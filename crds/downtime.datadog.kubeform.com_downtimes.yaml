@@ -1,0 +1,330 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: datadog.kubeform.com
+    app.kubernetes.io/part-of: kubeform.com
+  name: downtimes.downtime.datadog.kubeform.com
+spec:
+  group: downtime.datadog.kubeform.com
+  names:
+    kind: Downtime
+    listKind: DowntimeList
+    plural: downtimes
+    singular: downtime
+  scope: Namespaced
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .status.phase
+      name: Phase
+      type: string
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              providerRef:
+                description: LocalObjectReference contains enough information to let
+                  you locate the referenced object inside the same namespace.
+                properties:
+                  name:
+                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+                      TODO: Add other useful fields. apiVersion, kind, uid?'
+                    type: string
+                type: object
+              resource:
+                properties:
+                  active:
+                    description: When true indicates this downtime is being actively
+                      applied
+                    type: boolean
+                  activeChildID:
+                    description: The id corresponding to the downtime object definition
+                      of the active child for the original parent recurring downtime.
+                      This field will only exist on recurring downtimes.
+                    format: int64
+                    type: integer
+                  disabled:
+                    description: When true indicates this downtime is not being applied
+                    type: boolean
+                  end:
+                    description: Optionally specify an end date when this downtime
+                      should expire
+                    format: int64
+                    type: integer
+                  endDate:
+                    description: String representing date and time to end the downtime
+                      in RFC3339 format.
+                    type: string
+                  id:
+                    type: string
+                  message:
+                    description: An optional message to provide when creating the
+                      downtime, can include notification handles
+                    type: string
+                  monitorID:
+                    description: When specified, this downtime will only apply to
+                      this monitor
+                    format: int64
+                    type: integer
+                  monitorTags:
+                    description: A list of monitor tags (up to 25), i.e. tags that
+                      are applied directly to monitors to which the downtime applies
+                    items:
+                      type: string
+                    type: array
+                  recurrence:
+                    description: Optional recurring schedule for this downtime
+                    properties:
+                      period:
+                        description: How often to repeat as an integer. For example
+                          to repeat every 3 days, select a `type` of `days` and a
+                          `period` of `3`.
+                        format: int64
+                        type: integer
+                      rrule:
+                        description: The RRULE standard for defining recurring events.
+                          For example, to have a recurring event on the first day
+                          of each month, use `FREQ=MONTHLY;INTERVAL=1`. Most common
+                          rrule options from the iCalendar Spec are supported. Attributes
+                          specifying the duration in RRULE are not supported (for
+                          example, `DTSTART`, `DTEND`, `DURATION`).
+                        type: string
+                      type:
+                        description: One of `days`, `weeks`, `months`, or `years`
+                        type: string
+                      untilDate:
+                        description: The date at which the recurrence should end as
+                          a POSIX timestamp. `until_occurrences` and `until_date`
+                          are mutually exclusive.
+                        format: int64
+                        type: integer
+                      untilOccurrences:
+                        description: How many times the downtime will be rescheduled.
+                          `until_occurrences` and `until_date` are mutually exclusive.
+                        format: int64
+                        type: integer
+                      weekDays:
+                        description: 'A list of week days to repeat on. Choose from:
+                          `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat` or `Sun`. Only
+                          applicable when `type` is `weeks`. First letter must be
+                          capitalized.'
+                        items:
+                          type: string
+                        type: array
+                    required:
+                    - type
+                    type: object
+                  scope:
+                    description: specify the group scope to which this downtime applies.
+                      For everything use '*'
+                    items:
+                      type: string
+                    type: array
+                  start:
+                    description: Specify when this downtime should start
+                    format: int64
+                    type: integer
+                  startDate:
+                    description: String representing date and time to start the downtime
+                      in RFC3339 format.
+                    type: string
+                  timezone:
+                    description: The timezone for the downtime, default UTC
+                    type: string
+                required:
+                - scope
+                type: object
+              state:
+                properties:
+                  active:
+                    description: When true indicates this downtime is being actively
+                      applied
+                    type: boolean
+                  activeChildID:
+                    description: The id corresponding to the downtime object definition
+                      of the active child for the original parent recurring downtime.
+                      This field will only exist on recurring downtimes.
+                    format: int64
+                    type: integer
+                  disabled:
+                    description: When true indicates this downtime is not being applied
+                    type: boolean
+                  end:
+                    description: Optionally specify an end date when this downtime
+                      should expire
+                    format: int64
+                    type: integer
+                  endDate:
+                    description: String representing date and time to end the downtime
+                      in RFC3339 format.
+                    type: string
+                  id:
+                    type: string
+                  message:
+                    description: An optional message to provide when creating the
+                      downtime, can include notification handles
+                    type: string
+                  monitorID:
+                    description: When specified, this downtime will only apply to
+                      this monitor
+                    format: int64
+                    type: integer
+                  monitorTags:
+                    description: A list of monitor tags (up to 25), i.e. tags that
+                      are applied directly to monitors to which the downtime applies
+                    items:
+                      type: string
+                    type: array
+                  recurrence:
+                    description: Optional recurring schedule for this downtime
+                    properties:
+                      period:
+                        description: How often to repeat as an integer. For example
+                          to repeat every 3 days, select a `type` of `days` and a
+                          `period` of `3`.
+                        format: int64
+                        type: integer
+                      rrule:
+                        description: The RRULE standard for defining recurring events.
+                          For example, to have a recurring event on the first day
+                          of each month, use `FREQ=MONTHLY;INTERVAL=1`. Most common
+                          rrule options from the iCalendar Spec are supported. Attributes
+                          specifying the duration in RRULE are not supported (for
+                          example, `DTSTART`, `DTEND`, `DURATION`).
+                        type: string
+                      type:
+                        description: One of `days`, `weeks`, `months`, or `years`
+                        type: string
+                      untilDate:
+                        description: The date at which the recurrence should end as
+                          a POSIX timestamp. `until_occurrences` and `until_date`
+                          are mutually exclusive.
+                        format: int64
+                        type: integer
+                      untilOccurrences:
+                        description: How many times the downtime will be rescheduled.
+                          `until_occurrences` and `until_date` are mutually exclusive.
+                        format: int64
+                        type: integer
+                      weekDays:
+                        description: 'A list of week days to repeat on. Choose from:
+                          `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat` or `Sun`. Only
+                          applicable when `type` is `weeks`. First letter must be
+                          capitalized.'
+                        items:
+                          type: string
+                        type: array
+                    required:
+                    - type
+                    type: object
+                  scope:
+                    description: specify the group scope to which this downtime applies.
+                      For everything use '*'
+                    items:
+                      type: string
+                    type: array
+                  start:
+                    description: Specify when this downtime should start
+                    format: int64
+                    type: integer
+                  startDate:
+                    description: String representing date and time to start the downtime
+                      in RFC3339 format.
+                    type: string
+                  timezone:
+                    description: The timezone for the downtime, default UTC
+                    type: string
+                required:
+                - scope
+                type: object
+              terminationPolicy:
+                enum:
+                - Delete
+                - DoNotTerminate
+                type: string
+              updatePolicy:
+                enum:
+                - Destroy
+                - DoNotDestroy
+                type: string
+            required:
+            - providerRef
+            - resource
+            type: object
+          status:
+            properties:
+              conditions:
+                items:
+                  properties:
+                    lastTransitionTime:
+                      description: Last time the condition transitioned from one status
+                        to another. This should be when the underlying condition changed.  If
+                        that is not known, then using the time when the API field
+                        changed is acceptable.
+                      format: date-time
+                      type: string
+                    message:
+                      description: A human readable message indicating details about
+                        the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: If set, this represents the .metadata.generation
+                        that the condition was set based upon. For instance, if .metadata.generation
+                        is currently 12, but the .status.condition[x].observedGeneration
+                        is 9, the condition is out of date with respect to the current
+                        state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: The reason for the condition's last transition
+                        in CamelCase. The specific API may choose whether or not this
+                        field is considered a guaranteed API. This field may not be
+                        empty.
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, Unknown.
+                      type: string
+                    type:
+                      description: Type of condition in CamelCase or in foo.example.com/CamelCase.
+                        Many .condition.type values are consistent across resources
+                        like Available, but because arbitrary conditions can be useful
+                        (see .node.status.conditions), the ability to deconflict is
+                        important.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - message
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              observedGeneration:
+                description: Resource generation, which is updated on mutation by
+                  the API Server.
+                format: int64
+                type: integer
+              phase:
+                description: Status defines the set of statuses a resource can have.
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
