@@ -22,10 +22,10 @@ import (
 	"context"
 	time "time"
 
-	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
+	syntheticstestv1alpha1 "kubeform.dev/provider-datadog-api/apis/syntheticstest/v1alpha1"
 	versioned "kubeform.dev/provider-datadog-api/client/clientset/versioned"
 	internalinterfaces "kubeform.dev/provider-datadog-api/client/informers/externalversions/internalinterfaces"
-	v1alpha1 "kubeform.dev/provider-datadog-api/client/listers/synthetics/v1alpha1"
+	v1alpha1 "kubeform.dev/provider-datadog-api/client/listers/syntheticstest/v1alpha1"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
@@ -33,59 +33,59 @@ import (
 	cache "k8s.io/client-go/tools/cache"
 )
 
-// TestInformer provides access to a shared informer and lister for
-// Tests.
-type TestInformer interface {
+// SyntheticstestInformer provides access to a shared informer and lister for
+// Syntheticstests.
+type SyntheticstestInformer interface {
 	Informer() cache.SharedIndexInformer
-	Lister() v1alpha1.TestLister
+	Lister() v1alpha1.SyntheticstestLister
 }
 
-type testInformer struct {
+type syntheticstestInformer struct {
 	factory          internalinterfaces.SharedInformerFactory
 	tweakListOptions internalinterfaces.TweakListOptionsFunc
 	namespace        string
 }
 
-// NewTestInformer constructs a new informer for Test type.
+// NewSyntheticstestInformer constructs a new informer for Syntheticstest type.
 // Always prefer using an informer factory to get a shared informer instead of getting an independent
 // one. This reduces memory footprint and number of connections to the server.
-func NewTestInformer(client versioned.Interface, namespace string, resyncPeriod time.Duration, indexers cache.Indexers) cache.SharedIndexInformer {
-	return NewFilteredTestInformer(client, namespace, resyncPeriod, indexers, nil)
+func NewSyntheticstestInformer(client versioned.Interface, namespace string, resyncPeriod time.Duration, indexers cache.Indexers) cache.SharedIndexInformer {
+	return NewFilteredSyntheticstestInformer(client, namespace, resyncPeriod, indexers, nil)
 }
 
-// NewFilteredTestInformer constructs a new informer for Test type.
+// NewFilteredSyntheticstestInformer constructs a new informer for Syntheticstest type.
 // Always prefer using an informer factory to get a shared informer instead of getting an independent
 // one. This reduces memory footprint and number of connections to the server.
-func NewFilteredTestInformer(client versioned.Interface, namespace string, resyncPeriod time.Duration, indexers cache.Indexers, tweakListOptions internalinterfaces.TweakListOptionsFunc) cache.SharedIndexInformer {
+func NewFilteredSyntheticstestInformer(client versioned.Interface, namespace string, resyncPeriod time.Duration, indexers cache.Indexers, tweakListOptions internalinterfaces.TweakListOptionsFunc) cache.SharedIndexInformer {
 	return cache.NewSharedIndexInformer(
 		&cache.ListWatch{
 			ListFunc: func(options v1.ListOptions) (runtime.Object, error) {
 				if tweakListOptions != nil {
 					tweakListOptions(&options)
 				}
-				return client.SyntheticsV1alpha1().Tests(namespace).List(context.TODO(), options)
+				return client.SyntheticstestV1alpha1().Syntheticstests(namespace).List(context.TODO(), options)
 			},
 			WatchFunc: func(options v1.ListOptions) (watch.Interface, error) {
 				if tweakListOptions != nil {
 					tweakListOptions(&options)
 				}
-				return client.SyntheticsV1alpha1().Tests(namespace).Watch(context.TODO(), options)
+				return client.SyntheticstestV1alpha1().Syntheticstests(namespace).Watch(context.TODO(), options)
 			},
 		},
-		&syntheticsv1alpha1.Test{},
+		&syntheticstestv1alpha1.Syntheticstest{},
 		resyncPeriod,
 		indexers,
 	)
 }
 
-func (f *testInformer) defaultInformer(client versioned.Interface, resyncPeriod time.Duration) cache.SharedIndexInformer {
-	return NewFilteredTestInformer(client, f.namespace, resyncPeriod, cache.Indexers{cache.NamespaceIndex: cache.MetaNamespaceIndexFunc}, f.tweakListOptions)
+func (f *syntheticstestInformer) defaultInformer(client versioned.Interface, resyncPeriod time.Duration) cache.SharedIndexInformer {
+	return NewFilteredSyntheticstestInformer(client, f.namespace, resyncPeriod, cache.Indexers{cache.NamespaceIndex: cache.MetaNamespaceIndexFunc}, f.tweakListOptions)
 }
 
-func (f *testInformer) Informer() cache.SharedIndexInformer {
-	return f.factory.InformerFor(&syntheticsv1alpha1.Test{}, f.defaultInformer)
+func (f *syntheticstestInformer) Informer() cache.SharedIndexInformer {
+	return f.factory.InformerFor(&syntheticstestv1alpha1.Syntheticstest{}, f.defaultInformer)
 }
 
-func (f *testInformer) Lister() v1alpha1.TestLister {
-	return v1alpha1.NewTestLister(f.Informer().GetIndexer())
+func (f *syntheticstestInformer) Lister() v1alpha1.SyntheticstestLister {
+	return v1alpha1.NewSyntheticstestLister(f.Informer().GetIndexer())
 }

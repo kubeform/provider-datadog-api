@@ -32,6 +32,7 @@ import (
 	servicev1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/service/v1alpha1"
 	slov1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/slo/v1alpha1"
 	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/synthetics/v1alpha1"
+	syntheticstestv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/syntheticstest/v1alpha1"
 	userv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/user/v1alpha1"
 
 	discovery "k8s.io/client-go/discovery"
@@ -52,6 +53,7 @@ type Interface interface {
 	ServiceV1alpha1() servicev1alpha1.ServiceV1alpha1Interface
 	SloV1alpha1() slov1alpha1.SloV1alpha1Interface
 	SyntheticsV1alpha1() syntheticsv1alpha1.SyntheticsV1alpha1Interface
+	SyntheticstestV1alpha1() syntheticstestv1alpha1.SyntheticstestV1alpha1Interface
 	UserV1alpha1() userv1alpha1.UserV1alpha1Interface
 }
 
@@ -59,18 +61,19 @@ type Interface interface {
 // version included in a Clientset.
 type Clientset struct {
 	*discovery.DiscoveryClient
-	dashboardV1alpha1   *dashboardv1alpha1.DashboardV1alpha1Client
-	downtimeV1alpha1    *downtimev1alpha1.DowntimeV1alpha1Client
-	integrationV1alpha1 *integrationv1alpha1.IntegrationV1alpha1Client
-	logsV1alpha1        *logsv1alpha1.LogsV1alpha1Client
-	metricV1alpha1      *metricv1alpha1.MetricV1alpha1Client
-	monitorV1alpha1     *monitorv1alpha1.MonitorV1alpha1Client
-	roleV1alpha1        *rolev1alpha1.RoleV1alpha1Client
-	securityV1alpha1    *securityv1alpha1.SecurityV1alpha1Client
-	serviceV1alpha1     *servicev1alpha1.ServiceV1alpha1Client
-	sloV1alpha1         *slov1alpha1.SloV1alpha1Client
-	syntheticsV1alpha1  *syntheticsv1alpha1.SyntheticsV1alpha1Client
-	userV1alpha1        *userv1alpha1.UserV1alpha1Client
+	dashboardV1alpha1      *dashboardv1alpha1.DashboardV1alpha1Client
+	downtimeV1alpha1       *downtimev1alpha1.DowntimeV1alpha1Client
+	integrationV1alpha1    *integrationv1alpha1.IntegrationV1alpha1Client
+	logsV1alpha1           *logsv1alpha1.LogsV1alpha1Client
+	metricV1alpha1         *metricv1alpha1.MetricV1alpha1Client
+	monitorV1alpha1        *monitorv1alpha1.MonitorV1alpha1Client
+	roleV1alpha1           *rolev1alpha1.RoleV1alpha1Client
+	securityV1alpha1       *securityv1alpha1.SecurityV1alpha1Client
+	serviceV1alpha1        *servicev1alpha1.ServiceV1alpha1Client
+	sloV1alpha1            *slov1alpha1.SloV1alpha1Client
+	syntheticsV1alpha1     *syntheticsv1alpha1.SyntheticsV1alpha1Client
+	syntheticstestV1alpha1 *syntheticstestv1alpha1.SyntheticstestV1alpha1Client
+	userV1alpha1           *userv1alpha1.UserV1alpha1Client
 }
 
 // DashboardV1alpha1 retrieves the DashboardV1alpha1Client
@@ -126,6 +129,11 @@ func (c *Clientset) SloV1alpha1() slov1alpha1.SloV1alpha1Interface {
 // SyntheticsV1alpha1 retrieves the SyntheticsV1alpha1Client
 func (c *Clientset) SyntheticsV1alpha1() syntheticsv1alpha1.SyntheticsV1alpha1Interface {
 	return c.syntheticsV1alpha1
+}
+
+// SyntheticstestV1alpha1 retrieves the SyntheticstestV1alpha1Client
+func (c *Clientset) SyntheticstestV1alpha1() syntheticstestv1alpha1.SyntheticstestV1alpha1Interface {
+	return c.syntheticstestV1alpha1
 }
 
 // UserV1alpha1 retrieves the UserV1alpha1Client
@@ -198,6 +206,10 @@ func NewForConfig(c *rest.Config) (*Clientset, error) {
 	if err != nil {
 		return nil, err
 	}
+	cs.syntheticstestV1alpha1, err = syntheticstestv1alpha1.NewForConfig(&configShallowCopy)
+	if err != nil {
+		return nil, err
+	}
 	cs.userV1alpha1, err = userv1alpha1.NewForConfig(&configShallowCopy)
 	if err != nil {
 		return nil, err
@@ -225,6 +237,7 @@ func NewForConfigOrDie(c *rest.Config) *Clientset {
 	cs.serviceV1alpha1 = servicev1alpha1.NewForConfigOrDie(c)
 	cs.sloV1alpha1 = slov1alpha1.NewForConfigOrDie(c)
 	cs.syntheticsV1alpha1 = syntheticsv1alpha1.NewForConfigOrDie(c)
+	cs.syntheticstestV1alpha1 = syntheticstestv1alpha1.NewForConfigOrDie(c)
 	cs.userV1alpha1 = userv1alpha1.NewForConfigOrDie(c)
 
 	cs.DiscoveryClient = discovery.NewDiscoveryClientForConfigOrDie(c)
@@ -245,6 +258,7 @@ func New(c rest.Interface) *Clientset {
 	cs.serviceV1alpha1 = servicev1alpha1.New(c)
 	cs.sloV1alpha1 = slov1alpha1.New(c)
 	cs.syntheticsV1alpha1 = syntheticsv1alpha1.New(c)
+	cs.syntheticstestV1alpha1 = syntheticstestv1alpha1.New(c)
 	cs.userV1alpha1 = userv1alpha1.New(c)
 
 	cs.DiscoveryClient = discovery.NewDiscoveryClient(c)

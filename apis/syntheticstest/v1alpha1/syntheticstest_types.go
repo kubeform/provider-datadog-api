@@ -34,14 +34,14 @@ import (
 // +kubebuilder:subresource:status
 // +kubebuilder:printcolumn:name="Phase",type=string,JSONPath=`.status.phase`
 
-type Test struct {
+type Syntheticstest struct {
 	metav1.TypeMeta   `json:",inline,omitempty"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              TestSpec   `json:"spec,omitempty"`
-	Status            TestStatus `json:"status,omitempty"`
+	Spec              SyntheticstestSpec   `json:"spec,omitempty"`
+	Status            SyntheticstestStatus `json:"status,omitempty"`
 }
 
-type TestSpecApiStepAssertionTargetjsonpath struct {
+type SyntheticstestSpecApiStepAssertionTargetjsonpath struct {
 	// The JSON path to assert.
 	Jsonpath *string `json:"jsonpath" tf:"jsonpath"`
 	// The specific operator to use on the path.
@@ -50,7 +50,7 @@ type TestSpecApiStepAssertionTargetjsonpath struct {
 	Targetvalue *string `json:"targetvalue" tf:"targetvalue"`
 }
 
-type TestSpecApiStepAssertion struct {
+type SyntheticstestSpecApiStepAssertion struct {
 	// Assertion operator. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
 	Operator *string `json:"operator" tf:"operator"`
 	// If assertion type is `header`, this is the header name.
@@ -61,12 +61,12 @@ type TestSpecApiStepAssertion struct {
 	Target *string `json:"target,omitempty" tf:"target"`
 	// Expected structure if `operator` is `validatesJSONPath`. Exactly one nested block is allowed with the structure below.
 	// +optional
-	Targetjsonpath *TestSpecApiStepAssertionTargetjsonpath `json:"targetjsonpath,omitempty" tf:"targetjsonpath"`
+	Targetjsonpath *SyntheticstestSpecApiStepAssertionTargetjsonpath `json:"targetjsonpath,omitempty" tf:"targetjsonpath"`
 	// Type of assertion. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
 	Type *string `json:"type" tf:"type"`
 }
 
-type TestSpecApiStepExtractedValueParser struct {
+type SyntheticstestSpecApiStepExtractedValueParser struct {
 	// Type of parser for a Synthetics global variable from a synthetics test.
 	Type *string `json:"type" tf:"type"`
 	// Regex or JSON path used for the parser. Not used with type `raw`.
@@ -74,24 +74,24 @@ type TestSpecApiStepExtractedValueParser struct {
 	Value *string `json:"value,omitempty" tf:"value"`
 }
 
-type TestSpecApiStepExtractedValue struct {
+type SyntheticstestSpecApiStepExtractedValue struct {
 	// When type is `http_header`, name of the header to use to extract the value.
 	// +optional
-	Field  *string                              `json:"field,omitempty" tf:"field"`
-	Name   *string                              `json:"name" tf:"name"`
-	Parser *TestSpecApiStepExtractedValueParser `json:"parser" tf:"parser"`
+	Field  *string                                        `json:"field,omitempty" tf:"field"`
+	Name   *string                                        `json:"name" tf:"name"`
+	Parser *SyntheticstestSpecApiStepExtractedValueParser `json:"parser" tf:"parser"`
 	// Property of the Synthetics Test Response to use for the variable.
 	Type *string `json:"type" tf:"type"`
 }
 
-type TestSpecApiStepRequestBasicauth struct {
+type SyntheticstestSpecApiStepRequestBasicauth struct {
 	// Password for authentication.
 	Password *string `json:"-" sensitive:"true" tf:"password"`
 	// Username for authentication.
 	Username *string `json:"username" tf:"username"`
 }
 
-type TestSpecApiStepRequestClientCertificateCert struct {
+type SyntheticstestSpecApiStepRequestClientCertificateCert struct {
 	// Content of the certificate.
 	Content *string `json:"-" sensitive:"true" tf:"content"`
 	// File name for the certificate.
@@ -99,7 +99,7 @@ type TestSpecApiStepRequestClientCertificateCert struct {
 	Filename *string `json:"filename,omitempty" tf:"filename"`
 }
 
-type TestSpecApiStepRequestClientCertificateKey struct {
+type SyntheticstestSpecApiStepRequestClientCertificateKey struct {
 	// Content of the certificate.
 	Content *string `json:"-" sensitive:"true" tf:"content"`
 	// File name for the certificate.
@@ -107,12 +107,12 @@ type TestSpecApiStepRequestClientCertificateKey struct {
 	Filename *string `json:"filename,omitempty" tf:"filename"`
 }
 
-type TestSpecApiStepRequestClientCertificate struct {
-	Cert *TestSpecApiStepRequestClientCertificateCert `json:"cert" tf:"cert"`
-	Key  *TestSpecApiStepRequestClientCertificateKey  `json:"key" tf:"key"`
+type SyntheticstestSpecApiStepRequestClientCertificate struct {
+	Cert *SyntheticstestSpecApiStepRequestClientCertificateCert `json:"cert" tf:"cert"`
+	Key  *SyntheticstestSpecApiStepRequestClientCertificateKey  `json:"key" tf:"key"`
 }
 
-type TestSpecApiStepRequestDefinition struct {
+type SyntheticstestSpecApiStepRequestDefinition struct {
 	// The request body.
 	// +optional
 	Body *string `json:"body,omitempty" tf:"body"`
@@ -148,16 +148,16 @@ type TestSpecApiStepRequestDefinition struct {
 	Url *string `json:"url,omitempty" tf:"url"`
 }
 
-type TestSpecApiStep struct {
+type SyntheticstestSpecApiStep struct {
 	// Determines whether or not to continue with test if this step fails.
 	// +optional
 	AllowFailure *bool `json:"allowFailure,omitempty" tf:"allow_failure"`
 	// Assertions used for the test. Multiple `assertion` blocks are allowed with the structure below.
 	// +optional
-	Assertion []TestSpecApiStepAssertion `json:"assertion,omitempty" tf:"assertion"`
+	Assertion []SyntheticstestSpecApiStepAssertion `json:"assertion,omitempty" tf:"assertion"`
 	// Values to parse and save as variables from the response.
 	// +optional
-	ExtractedValue []TestSpecApiStepExtractedValue `json:"extractedValue,omitempty" tf:"extracted_value"`
+	ExtractedValue []SyntheticstestSpecApiStepExtractedValue `json:"extractedValue,omitempty" tf:"extracted_value"`
 	// Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
 	// +optional
 	IsCritical *bool `json:"isCritical,omitempty" tf:"is_critical"`
@@ -165,13 +165,13 @@ type TestSpecApiStep struct {
 	Name *string `json:"name" tf:"name"`
 	// The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 	// +optional
-	RequestBasicauth *TestSpecApiStepRequestBasicauth `json:"requestBasicauth,omitempty" tf:"request_basicauth"`
+	RequestBasicauth *SyntheticstestSpecApiStepRequestBasicauth `json:"requestBasicauth,omitempty" tf:"request_basicauth"`
 	// Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
 	// +optional
-	RequestClientCertificate *TestSpecApiStepRequestClientCertificate `json:"requestClientCertificate,omitempty" tf:"request_client_certificate"`
+	RequestClientCertificate *SyntheticstestSpecApiStepRequestClientCertificate `json:"requestClientCertificate,omitempty" tf:"request_client_certificate"`
 	// The request for the api step.
 	// +optional
-	RequestDefinition *TestSpecApiStepRequestDefinition `json:"requestDefinition,omitempty" tf:"request_definition"`
+	RequestDefinition *SyntheticstestSpecApiStepRequestDefinition `json:"requestDefinition,omitempty" tf:"request_definition"`
 	// Header name and value map.
 	// +optional
 	RequestHeaders map[string]string `json:"requestHeaders,omitempty" tf:"request_headers"`
@@ -183,7 +183,7 @@ type TestSpecApiStep struct {
 	Subtype *string `json:"subtype,omitempty" tf:"subtype"`
 }
 
-type TestSpecAssertionTargetjsonpath struct {
+type SyntheticstestSpecAssertionTargetjsonpath struct {
 	// The JSON path to assert.
 	Jsonpath *string `json:"jsonpath" tf:"jsonpath"`
 	// The specific operator to use on the path.
@@ -192,7 +192,7 @@ type TestSpecAssertionTargetjsonpath struct {
 	Targetvalue *string `json:"targetvalue" tf:"targetvalue"`
 }
 
-type TestSpecAssertion struct {
+type SyntheticstestSpecAssertion struct {
 	// Assertion operator. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
 	Operator *string `json:"operator" tf:"operator"`
 	// If assertion type is `header`, this is the header name.
@@ -203,12 +203,12 @@ type TestSpecAssertion struct {
 	Target *string `json:"target,omitempty" tf:"target"`
 	// Expected structure if `operator` is `validatesJSONPath`. Exactly one nested block is allowed with the structure below.
 	// +optional
-	Targetjsonpath *TestSpecAssertionTargetjsonpath `json:"targetjsonpath,omitempty" tf:"targetjsonpath"`
+	Targetjsonpath *SyntheticstestSpecAssertionTargetjsonpath `json:"targetjsonpath,omitempty" tf:"targetjsonpath"`
 	// Type of assertion. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
 	Type *string `json:"type" tf:"type"`
 }
 
-type TestSpecBrowserStepParamsVariable struct {
+type SyntheticstestSpecBrowserStepParamsVariable struct {
 	// Example of the extracted variable.
 	// +optional
 	Example *string `json:"example,omitempty" tf:"example"`
@@ -217,7 +217,7 @@ type TestSpecBrowserStepParamsVariable struct {
 	Name *string `json:"name,omitempty" tf:"name"`
 }
 
-type TestSpecBrowserStepParams struct {
+type SyntheticstestSpecBrowserStepParams struct {
 	// Name of the attribute to use for an "assert attribute" step.
 	// +optional
 	Attribute *string `json:"attribute,omitempty" tf:"attribute"`
@@ -262,7 +262,7 @@ type TestSpecBrowserStepParams struct {
 	Value *string `json:"value,omitempty" tf:"value"`
 	// Details of the variable to extract.
 	// +optional
-	Variable *TestSpecBrowserStepParamsVariable `json:"variable,omitempty" tf:"variable"`
+	Variable *SyntheticstestSpecBrowserStepParamsVariable `json:"variable,omitempty" tf:"variable"`
 	// For "file upload" steps.
 	// +optional
 	WithClick *bool `json:"withClick,omitempty" tf:"with_click"`
@@ -274,7 +274,7 @@ type TestSpecBrowserStepParams struct {
 	Y *int64 `json:"y,omitempty" tf:"y"`
 }
 
-type TestSpecBrowserStep struct {
+type SyntheticstestSpecBrowserStep struct {
 	// Determines if the step should be allowed to fail.
 	// +optional
 	AllowFailure *bool `json:"allowFailure,omitempty" tf:"allow_failure"`
@@ -284,7 +284,7 @@ type TestSpecBrowserStep struct {
 	// Name of the step.
 	Name *string `json:"name" tf:"name"`
 	// Parameters for the step.
-	Params *TestSpecBrowserStepParams `json:"params" tf:"params"`
+	Params *SyntheticstestSpecBrowserStepParams `json:"params" tf:"params"`
 	// Used to override the default timeout of a step.
 	// +optional
 	Timeout *int64 `json:"timeout,omitempty" tf:"timeout"`
@@ -292,7 +292,7 @@ type TestSpecBrowserStep struct {
 	Type *string `json:"type" tf:"type"`
 }
 
-type TestSpecBrowserVariable struct {
+type SyntheticstestSpecBrowserVariable struct {
 	// Example for the variable.
 	// +optional
 	Example *string `json:"example,omitempty" tf:"example"`
@@ -308,7 +308,7 @@ type TestSpecBrowserVariable struct {
 	Type *string `json:"type" tf:"type"`
 }
 
-type TestSpecConfigVariable struct {
+type SyntheticstestSpecConfigVariable struct {
 	// Example for the variable.
 	// +optional
 	Example *string `json:"example,omitempty" tf:"example"`
@@ -324,13 +324,13 @@ type TestSpecConfigVariable struct {
 	Type *string `json:"type" tf:"type"`
 }
 
-type TestSpecOptionsListMonitorOptions struct {
+type SyntheticstestSpecOptionsListMonitorOptions struct {
 	// Specify a renotification frequency.
 	// +optional
 	RenotifyInterval *int64 `json:"renotifyInterval,omitempty" tf:"renotify_interval"`
 }
 
-type TestSpecOptionsListRetry struct {
+type SyntheticstestSpecOptionsListRetry struct {
 	// Number of retries needed to consider a location as failed before sending a notification alert.
 	// +optional
 	Count *int64 `json:"count,omitempty" tf:"count"`
@@ -339,7 +339,7 @@ type TestSpecOptionsListRetry struct {
 	Interval *int64 `json:"interval,omitempty" tf:"interval"`
 }
 
-type TestSpecOptionsList struct {
+type SyntheticstestSpecOptionsList struct {
 	// For SSL test, whether or not the test should allow self signed certificates.
 	// +optional
 	AcceptSelfSigned *bool `json:"acceptSelfSigned,omitempty" tf:"accept_self_signed"`
@@ -359,26 +359,26 @@ type TestSpecOptionsList struct {
 	// +optional
 	MonitorName *string `json:"monitorName,omitempty" tf:"monitor_name"`
 	// +optional
-	MonitorOptions *TestSpecOptionsListMonitorOptions `json:"monitorOptions,omitempty" tf:"monitor_options"`
+	MonitorOptions *SyntheticstestSpecOptionsListMonitorOptions `json:"monitorOptions,omitempty" tf:"monitor_options"`
 	// +optional
 	MonitorPriority *int64 `json:"monitorPriority,omitempty" tf:"monitor_priority"`
 	// Prevents saving screenshots of the steps.
 	// +optional
 	NoScreenshot *bool `json:"noScreenshot,omitempty" tf:"no_screenshot"`
 	// +optional
-	Retry *TestSpecOptionsListRetry `json:"retry,omitempty" tf:"retry"`
+	Retry *SyntheticstestSpecOptionsListRetry `json:"retry,omitempty" tf:"retry"`
 	// How often the test should run (in seconds).
 	TickEvery *int64 `json:"tickEvery" tf:"tick_every"`
 }
 
-type TestSpecRequestBasicauth struct {
+type SyntheticstestSpecRequestBasicauth struct {
 	// Password for authentication.
 	Password *string `json:"-" sensitive:"true" tf:"password"`
 	// Username for authentication.
 	Username *string `json:"username" tf:"username"`
 }
 
-type TestSpecRequestClientCertificateCert struct {
+type SyntheticstestSpecRequestClientCertificateCert struct {
 	// Content of the certificate.
 	Content *string `json:"-" sensitive:"true" tf:"content"`
 	// File name for the certificate.
@@ -386,7 +386,7 @@ type TestSpecRequestClientCertificateCert struct {
 	Filename *string `json:"filename,omitempty" tf:"filename"`
 }
 
-type TestSpecRequestClientCertificateKey struct {
+type SyntheticstestSpecRequestClientCertificateKey struct {
 	// Content of the certificate.
 	Content *string `json:"-" sensitive:"true" tf:"content"`
 	// File name for the certificate.
@@ -394,12 +394,12 @@ type TestSpecRequestClientCertificateKey struct {
 	Filename *string `json:"filename,omitempty" tf:"filename"`
 }
 
-type TestSpecRequestClientCertificate struct {
-	Cert *TestSpecRequestClientCertificateCert `json:"cert" tf:"cert"`
-	Key  *TestSpecRequestClientCertificateKey  `json:"key" tf:"key"`
+type SyntheticstestSpecRequestClientCertificate struct {
+	Cert *SyntheticstestSpecRequestClientCertificateCert `json:"cert" tf:"cert"`
+	Key  *SyntheticstestSpecRequestClientCertificateKey  `json:"key" tf:"key"`
 }
 
-type TestSpecRequestDefinition struct {
+type SyntheticstestSpecRequestDefinition struct {
 	// The request body.
 	// +optional
 	Body *string `json:"body,omitempty" tf:"body"`
@@ -435,10 +435,10 @@ type TestSpecRequestDefinition struct {
 	Url *string `json:"url,omitempty" tf:"url"`
 }
 
-type TestSpec struct {
-	State *TestSpecResource `json:"state,omitempty" tf:"-"`
+type SyntheticstestSpec struct {
+	State *SyntheticstestSpecResource `json:"state,omitempty" tf:"-"`
 
-	Resource TestSpecResource `json:"resource" tf:"resource"`
+	Resource SyntheticstestSpecResource `json:"resource" tf:"resource"`
 
 	UpdatePolicy base.UpdatePolicy `json:"updatePolicy,omitempty" tf:"-"`
 
@@ -449,24 +449,24 @@ type TestSpec struct {
 	SecretRef *core.LocalObjectReference `json:"secretRef,omitempty" tf:"-"`
 }
 
-type TestSpecResource struct {
+type SyntheticstestSpecResource struct {
 	ID string `json:"id,omitempty" tf:"id,omitempty"`
 
 	// Steps for multistep api tests
 	// +optional
-	ApiStep []TestSpecApiStep `json:"apiStep,omitempty" tf:"api_step"`
+	ApiStep []SyntheticstestSpecApiStep `json:"apiStep,omitempty" tf:"api_step"`
 	// Assertions used for the test. Multiple `assertion` blocks are allowed with the structure below.
 	// +optional
-	Assertion []TestSpecAssertion `json:"assertion,omitempty" tf:"assertion"`
+	Assertion []SyntheticstestSpecAssertion `json:"assertion,omitempty" tf:"assertion"`
 	// Steps for browser tests.
 	// +optional
-	BrowserStep []TestSpecBrowserStep `json:"browserStep,omitempty" tf:"browser_step"`
+	BrowserStep []SyntheticstestSpecBrowserStep `json:"browserStep,omitempty" tf:"browser_step"`
 	// Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 	// +optional
-	BrowserVariable []TestSpecBrowserVariable `json:"browserVariable,omitempty" tf:"browser_variable"`
+	BrowserVariable []SyntheticstestSpecBrowserVariable `json:"browserVariable,omitempty" tf:"browser_variable"`
 	// Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 	// +optional
-	ConfigVariable []TestSpecConfigVariable `json:"configVariable,omitempty" tf:"config_variable"`
+	ConfigVariable []SyntheticstestSpecConfigVariable `json:"configVariable,omitempty" tf:"config_variable"`
 	// Array with the different device IDs used to run the test (only for `browser` tests).
 	// +optional
 	DeviceIDS []string `json:"deviceIDS,omitempty" tf:"device_ids"`
@@ -481,16 +481,16 @@ type TestSpecResource struct {
 	// Name of Datadog synthetics test.
 	Name *string `json:"name" tf:"name"`
 	// +optional
-	OptionsList *TestSpecOptionsList `json:"optionsList,omitempty" tf:"options_list"`
+	OptionsList *SyntheticstestSpecOptionsList `json:"optionsList,omitempty" tf:"options_list"`
 	// The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 	// +optional
-	RequestBasicauth *TestSpecRequestBasicauth `json:"requestBasicauth,omitempty" tf:"request_basicauth"`
+	RequestBasicauth *SyntheticstestSpecRequestBasicauth `json:"requestBasicauth,omitempty" tf:"request_basicauth"`
 	// Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
 	// +optional
-	RequestClientCertificate *TestSpecRequestClientCertificate `json:"requestClientCertificate,omitempty" tf:"request_client_certificate"`
+	RequestClientCertificate *SyntheticstestSpecRequestClientCertificate `json:"requestClientCertificate,omitempty" tf:"request_client_certificate"`
 	// The synthetics test request. Required if `type = "api"`.
 	// +optional
-	RequestDefinition *TestSpecRequestDefinition `json:"requestDefinition,omitempty" tf:"request_definition"`
+	RequestDefinition *SyntheticstestSpecRequestDefinition `json:"requestDefinition,omitempty" tf:"request_definition"`
 	// Header name and value map.
 	// +optional
 	RequestHeaders map[string]string `json:"requestHeaders,omitempty" tf:"request_headers"`
@@ -512,7 +512,7 @@ type TestSpecResource struct {
 	Type *string `json:"type" tf:"type"`
 }
 
-type TestStatus struct {
+type SyntheticstestStatus struct {
 	// Resource generation, which is updated on mutation by the API Server.
 	// +optional
 	ObservedGeneration int64 `json:"observedGeneration,omitempty"`
@@ -525,10 +525,10 @@ type TestStatus struct {
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 // +kubebuilder:object:root=true
 
-// TestList is a list of Tests
-type TestList struct {
+// SyntheticstestList is a list of Syntheticstests
+type SyntheticstestList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	// Items is a list of Test CRD objects
-	Items []Test `json:"items,omitempty"`
+	// Items is a list of Syntheticstest CRD objects
+	Items []Syntheticstest `json:"items,omitempty"`
 }

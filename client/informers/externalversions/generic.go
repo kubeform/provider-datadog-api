@@ -32,6 +32,7 @@ import (
 	servicev1alpha1 "kubeform.dev/provider-datadog-api/apis/service/v1alpha1"
 	slov1alpha1 "kubeform.dev/provider-datadog-api/apis/slo/v1alpha1"
 	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
+	syntheticstestv1alpha1 "kubeform.dev/provider-datadog-api/apis/syntheticstest/v1alpha1"
 	userv1alpha1 "kubeform.dev/provider-datadog-api/apis/user/v1alpha1"
 
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -147,8 +148,10 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Synthetics().V1alpha1().GlobalVariables().Informer()}, nil
 	case syntheticsv1alpha1.SchemeGroupVersion.WithResource("privatelocations"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Synthetics().V1alpha1().PrivateLocations().Informer()}, nil
-	case syntheticsv1alpha1.SchemeGroupVersion.WithResource("tests"):
-		return &genericInformer{resource: resource.GroupResource(), informer: f.Synthetics().V1alpha1().Tests().Informer()}, nil
+
+		// Group=syntheticstest.datadog.kubeform.com, Version=v1alpha1
+	case syntheticstestv1alpha1.SchemeGroupVersion.WithResource("syntheticstests"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Syntheticstest().V1alpha1().Syntheticstests().Informer()}, nil
 
 		// Group=user.datadog.kubeform.com, Version=v1alpha1
 	case userv1alpha1.SchemeGroupVersion.WithResource("users"):
