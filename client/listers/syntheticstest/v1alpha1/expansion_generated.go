@@ -18,18 +18,10 @@ limitations under the License.
 
 package v1alpha1
 
-// GlobalVariableListerExpansion allows custom methods to be added to
-// GlobalVariableLister.
-type GlobalVariableListerExpansion interface{}
+// SyntheticstestListerExpansion allows custom methods to be added to
+// SyntheticstestLister.
+type SyntheticstestListerExpansion interface{}
 
-// GlobalVariableNamespaceListerExpansion allows custom methods to be added to
-// GlobalVariableNamespaceLister.
-type GlobalVariableNamespaceListerExpansion interface{}
-
-// PrivateLocationListerExpansion allows custom methods to be added to
-// PrivateLocationLister.
-type PrivateLocationListerExpansion interface{}
-
-// PrivateLocationNamespaceListerExpansion allows custom methods to be added to
-// PrivateLocationNamespaceLister.
-type PrivateLocationNamespaceListerExpansion interface{}
+// SyntheticstestNamespaceListerExpansion allows custom methods to be added to
+// SyntheticstestNamespaceLister.
+type SyntheticstestNamespaceListerExpansion interface{}

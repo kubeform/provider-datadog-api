@@ -28,30 +28,30 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 )
 
-func (r *Test) SetupWebhookWithManager(mgr ctrl.Manager) error {
+func (r *Syntheticstest) SetupWebhookWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewWebhookManagedBy(mgr).
 		For(r).
 		Complete()
 }
 
-//+kubebuilder:webhook:verbs=create;update;delete,path=/validate-synthetics-datadog-kubeform-com-v1alpha1-test,mutating=false,failurePolicy=fail,groups=synthetics.datadog.kubeform.com,resources=tests,versions=v1alpha1,name=test.synthetics.datadog.kubeform.io,sideEffects=None,admissionReviewVersions=v1
+//+kubebuilder:webhook:verbs=create;update;delete,path=/validate-syntheticstest-datadog-kubeform-com-v1alpha1-syntheticstest,mutating=false,failurePolicy=fail,groups=syntheticstest.datadog.kubeform.com,resources=syntheticstests,versions=v1alpha1,name=syntheticstest.syntheticstest.datadog.kubeform.io,sideEffects=None,admissionReviewVersions=v1
 
-var _ webhook.Validator = &Test{}
+var _ webhook.Validator = &Syntheticstest{}
 
 // ValidateCreate implements webhook.Validator so a webhook will be registered for the type
-func (r *Test) ValidateCreate() error {
+func (r *Syntheticstest) ValidateCreate() error {
 	return nil
 }
 
 // ValidateUpdate implements webhook.Validator so a webhook will be registered for the type
-func (r *Test) ValidateUpdate(old runtime.Object) error {
+func (r *Syntheticstest) ValidateUpdate(old runtime.Object) error {
 	return nil
 }
 
 // ValidateDelete implements webhook.Validator so a webhook will be registered for the type
-func (r *Test) ValidateDelete() error {
+func (r *Syntheticstest) ValidateDelete() error {
 	if r.Spec.TerminationPolicy == base.TerminationPolicyDoNotTerminate {
-		return fmt.Errorf(`test "%v/%v" can't be terminated. To delete, change spec.terminationPolicy to Delete`, r.Namespace, r.Name)
+		return fmt.Errorf(`syntheticstest "%v/%v" can't be terminated. To delete, change spec.terminationPolicy to Delete`, r.Namespace, r.Name)
 	}
 	return nil
 }

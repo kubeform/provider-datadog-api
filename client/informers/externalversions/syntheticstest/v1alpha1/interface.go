@@ -24,10 +24,8 @@ import (
 
 // Interface provides access to all the informers in this group version.
 type Interface interface {
-	// GlobalVariables returns a GlobalVariableInformer.
-	GlobalVariables() GlobalVariableInformer
-	// PrivateLocations returns a PrivateLocationInformer.
-	PrivateLocations() PrivateLocationInformer
+	// Syntheticstests returns a SyntheticstestInformer.
+	Syntheticstests() SyntheticstestInformer
 }
 
 type version struct {
@@ -41,12 +39,7 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 	return &version{factory: f, namespace: namespace, tweakListOptions: tweakListOptions}
 }
 
-// GlobalVariables returns a GlobalVariableInformer.
-func (v *version) GlobalVariables() GlobalVariableInformer {
-	return &globalVariableInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
-}
-
-// PrivateLocations returns a PrivateLocationInformer.
-func (v *version) PrivateLocations() PrivateLocationInformer {
-	return &privateLocationInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+// Syntheticstests returns a SyntheticstestInformer.
+func (v *version) Syntheticstests() SyntheticstestInformer {
+	return &syntheticstestInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }

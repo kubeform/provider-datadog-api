@@ -5,14 +5,14 @@ metadata:
   labels:
     app.kubernetes.io/name: datadog.kubeform.com
     app.kubernetes.io/part-of: kubeform.com
-  name: tests.synthetics.datadog.kubeform.com
+  name: syntheticstests.syntheticstest.datadog.kubeform.com
 spec:
-  group: synthetics.datadog.kubeform.com
+  group: syntheticstest.datadog.kubeform.com
   names:
-    kind: Test
-    listKind: TestList
-    plural: tests
-    singular: test
+    kind: Syntheticstest
+    listKind: SyntheticstestList
+    plural: syntheticstests
+    singular: syntheticstest
   scope: Namespaced
   versions:
   - additionalPrinterColumns:

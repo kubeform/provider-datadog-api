@@ -36,6 +36,7 @@ import (
 	service "kubeform.dev/provider-datadog-api/client/informers/externalversions/service"
 	slo "kubeform.dev/provider-datadog-api/client/informers/externalversions/slo"
 	synthetics "kubeform.dev/provider-datadog-api/client/informers/externalversions/synthetics"
+	syntheticstest "kubeform.dev/provider-datadog-api/client/informers/externalversions/syntheticstest"
 	user "kubeform.dev/provider-datadog-api/client/informers/externalversions/user"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -195,6 +196,7 @@ type SharedInformerFactory interface {
 	Service() service.Interface
 	Slo() slo.Interface
 	Synthetics() synthetics.Interface
+	Syntheticstest() syntheticstest.Interface
 	User() user.Interface
 }
 
@@ -240,6 +242,10 @@ func (f *sharedInformerFactory) Slo() slo.Interface {
 
 func (f *sharedInformerFactory) Synthetics() synthetics.Interface {
 	return synthetics.New(f, f.namespace, f.tweakListOptions)
+}
+
+func (f *sharedInformerFactory) Syntheticstest() syntheticstest.Interface {
+	return syntheticstest.New(f, f.namespace, f.tweakListOptions)
 }
 
 func (f *sharedInformerFactory) User() user.Interface {

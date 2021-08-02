@@ -19,33 +19,28 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
+	v1alpha1 "kubeform.dev/provider-datadog-api/apis/syntheticstest/v1alpha1"
 	"kubeform.dev/provider-datadog-api/client/clientset/versioned/scheme"
 
 	rest "k8s.io/client-go/rest"
 )
 
-type SyntheticsV1alpha1Interface interface {
+type SyntheticstestV1alpha1Interface interface {
 	RESTClient() rest.Interface
-	GlobalVariablesGetter
-	PrivateLocationsGetter
+	SyntheticstestsGetter
 }
 
-// SyntheticsV1alpha1Client is used to interact with features provided by the synthetics.datadog.kubeform.com group.
-type SyntheticsV1alpha1Client struct {
+// SyntheticstestV1alpha1Client is used to interact with features provided by the syntheticstest.datadog.kubeform.com group.
+type SyntheticstestV1alpha1Client struct {
 	restClient rest.Interface
 }
 
-func (c *SyntheticsV1alpha1Client) GlobalVariables(namespace string) GlobalVariableInterface {
-	return newGlobalVariables(c, namespace)
+func (c *SyntheticstestV1alpha1Client) Syntheticstests(namespace string) SyntheticstestInterface {
+	return newSyntheticstests(c, namespace)
 }
 
-func (c *SyntheticsV1alpha1Client) PrivateLocations(namespace string) PrivateLocationInterface {
-	return newPrivateLocations(c, namespace)
-}
-
-// NewForConfig creates a new SyntheticsV1alpha1Client for the given config.
-func NewForConfig(c *rest.Config) (*SyntheticsV1alpha1Client, error) {
+// NewForConfig creates a new SyntheticstestV1alpha1Client for the given config.
+func NewForConfig(c *rest.Config) (*SyntheticstestV1alpha1Client, error) {
 	config := *c
 	if err := setConfigDefaults(&config); err != nil {
 		return nil, err
@@ -54,12 +49,12 @@ func NewForConfig(c *rest.Config) (*SyntheticsV1alpha1Client, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &SyntheticsV1alpha1Client{client}, nil
+	return &SyntheticstestV1alpha1Client{client}, nil
 }
 
-// NewForConfigOrDie creates a new SyntheticsV1alpha1Client for the given config and
+// NewForConfigOrDie creates a new SyntheticstestV1alpha1Client for the given config and
 // panics if there is an error in the config.
-func NewForConfigOrDie(c *rest.Config) *SyntheticsV1alpha1Client {
+func NewForConfigOrDie(c *rest.Config) *SyntheticstestV1alpha1Client {
 	client, err := NewForConfig(c)
 	if err != nil {
 		panic(err)
@@ -67,9 +62,9 @@ func NewForConfigOrDie(c *rest.Config) *SyntheticsV1alpha1Client {
 	return client
 }
 
-// New creates a new SyntheticsV1alpha1Client for the given RESTClient.
-func New(c rest.Interface) *SyntheticsV1alpha1Client {
-	return &SyntheticsV1alpha1Client{c}
+// New creates a new SyntheticstestV1alpha1Client for the given RESTClient.
+func New(c rest.Interface) *SyntheticstestV1alpha1Client {
+	return &SyntheticstestV1alpha1Client{c}
 }
 
 func setConfigDefaults(config *rest.Config) error {
@@ -87,7 +82,7 @@ func setConfigDefaults(config *rest.Config) error {
 
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
-func (c *SyntheticsV1alpha1Client) RESTClient() rest.Interface {
+func (c *SyntheticstestV1alpha1Client) RESTClient() rest.Interface {
 	if c == nil {
 		return nil
 	}

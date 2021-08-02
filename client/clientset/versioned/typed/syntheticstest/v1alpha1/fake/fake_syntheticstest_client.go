@@ -19,27 +19,23 @@ limitations under the License.
 package fake
 
 import (
-	v1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/synthetics/v1alpha1"
+	v1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/syntheticstest/v1alpha1"
 
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )
 
-type FakeSyntheticsV1alpha1 struct {
+type FakeSyntheticstestV1alpha1 struct {
 	*testing.Fake
 }
 
-func (c *FakeSyntheticsV1alpha1) GlobalVariables(namespace string) v1alpha1.GlobalVariableInterface {
-	return &FakeGlobalVariables{c, namespace}
-}
-
-func (c *FakeSyntheticsV1alpha1) PrivateLocations(namespace string) v1alpha1.PrivateLocationInterface {
-	return &FakePrivateLocations{c, namespace}
+func (c *FakeSyntheticstestV1alpha1) Syntheticstests(namespace string) v1alpha1.SyntheticstestInterface {
+	return &FakeSyntheticstests{c, namespace}
 }
 
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
-func (c *FakeSyntheticsV1alpha1) RESTClient() rest.Interface {
+func (c *FakeSyntheticstestV1alpha1) RESTClient() rest.Interface {
 	var ret *rest.RESTClient
 	return ret
 }
