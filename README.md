@@ -3,7 +3,7 @@
 
 # provider-datadog-api
 
-Kubeform CRDs for [Terraform Datadog Provider](https://github.com/datadog/terraform-provider-datadog)
+Kubeform CRDs for [Terraform Datadog Provider](https://github.com/DataDog/terraform-provider-datadog)
 
 ## Installation
 
