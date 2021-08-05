@@ -29,6 +29,7 @@ type SyntheticsV1alpha1Interface interface {
 	RESTClient() rest.Interface
 	GlobalVariablesGetter
 	PrivateLocationsGetter
+	SyntheticstestsGetter
 }
 
 // SyntheticsV1alpha1Client is used to interact with features provided by the synthetics.datadog.kubeform.com group.
@@ -42,6 +43,10 @@ func (c *SyntheticsV1alpha1Client) GlobalVariables(namespace string) GlobalVaria
 
 func (c *SyntheticsV1alpha1Client) PrivateLocations(namespace string) PrivateLocationInterface {
 	return newPrivateLocations(c, namespace)
+}
+
+func (c *SyntheticsV1alpha1Client) Syntheticstests(namespace string) SyntheticstestInterface {
+	return newSyntheticstests(c, namespace)
 }
 
 // NewForConfig creates a new SyntheticsV1alpha1Client for the given config.

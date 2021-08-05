@@ -5,9 +5,9 @@ metadata:
   labels:
     app.kubernetes.io/name: datadog.kubeform.com
     app.kubernetes.io/part-of: kubeform.com
-  name: syntheticstests.syntheticstest.datadog.kubeform.com
+  name: syntheticstests.synthetics.datadog.kubeform.com
 spec:
-  group: syntheticstest.datadog.kubeform.com
+  group: synthetics.datadog.kubeform.com
   names:
     kind: Syntheticstest
     listKind: SyntheticstestList

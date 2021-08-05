@@ -21,7 +21,7 @@ package fake
 import (
 	"context"
 
-	v1alpha1 "kubeform.dev/provider-datadog-api/apis/syntheticstest/v1alpha1"
+	v1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
@@ -33,13 +33,13 @@ import (
 
 // FakeSyntheticstests implements SyntheticstestInterface
 type FakeSyntheticstests struct {
-	Fake *FakeSyntheticstestV1alpha1
+	Fake *FakeSyntheticsV1alpha1
 	ns   string
 }
 
-var syntheticstestsResource = schema.GroupVersionResource{Group: "syntheticstest.datadog.kubeform.com", Version: "v1alpha1", Resource: "syntheticstests"}
+var syntheticstestsResource = schema.GroupVersionResource{Group: "synthetics.datadog.kubeform.com", Version: "v1alpha1", Resource: "syntheticstests"}
 
-var syntheticstestsKind = schema.GroupVersionKind{Group: "syntheticstest.datadog.kubeform.com", Version: "v1alpha1", Kind: "Syntheticstest"}
+var syntheticstestsKind = schema.GroupVersionKind{Group: "synthetics.datadog.kubeform.com", Version: "v1alpha1", Kind: "Syntheticstest"}
 
 // Get takes name of the syntheticstest, and returns the corresponding syntheticstest object, and an error if there is any.
 func (c *FakeSyntheticstests) Get(ctx context.Context, name string, options v1.GetOptions) (result *v1alpha1.Syntheticstest, err error) {

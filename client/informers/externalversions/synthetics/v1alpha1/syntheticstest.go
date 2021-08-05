@@ -22,10 +22,10 @@ import (
 	"context"
 	time "time"
 
-	syntheticstestv1alpha1 "kubeform.dev/provider-datadog-api/apis/syntheticstest/v1alpha1"
+	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
 	versioned "kubeform.dev/provider-datadog-api/client/clientset/versioned"
 	internalinterfaces "kubeform.dev/provider-datadog-api/client/informers/externalversions/internalinterfaces"
-	v1alpha1 "kubeform.dev/provider-datadog-api/client/listers/syntheticstest/v1alpha1"
+	v1alpha1 "kubeform.dev/provider-datadog-api/client/listers/synthetics/v1alpha1"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
@@ -63,16 +63,16 @@ func NewFilteredSyntheticstestInformer(client versioned.Interface, namespace str
 				if tweakListOptions != nil {
 					tweakListOptions(&options)
 				}
-				return client.SyntheticstestV1alpha1().Syntheticstests(namespace).List(context.TODO(), options)
+				return client.SyntheticsV1alpha1().Syntheticstests(namespace).List(context.TODO(), options)
 			},
 			WatchFunc: func(options v1.ListOptions) (watch.Interface, error) {
 				if tweakListOptions != nil {
 					tweakListOptions(&options)
 				}
-				return client.SyntheticstestV1alpha1().Syntheticstests(namespace).Watch(context.TODO(), options)
+				return client.SyntheticsV1alpha1().Syntheticstests(namespace).Watch(context.TODO(), options)
 			},
 		},
-		&syntheticstestv1alpha1.Syntheticstest{},
+		&syntheticsv1alpha1.Syntheticstest{},
 		resyncPeriod,
 		indexers,
 	)
@@ -83,7 +83,7 @@ func (f *syntheticstestInformer) defaultInformer(client versioned.Interface, res
 }
 
 func (f *syntheticstestInformer) Informer() cache.SharedIndexInformer {
-	return f.factory.InformerFor(&syntheticstestv1alpha1.Syntheticstest{}, f.defaultInformer)
+	return f.factory.InformerFor(&syntheticsv1alpha1.Syntheticstest{}, f.defaultInformer)
 }
 
 func (f *syntheticstestInformer) Lister() v1alpha1.SyntheticstestLister {

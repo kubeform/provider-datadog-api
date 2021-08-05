@@ -42,8 +42,6 @@ import (
 	fakeslov1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/slo/v1alpha1/fake"
 	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/synthetics/v1alpha1"
 	fakesyntheticsv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/synthetics/v1alpha1/fake"
-	syntheticstestv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/syntheticstest/v1alpha1"
-	fakesyntheticstestv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/syntheticstest/v1alpha1/fake"
 	userv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/user/v1alpha1"
 	fakeuserv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/user/v1alpha1/fake"
 
@@ -154,11 +152,6 @@ func (c *Clientset) SloV1alpha1() slov1alpha1.SloV1alpha1Interface {
 // SyntheticsV1alpha1 retrieves the SyntheticsV1alpha1Client
 func (c *Clientset) SyntheticsV1alpha1() syntheticsv1alpha1.SyntheticsV1alpha1Interface {
 	return &fakesyntheticsv1alpha1.FakeSyntheticsV1alpha1{Fake: &c.Fake}
-}
-
-// SyntheticstestV1alpha1 retrieves the SyntheticstestV1alpha1Client
-func (c *Clientset) SyntheticstestV1alpha1() syntheticstestv1alpha1.SyntheticstestV1alpha1Interface {
-	return &fakesyntheticstestv1alpha1.FakeSyntheticstestV1alpha1{Fake: &c.Fake}
 }
 
 // UserV1alpha1 retrieves the UserV1alpha1Client

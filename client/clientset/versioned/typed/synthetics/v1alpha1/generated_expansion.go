@@ -21,3 +21,5 @@ package v1alpha1
 type GlobalVariableExpansion interface{}
 
 type PrivateLocationExpansion interface{}
+
+type SyntheticstestExpansion interface{}

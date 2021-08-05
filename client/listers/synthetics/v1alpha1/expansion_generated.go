@@ -33,3 +33,11 @@ type PrivateLocationListerExpansion interface{}
 // PrivateLocationNamespaceListerExpansion allows custom methods to be added to
 // PrivateLocationNamespaceLister.
 type PrivateLocationNamespaceListerExpansion interface{}
+
+// SyntheticstestListerExpansion allows custom methods to be added to
+// SyntheticstestLister.
+type SyntheticstestListerExpansion interface{}
+
+// SyntheticstestNamespaceListerExpansion allows custom methods to be added to
+// SyntheticstestNamespaceLister.
+type SyntheticstestNamespaceListerExpansion interface{}
