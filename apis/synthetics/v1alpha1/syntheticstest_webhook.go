@@ -34,7 +34,7 @@ func (r *Syntheticstest) SetupWebhookWithManager(mgr ctrl.Manager) error {
 		Complete()
 }
 
-//+kubebuilder:webhook:verbs=create;update;delete,path=/validate-syntheticstest-datadog-kubeform-com-v1alpha1-syntheticstest,mutating=false,failurePolicy=fail,groups=syntheticstest.datadog.kubeform.com,resources=syntheticstests,versions=v1alpha1,name=syntheticstest.syntheticstest.datadog.kubeform.io,sideEffects=None,admissionReviewVersions=v1
+//+kubebuilder:webhook:verbs=create;update;delete,path=/validate-synthetics-datadog-kubeform-com-v1alpha1-syntheticstest,mutating=false,failurePolicy=fail,groups=synthetics.datadog.kubeform.com,resources=syntheticstests,versions=v1alpha1,name=syntheticstest.synthetics.datadog.kubeform.io,sideEffects=None,admissionReviewVersions=v1
 
 var _ webhook.Validator = &Syntheticstest{}
 

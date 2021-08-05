@@ -37,6 +37,10 @@ func (c *FakeSyntheticsV1alpha1) PrivateLocations(namespace string) v1alpha1.Pri
 	return &FakePrivateLocations{c, namespace}
 }
 
+func (c *FakeSyntheticsV1alpha1) Syntheticstests(namespace string) v1alpha1.SyntheticstestInterface {
+	return &FakeSyntheticstests{c, namespace}
+}
+
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
 func (c *FakeSyntheticsV1alpha1) RESTClient() rest.Interface {

@@ -19,7 +19,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1alpha1 "kubeform.dev/provider-datadog-api/apis/syntheticstest/v1alpha1"
+	v1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
 
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/labels"

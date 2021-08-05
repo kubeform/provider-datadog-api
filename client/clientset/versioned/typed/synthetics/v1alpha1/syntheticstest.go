@@ -22,7 +22,7 @@ import (
 	"context"
 	"time"
 
-	v1alpha1 "kubeform.dev/provider-datadog-api/apis/syntheticstest/v1alpha1"
+	v1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
 	scheme "kubeform.dev/provider-datadog-api/client/clientset/versioned/scheme"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -58,7 +58,7 @@ type syntheticstests struct {
 }
 
 // newSyntheticstests returns a Syntheticstests
-func newSyntheticstests(c *SyntheticstestV1alpha1Client, namespace string) *syntheticstests {
+func newSyntheticstests(c *SyntheticsV1alpha1Client, namespace string) *syntheticstests {
 	return &syntheticstests{
 		client: c.RESTClient(),
 		ns:     namespace,

@@ -60,6 +60,8 @@ func addKnownTypes(scheme *runtime.Scheme) error {
 		&GlobalVariableList{},
 		&PrivateLocation{},
 		&PrivateLocationList{},
+		&Syntheticstest{},
+		&SyntheticstestList{},
 	)
 
 	scheme.AddKnownTypes(SchemeGroupVersion,

@@ -30,7 +30,6 @@ import (
 	servicev1alpha1 "kubeform.dev/provider-datadog-api/apis/service/v1alpha1"
 	slov1alpha1 "kubeform.dev/provider-datadog-api/apis/slo/v1alpha1"
 	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
-	syntheticstestv1alpha1 "kubeform.dev/provider-datadog-api/apis/syntheticstest/v1alpha1"
 	userv1alpha1 "kubeform.dev/provider-datadog-api/apis/user/v1alpha1"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -55,7 +54,6 @@ var localSchemeBuilder = runtime.SchemeBuilder{
 	servicev1alpha1.AddToScheme,
 	slov1alpha1.AddToScheme,
 	syntheticsv1alpha1.AddToScheme,
-	syntheticstestv1alpha1.AddToScheme,
 	userv1alpha1.AddToScheme,
 }
 

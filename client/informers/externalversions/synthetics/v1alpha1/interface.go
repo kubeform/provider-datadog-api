@@ -28,6 +28,8 @@ type Interface interface {
 	GlobalVariables() GlobalVariableInformer
 	// PrivateLocations returns a PrivateLocationInformer.
 	PrivateLocations() PrivateLocationInformer
+	// Syntheticstests returns a SyntheticstestInformer.
+	Syntheticstests() SyntheticstestInformer
 }
 
 type version struct {
@@ -49,4 +51,9 @@ func (v *version) GlobalVariables() GlobalVariableInformer {
 // PrivateLocations returns a PrivateLocationInformer.
 func (v *version) PrivateLocations() PrivateLocationInformer {
 	return &privateLocationInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// Syntheticstests returns a SyntheticstestInformer.
+func (v *version) Syntheticstests() SyntheticstestInformer {
+	return &syntheticstestInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
