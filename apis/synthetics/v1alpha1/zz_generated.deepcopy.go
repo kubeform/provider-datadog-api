@@ -103,6 +103,11 @@ func (in *GlobalVariableSpec) DeepCopyInto(out *GlobalVariableSpec) {
 		*out = new(v1.LocalObjectReference)
 		**out = **in
 	}
+	if in.BackendRef != nil {
+		in, out := &in.BackendRef, &out.BackendRef
+		*out = new(v1.LocalObjectReference)
+		**out = **in
+	}
 	return
 }
 
@@ -323,6 +328,11 @@ func (in *PrivateLocationSpec) DeepCopyInto(out *PrivateLocationSpec) {
 		*out = new(v1.LocalObjectReference)
 		**out = **in
 	}
+	if in.BackendRef != nil {
+		in, out := &in.BackendRef, &out.BackendRef
+		*out = new(v1.LocalObjectReference)
+		**out = **in
+	}
 	return
 }
 
@@ -468,6 +478,11 @@ func (in *SyntheticstestSpec) DeepCopyInto(out *SyntheticstestSpec) {
 	out.ProviderRef = in.ProviderRef
 	if in.SecretRef != nil {
 		in, out := &in.SecretRef, &out.SecretRef
+		*out = new(v1.LocalObjectReference)
+		**out = **in
+	}
+	if in.BackendRef != nil {
+		in, out := &in.BackendRef, &out.BackendRef
 		*out = new(v1.LocalObjectReference)
 		**out = **in
 	}
