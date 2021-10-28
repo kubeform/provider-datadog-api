@@ -96,8 +96,15 @@ spec:
                     - parser
                     - type
                     type: object
+                  restrictedRoles:
+                    description: A list of role identifiers to associate with the
+                      Synthetics global variable.
+                    items:
+                      type: string
+                    type: array
                   secure:
-                    description: Sets the variable as secure. Defaults to `false`.
+                    description: If set to true, the value of the global variable
+                      is hidden. Defaults to `false`.
                     type: boolean
                   tags:
                     description: A list of tags to associate with your synthetics
@@ -158,8 +165,15 @@ spec:
                     - parser
                     - type
                     type: object
+                  restrictedRoles:
+                    description: A list of role identifiers to associate with the
+                      Synthetics global variable.
+                    items:
+                      type: string
+                    type: array
                   secure:
-                    description: Sets the variable as secure. Defaults to `false`.
+                    description: If set to true, the value of the global variable
+                      is hidden. Defaults to `false`.
                     type: boolean
                   tags:
                     description: A list of tags to associate with your synthetics

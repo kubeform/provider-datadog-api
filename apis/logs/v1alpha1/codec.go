@@ -63,6 +63,7 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(CustomPipelineSpecProcessorTraceIDRemapper{}).Type1()):                                  CustomPipelineSpecProcessorTraceIDRemapperCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(CustomPipelineSpecProcessorUrlParser{}).Type1()):                                        CustomPipelineSpecProcessorUrlParserCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(CustomPipelineSpecProcessorUserAgentParser{}).Type1()):                                  CustomPipelineSpecProcessorUserAgentParserCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(IndexSpecFilter{}).Type1()):                                                             IndexSpecFilterCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(MetricSpecCompute{}).Type1()):                                                           MetricSpecComputeCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(MetricSpecFilter{}).Type1()):                                                            MetricSpecFilterCodec{},
 	}
@@ -106,6 +107,7 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(CustomPipelineSpecProcessorTraceIDRemapper{}).Type1()):                                  CustomPipelineSpecProcessorTraceIDRemapperCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(CustomPipelineSpecProcessorUrlParser{}).Type1()):                                        CustomPipelineSpecProcessorUrlParserCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(CustomPipelineSpecProcessorUserAgentParser{}).Type1()):                                  CustomPipelineSpecProcessorUserAgentParserCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(IndexSpecFilter{}).Type1()):                                                             IndexSpecFilterCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(MetricSpecCompute{}).Type1()):                                                           MetricSpecComputeCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(MetricSpecFilter{}).Type1()):                                                            MetricSpecFilterCodec{},
 	}
@@ -2964,6 +2966,85 @@ func (CustomPipelineSpecProcessorUserAgentParserCodec) Decode(ptr unsafe.Pointer
 		}
 	default:
 		iter.ReportError("decode CustomPipelineSpecProcessorUserAgentParser", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type IndexSpecFilterCodec struct {
+}
+
+func (IndexSpecFilterCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*IndexSpecFilter)(ptr) == nil
+}
+
+func (IndexSpecFilterCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*IndexSpecFilter)(ptr)
+	var objs []IndexSpecFilter
+	if obj != nil {
+		objs = []IndexSpecFilter{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(IndexSpecFilter{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (IndexSpecFilterCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*IndexSpecFilter)(ptr) = IndexSpecFilter{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []IndexSpecFilter
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(IndexSpecFilter{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*IndexSpecFilter)(ptr) = objs[0]
+			} else {
+				*(*IndexSpecFilter)(ptr) = IndexSpecFilter{}
+			}
+		} else {
+			*(*IndexSpecFilter)(ptr) = IndexSpecFilter{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj IndexSpecFilter
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(IndexSpecFilter{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*IndexSpecFilter)(ptr) = obj
+		} else {
+			*(*IndexSpecFilter)(ptr) = IndexSpecFilter{}
+		}
+	default:
+		iter.ReportError("decode IndexSpecFilter", "unexpected JSON type")
 	}
 }
 

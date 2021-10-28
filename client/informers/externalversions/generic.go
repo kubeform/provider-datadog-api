@@ -21,18 +21,23 @@ package externalversions
 import (
 	"fmt"
 
-	v1alpha1 "kubeform.dev/provider-datadog-api/apis/dashboard/v1alpha1"
+	v1alpha1 "kubeform.dev/provider-datadog-api/apis/apikey/v1alpha1"
+	applicationv1alpha1 "kubeform.dev/provider-datadog-api/apis/application/v1alpha1"
+	childv1alpha1 "kubeform.dev/provider-datadog-api/apis/child/v1alpha1"
+	dashboardv1alpha1 "kubeform.dev/provider-datadog-api/apis/dashboard/v1alpha1"
 	downtimev1alpha1 "kubeform.dev/provider-datadog-api/apis/downtime/v1alpha1"
 	integrationv1alpha1 "kubeform.dev/provider-datadog-api/apis/integration/v1alpha1"
 	logsv1alpha1 "kubeform.dev/provider-datadog-api/apis/logs/v1alpha1"
 	metricv1alpha1 "kubeform.dev/provider-datadog-api/apis/metric/v1alpha1"
 	monitorv1alpha1 "kubeform.dev/provider-datadog-api/apis/monitor/v1alpha1"
+	organizationv1alpha1 "kubeform.dev/provider-datadog-api/apis/organization/v1alpha1"
 	rolev1alpha1 "kubeform.dev/provider-datadog-api/apis/role/v1alpha1"
 	securityv1alpha1 "kubeform.dev/provider-datadog-api/apis/security/v1alpha1"
 	servicev1alpha1 "kubeform.dev/provider-datadog-api/apis/service/v1alpha1"
 	slov1alpha1 "kubeform.dev/provider-datadog-api/apis/slo/v1alpha1"
 	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
 	userv1alpha1 "kubeform.dev/provider-datadog-api/apis/user/v1alpha1"
+	webhookv1alpha1 "kubeform.dev/provider-datadog-api/apis/webhook/v1alpha1"
 
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
@@ -64,12 +69,24 @@ func (f *genericInformer) Lister() cache.GenericLister {
 // TODO extend this to unknown resources with a client pool
 func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource) (GenericInformer, error) {
 	switch resource {
-	// Group=dashboard.datadog.kubeform.com, Version=v1alpha1
-	case v1alpha1.SchemeGroupVersion.WithResource("dashboards"):
+	// Group=apikey.datadog.kubeform.com, Version=v1alpha1
+	case v1alpha1.SchemeGroupVersion.WithResource("apikeys"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Apikey().V1alpha1().ApiKeys().Informer()}, nil
+
+		// Group=application.datadog.kubeform.com, Version=v1alpha1
+	case applicationv1alpha1.SchemeGroupVersion.WithResource("keys"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Application().V1alpha1().Keys().Informer()}, nil
+
+		// Group=child.datadog.kubeform.com, Version=v1alpha1
+	case childv1alpha1.SchemeGroupVersion.WithResource("organizations"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Child().V1alpha1().Organizations().Informer()}, nil
+
+		// Group=dashboard.datadog.kubeform.com, Version=v1alpha1
+	case dashboardv1alpha1.SchemeGroupVersion.WithResource("dashboards"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Dashboard().V1alpha1().Dashboards().Informer()}, nil
-	case v1alpha1.SchemeGroupVersion.WithResource("jsons"):
+	case dashboardv1alpha1.SchemeGroupVersion.WithResource("jsons"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Dashboard().V1alpha1().Jsons().Informer()}, nil
-	case v1alpha1.SchemeGroupVersion.WithResource("lists"):
+	case dashboardv1alpha1.SchemeGroupVersion.WithResource("lists"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Dashboard().V1alpha1().Lists().Informer()}, nil
 
 		// Group=downtime.datadog.kubeform.com, Version=v1alpha1
@@ -121,8 +138,14 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Metric().V1alpha1().TagConfigurations().Informer()}, nil
 
 		// Group=monitor.datadog.kubeform.com, Version=v1alpha1
+	case monitorv1alpha1.SchemeGroupVersion.WithResource("jsons"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Monitor().V1alpha1().Jsons().Informer()}, nil
 	case monitorv1alpha1.SchemeGroupVersion.WithResource("monitors"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Monitor().V1alpha1().Monitors().Informer()}, nil
+
+		// Group=organization.datadog.kubeform.com, Version=v1alpha1
+	case organizationv1alpha1.SchemeGroupVersion.WithResource("settingses"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Organization().V1alpha1().Settingses().Informer()}, nil
 
 		// Group=role.datadog.kubeform.com, Version=v1alpha1
 	case rolev1alpha1.SchemeGroupVersion.WithResource("roles"):
@@ -131,6 +154,8 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		// Group=security.datadog.kubeform.com, Version=v1alpha1
 	case securityv1alpha1.SchemeGroupVersion.WithResource("monitoringdefaultrules"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Security().V1alpha1().MonitoringDefaultRules().Informer()}, nil
+	case securityv1alpha1.SchemeGroupVersion.WithResource("monitoringfilters"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Security().V1alpha1().MonitoringFilters().Informer()}, nil
 	case securityv1alpha1.SchemeGroupVersion.WithResource("monitoringrules"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Security().V1alpha1().MonitoringRules().Informer()}, nil
 
@@ -153,6 +178,12 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		// Group=user.datadog.kubeform.com, Version=v1alpha1
 	case userv1alpha1.SchemeGroupVersion.WithResource("users"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.User().V1alpha1().Users().Informer()}, nil
+
+		// Group=webhook.datadog.kubeform.com, Version=v1alpha1
+	case webhookv1alpha1.SchemeGroupVersion.WithResource("customvariables"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Webhook().V1alpha1().CustomVariables().Informer()}, nil
+	case webhookv1alpha1.SchemeGroupVersion.WithResource("webhooks"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Webhook().V1alpha1().Webhooks().Informer()}, nil
 
 	}
 

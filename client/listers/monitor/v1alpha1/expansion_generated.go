@@ -18,6 +18,14 @@ limitations under the License.
 
 package v1alpha1
 
+// JsonListerExpansion allows custom methods to be added to
+// JsonLister.
+type JsonListerExpansion interface{}
+
+// JsonNamespaceListerExpansion allows custom methods to be added to
+// JsonNamespaceLister.
+type JsonNamespaceListerExpansion interface{}
+
 // MonitorListerExpansion allows custom methods to be added to
 // MonitorLister.
 type MonitorListerExpansion interface{}

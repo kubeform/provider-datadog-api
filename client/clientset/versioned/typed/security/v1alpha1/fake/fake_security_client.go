@@ -33,6 +33,10 @@ func (c *FakeSecurityV1alpha1) MonitoringDefaultRules(namespace string) v1alpha1
 	return &FakeMonitoringDefaultRules{c, namespace}
 }
 
+func (c *FakeSecurityV1alpha1) MonitoringFilters(namespace string) v1alpha1.MonitoringFilterInterface {
+	return &FakeMonitoringFilters{c, namespace}
+}
+
 func (c *FakeSecurityV1alpha1) MonitoringRules(namespace string) v1alpha1.MonitoringRuleInterface {
 	return &FakeMonitoringRules{c, namespace}
 }

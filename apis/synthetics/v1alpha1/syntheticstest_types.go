@@ -113,6 +113,9 @@ type SyntheticstestSpecApiStepRequestClientCertificate struct {
 }
 
 type SyntheticstestSpecApiStepRequestDefinition struct {
+	// Allows loading insecure content for an HTTP test.
+	// +optional
+	AllowInsecure *bool `json:"allowInsecure,omitempty" tf:"allow_insecure"`
 	// The request body.
 	// +optional
 	Body *string `json:"body,omitempty" tf:"body"`
@@ -122,6 +125,9 @@ type SyntheticstestSpecApiStepRequestDefinition struct {
 	// DNS server port to use for DNS tests.
 	// +optional
 	DnsServerPort *int64 `json:"dnsServerPort,omitempty" tf:"dns_server_port"`
+	// Determines whether or not the API HTTP test should follow redirects.
+	// +optional
+	FollowRedirects *bool `json:"followRedirects,omitempty" tf:"follow_redirects"`
 	// Host name to perform the test with.
 	// +optional
 	Host *string `json:"host,omitempty" tf:"host"`
@@ -137,6 +143,9 @@ type SyntheticstestSpecApiStepRequestDefinition struct {
 	// Port to use when performing the test.
 	// +optional
 	Port *int64 `json:"port,omitempty" tf:"port"`
+	// For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
+	// +optional
+	Servername *string `json:"servername,omitempty" tf:"servername"`
 	// This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 	// +optional
 	ShouldTrackHops *bool `json:"shouldTrackHops,omitempty" tf:"should_track_hops"`
@@ -346,7 +355,7 @@ type SyntheticstestSpecOptionsList struct {
 	// Allows loading insecure content for an HTTP test.
 	// +optional
 	AllowInsecure *bool `json:"allowInsecure,omitempty" tf:"allow_insecure"`
-	// For API HTTP test, whether or not the test should follow redirects.
+	// Determines whether or not the API HTTP test should follow redirects.
 	// +optional
 	FollowRedirects *bool `json:"followRedirects,omitempty" tf:"follow_redirects"`
 	// Minimum amount of time in failure required to trigger an alert. Default is `0`.
@@ -424,6 +433,9 @@ type SyntheticstestSpecRequestDefinition struct {
 	// Port to use when performing the test.
 	// +optional
 	Port *int64 `json:"port,omitempty" tf:"port"`
+	// For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
+	// +optional
+	Servername *string `json:"servername,omitempty" tf:"servername"`
 	// This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
 	// +optional
 	ShouldTrackHops *bool `json:"shouldTrackHops,omitempty" tf:"should_track_hops"`
@@ -469,7 +481,7 @@ type SyntheticstestSpecResource struct {
 	// Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 	// +optional
 	ConfigVariable []SyntheticstestSpecConfigVariable `json:"configVariable,omitempty" tf:"config_variable"`
-	// Array with the different device IDs used to run the test (only for `browser` tests).
+	// Required if `type = "browser"`. Array with the different device IDs used to run the test.
 	// +optional
 	DeviceIDS []string `json:"deviceIDS,omitempty" tf:"device_ids"`
 	// Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
@@ -490,7 +502,7 @@ type SyntheticstestSpecResource struct {
 	// Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
 	// +optional
 	RequestClientCertificate *SyntheticstestSpecRequestClientCertificate `json:"requestClientCertificate,omitempty" tf:"request_client_certificate"`
-	// The synthetics test request. Required if `type = "api"`.
+	// Required if `type = "api"`. The synthetics test request.
 	// +optional
 	RequestDefinition *SyntheticstestSpecRequestDefinition `json:"requestDefinition,omitempty" tf:"request_definition"`
 	// Header name and value map.

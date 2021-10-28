@@ -26,6 +26,8 @@ import (
 type Interface interface {
 	// MonitoringDefaultRules returns a MonitoringDefaultRuleInformer.
 	MonitoringDefaultRules() MonitoringDefaultRuleInformer
+	// MonitoringFilters returns a MonitoringFilterInformer.
+	MonitoringFilters() MonitoringFilterInformer
 	// MonitoringRules returns a MonitoringRuleInformer.
 	MonitoringRules() MonitoringRuleInformer
 }
@@ -44,6 +46,11 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 // MonitoringDefaultRules returns a MonitoringDefaultRuleInformer.
 func (v *version) MonitoringDefaultRules() MonitoringDefaultRuleInformer {
 	return &monitoringDefaultRuleInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// MonitoringFilters returns a MonitoringFilterInformer.
+func (v *version) MonitoringFilters() MonitoringFilterInformer {
+	return &monitoringFilterInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // MonitoringRules returns a MonitoringRuleInformer.

@@ -93,7 +93,7 @@ type IndexSpecResource struct {
 	// +optional
 	ExclusionFilter []IndexSpecExclusionFilter `json:"exclusionFilter,omitempty" tf:"exclusion_filter"`
 	// Logs filter
-	Filter []IndexSpecFilter `json:"filter" tf:"filter"`
+	Filter *IndexSpecFilter `json:"filter" tf:"filter"`
 	// The name of the index.
 	Name *string `json:"name" tf:"name"`
 	// The number of days before logs are deleted from this index.

@@ -58,7 +58,7 @@ type AwsLogCollectionSpec struct {
 type AwsLogCollectionSpecResource struct {
 	ID string `json:"id,omitempty" tf:"id,omitempty"`
 
-	// Your AWS Account ID without dashes.
+	// Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 	AccountID *string `json:"accountID" tf:"account_id"`
 	// A list of services to collect logs from. See the [api docs](https://docs.datadoghq.com/api/v1/aws-logs-integration/#get-list-of-aws-log-ready-services) for more details on which services are supported.
 	Services []string `json:"services" tf:"services"`

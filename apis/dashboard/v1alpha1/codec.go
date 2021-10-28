@@ -67,6 +67,8 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                                                 DashboardSpecWidgetGeomapDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                             DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                               DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                                          DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                               DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):                                    DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
@@ -118,6 +120,8 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
@@ -184,10 +188,18 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
@@ -198,11 +210,16 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
@@ -250,6 +267,9 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
@@ -258,6 +278,8 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
@@ -276,11 +298,16 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):              DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
@@ -351,10 +378,18 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                                        DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                                     DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):                                    DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestRumQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
@@ -365,11 +400,16 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
@@ -417,6 +457,9 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
@@ -425,6 +468,8 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
@@ -443,11 +488,16 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                  DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                            DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                                         DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):                                   DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
@@ -507,6 +557,8 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                                                 DashboardSpecWidgetGeomapDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                             DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                               DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                                          DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                               DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):                                    DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
@@ -558,6 +610,8 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
@@ -624,10 +678,18 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
@@ -638,11 +700,16 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
@@ -690,6 +757,9 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
@@ -698,6 +768,8 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
@@ -716,11 +788,16 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):              DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
@@ -791,10 +868,18 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                                        DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                                     DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):                                    DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestRumQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
@@ -805,11 +890,16 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
@@ -857,6 +947,9 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
@@ -865,6 +958,8 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
@@ -883,11 +978,16 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestApmQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                  DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestFormulaLimitCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestLogQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                            DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                                         DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):                                   DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
@@ -4074,6 +4174,164 @@ func (DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec) D
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
 	}
 }
 
@@ -8103,6 +8361,164 @@ func (DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGro
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
 	}
 }
 
@@ -13321,6 +13737,85 @@ func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStat
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCodec struct {
 }
 
@@ -13633,6 +14128,559 @@ func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcess
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery", "unexpected JSON type")
 	}
 }
 
@@ -14427,6 +15475,243 @@ func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuer
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimitCodec struct {
 }
 
@@ -14818,6 +16103,164 @@ func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcess
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
 	}
 }
 
@@ -18535,6 +19978,243 @@ func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuer
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimitCodec struct {
 }
 
@@ -19163,6 +20843,164 @@ func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcess
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
 	}
 }
 
@@ -20589,6 +22427,243 @@ func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGr
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimitCodec struct {
 }
 
@@ -20980,6 +23055,164 @@ func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQue
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
 	}
 }
 
@@ -26514,6 +28747,85 @@ func (DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQueryCodec) Decode(p
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec struct {
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit)(ptr)
+	var objs []DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetQueryTableDefinitionRequestLogQueryCodec struct {
 }
 
@@ -26826,6 +29138,559 @@ func (DashboardSpecWidgetQueryTableDefinitionRequestProcessQueryCodec) Decode(pt
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec struct {
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr)
+	var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec struct {
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr)
+	var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery", "unexpected JSON type")
 	}
 }
 
@@ -27620,6 +30485,243 @@ func (DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCode
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimitCodec struct {
 }
 
@@ -28011,6 +31113,164 @@ func (DashboardSpecWidgetQueryValueDefinitionRequestProcessQueryCodec) Decode(pt
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetQueryValueDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
 	}
 }
 
@@ -31728,6 +34988,243 @@ func (DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCode
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec struct {
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery)(ptr)
+	var objs []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimitCodec struct {
 }
 
@@ -32356,6 +35853,164 @@ func (DashboardSpecWidgetTimeseriesDefinitionRequestProcessQueryCodec) Decode(pt
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetTimeseriesDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
 	}
 }
 
@@ -33782,6 +37437,243 @@ func (DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec) 
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec struct {
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetToplistDefinitionRequestAuditQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetToplistDefinitionRequestAuditQuery)(ptr)
+	var objs []DashboardSpecWidgetToplistDefinitionRequestAuditQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetToplistDefinitionRequestAuditQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetToplistDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetToplistDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetToplistDefinitionRequestAuditQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetToplistDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetToplistDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetToplistDefinitionRequestAuditQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetToplistDefinitionRequestFormulaLimitCodec struct {
 }
 
@@ -34173,6 +38065,164 @@ func (DashboardSpecWidgetToplistDefinitionRequestProcessQueryCodec) Decode(ptr u
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetToplistDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
 	}
 }
 
