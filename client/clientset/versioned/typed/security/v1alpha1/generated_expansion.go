@@ -20,4 +20,6 @@ package v1alpha1
 
 type MonitoringDefaultRuleExpansion interface{}
 
+type MonitoringFilterExpansion interface{}
+
 type MonitoringRuleExpansion interface{}

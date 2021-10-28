@@ -29,6 +29,10 @@ type FakeMonitorV1alpha1 struct {
 	*testing.Fake
 }
 
+func (c *FakeMonitorV1alpha1) Jsons(namespace string) v1alpha1.JsonInterface {
+	return &FakeJsons{c, namespace}
+}
+
 func (c *FakeMonitorV1alpha1) Monitors(namespace string) v1alpha1.MonitorInterface {
 	return &FakeMonitors{c, namespace}
 }

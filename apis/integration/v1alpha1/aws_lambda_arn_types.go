@@ -58,7 +58,7 @@ type AwsLambdaArnSpec struct {
 type AwsLambdaArnSpecResource struct {
 	ID string `json:"id,omitempty" tf:"id,omitempty"`
 
-	// Your AWS Account ID without dashes.
+	// Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 	AccountID *string `json:"accountID" tf:"account_id"`
 	// The ARN of the Datadog forwarder Lambda.
 	LambdaArn *string `json:"lambdaArn" tf:"lambda_arn"`

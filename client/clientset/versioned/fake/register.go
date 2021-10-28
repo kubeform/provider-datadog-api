@@ -19,18 +19,23 @@ limitations under the License.
 package fake
 
 import (
+	apikeyv1alpha1 "kubeform.dev/provider-datadog-api/apis/apikey/v1alpha1"
+	applicationv1alpha1 "kubeform.dev/provider-datadog-api/apis/application/v1alpha1"
+	childv1alpha1 "kubeform.dev/provider-datadog-api/apis/child/v1alpha1"
 	dashboardv1alpha1 "kubeform.dev/provider-datadog-api/apis/dashboard/v1alpha1"
 	downtimev1alpha1 "kubeform.dev/provider-datadog-api/apis/downtime/v1alpha1"
 	integrationv1alpha1 "kubeform.dev/provider-datadog-api/apis/integration/v1alpha1"
 	logsv1alpha1 "kubeform.dev/provider-datadog-api/apis/logs/v1alpha1"
 	metricv1alpha1 "kubeform.dev/provider-datadog-api/apis/metric/v1alpha1"
 	monitorv1alpha1 "kubeform.dev/provider-datadog-api/apis/monitor/v1alpha1"
+	organizationv1alpha1 "kubeform.dev/provider-datadog-api/apis/organization/v1alpha1"
 	rolev1alpha1 "kubeform.dev/provider-datadog-api/apis/role/v1alpha1"
 	securityv1alpha1 "kubeform.dev/provider-datadog-api/apis/security/v1alpha1"
 	servicev1alpha1 "kubeform.dev/provider-datadog-api/apis/service/v1alpha1"
 	slov1alpha1 "kubeform.dev/provider-datadog-api/apis/slo/v1alpha1"
 	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/apis/synthetics/v1alpha1"
 	userv1alpha1 "kubeform.dev/provider-datadog-api/apis/user/v1alpha1"
+	webhookv1alpha1 "kubeform.dev/provider-datadog-api/apis/webhook/v1alpha1"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
@@ -43,18 +48,23 @@ var scheme = runtime.NewScheme()
 var codecs = serializer.NewCodecFactory(scheme)
 
 var localSchemeBuilder = runtime.SchemeBuilder{
+	apikeyv1alpha1.AddToScheme,
+	applicationv1alpha1.AddToScheme,
+	childv1alpha1.AddToScheme,
 	dashboardv1alpha1.AddToScheme,
 	downtimev1alpha1.AddToScheme,
 	integrationv1alpha1.AddToScheme,
 	logsv1alpha1.AddToScheme,
 	metricv1alpha1.AddToScheme,
 	monitorv1alpha1.AddToScheme,
+	organizationv1alpha1.AddToScheme,
 	rolev1alpha1.AddToScheme,
 	securityv1alpha1.AddToScheme,
 	servicev1alpha1.AddToScheme,
 	slov1alpha1.AddToScheme,
 	syntheticsv1alpha1.AddToScheme,
 	userv1alpha1.AddToScheme,
+	webhookv1alpha1.AddToScheme,
 }
 
 // AddToScheme adds all types of this clientset into the given scheme. This allows composition

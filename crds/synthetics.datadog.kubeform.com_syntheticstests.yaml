@@ -191,6 +191,10 @@ spec:
                         requestDefinition:
                           description: The request for the api step.
                           properties:
+                            allowInsecure:
+                              description: Allows loading insecure content for an
+                                HTTP test.
+                              type: boolean
                             body:
                               description: The request body.
                               type: string
@@ -202,6 +206,10 @@ spec:
                               description: DNS server port to use for DNS tests.
                               format: int64
                               type: integer
+                            followRedirects:
+                              description: Determines whether or not the API HTTP
+                                test should follow redirects.
+                              type: boolean
                             host:
                               description: Host name to perform the test with.
                               type: string
@@ -221,6 +229,12 @@ spec:
                               description: Port to use when performing the test.
                               format: int64
                               type: integer
+                            servername:
+                              description: For SSL tests, it specifies on which server
+                                you want to initiate the TLS handshake, allowing the
+                                server to present one of multiple possible certificates
+                                on the same IP address and TCP port number.
+                              type: string
                             shouldTrackHops:
                               description: This will turn on a traceroute probe to
                                 discover all gateways along the path to the host destination.
@@ -458,8 +472,8 @@ spec:
                       type: object
                     type: array
                   deviceIDS:
-                    description: Array with the different device IDs used to run the
-                      test (only for `browser` tests).
+                    description: Required if `type = "browser"`. Array with the different
+                      device IDs used to run the test.
                     items:
                       type: string
                     type: array
@@ -495,7 +509,7 @@ spec:
                         description: Allows loading insecure content for an HTTP test.
                         type: boolean
                       followRedirects:
-                        description: For API HTTP test, whether or not the test should
+                        description: Determines whether or not the API HTTP test should
                           follow redirects.
                         type: boolean
                       minFailureDuration:
@@ -577,8 +591,7 @@ spec:
                     - key
                     type: object
                   requestDefinition:
-                    description: The synthetics test request. Required if `type =
-                      "api"`.
+                    description: Required if `type = "api"`. The synthetics test request.
                     properties:
                       body:
                         description: The request body.
@@ -609,6 +622,12 @@ spec:
                         description: Port to use when performing the test.
                         format: int64
                         type: integer
+                      servername:
+                        description: For SSL tests, it specifies on which server you
+                          want to initiate the TLS handshake, allowing the server
+                          to present one of multiple possible certificates on the
+                          same IP address and TCP port number.
+                        type: string
                       shouldTrackHops:
                         description: This will turn on a traceroute probe to discover
                           all gateways along the path to the host destination. For
@@ -807,6 +826,10 @@ spec:
                         requestDefinition:
                           description: The request for the api step.
                           properties:
+                            allowInsecure:
+                              description: Allows loading insecure content for an
+                                HTTP test.
+                              type: boolean
                             body:
                               description: The request body.
                               type: string
@@ -818,6 +841,10 @@ spec:
                               description: DNS server port to use for DNS tests.
                               format: int64
                               type: integer
+                            followRedirects:
+                              description: Determines whether or not the API HTTP
+                                test should follow redirects.
+                              type: boolean
                             host:
                               description: Host name to perform the test with.
                               type: string
@@ -837,6 +864,12 @@ spec:
                               description: Port to use when performing the test.
                               format: int64
                               type: integer
+                            servername:
+                              description: For SSL tests, it specifies on which server
+                                you want to initiate the TLS handshake, allowing the
+                                server to present one of multiple possible certificates
+                                on the same IP address and TCP port number.
+                              type: string
                             shouldTrackHops:
                               description: This will turn on a traceroute probe to
                                 discover all gateways along the path to the host destination.
@@ -1074,8 +1107,8 @@ spec:
                       type: object
                     type: array
                   deviceIDS:
-                    description: Array with the different device IDs used to run the
-                      test (only for `browser` tests).
+                    description: Required if `type = "browser"`. Array with the different
+                      device IDs used to run the test.
                     items:
                       type: string
                     type: array
@@ -1111,7 +1144,7 @@ spec:
                         description: Allows loading insecure content for an HTTP test.
                         type: boolean
                       followRedirects:
-                        description: For API HTTP test, whether or not the test should
+                        description: Determines whether or not the API HTTP test should
                           follow redirects.
                         type: boolean
                       minFailureDuration:
@@ -1193,8 +1226,7 @@ spec:
                     - key
                     type: object
                   requestDefinition:
-                    description: The synthetics test request. Required if `type =
-                      "api"`.
+                    description: Required if `type = "api"`. The synthetics test request.
                     properties:
                       body:
                         description: The request body.
@@ -1225,6 +1257,12 @@ spec:
                         description: Port to use when performing the test.
                         format: int64
                         type: integer
+                      servername:
+                        description: For SSL tests, it specifies on which server you
+                          want to initiate the TLS handshake, allowing the server
+                          to present one of multiple possible certificates on the
+                          same IP address and TCP port number.
+                        type: string
                       shouldTrackHops:
                         description: This will turn on a traceroute probe to discover
                           all gateways along the path to the host destination. For

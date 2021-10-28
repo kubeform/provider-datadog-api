@@ -27,12 +27,17 @@ import (
 
 type MonitorV1alpha1Interface interface {
 	RESTClient() rest.Interface
+	JsonsGetter
 	MonitorsGetter
 }
 
 // MonitorV1alpha1Client is used to interact with features provided by the monitor.datadog.kubeform.com group.
 type MonitorV1alpha1Client struct {
 	restClient rest.Interface
+}
+
+func (c *MonitorV1alpha1Client) Jsons(namespace string) JsonInterface {
+	return newJsons(c, namespace)
 }
 
 func (c *MonitorV1alpha1Client) Monitors(namespace string) MonitorInterface {

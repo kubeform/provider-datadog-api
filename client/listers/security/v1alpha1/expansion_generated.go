@@ -26,6 +26,14 @@ type MonitoringDefaultRuleListerExpansion interface{}
 // MonitoringDefaultRuleNamespaceLister.
 type MonitoringDefaultRuleNamespaceListerExpansion interface{}
 
+// MonitoringFilterListerExpansion allows custom methods to be added to
+// MonitoringFilterLister.
+type MonitoringFilterListerExpansion interface{}
+
+// MonitoringFilterNamespaceListerExpansion allows custom methods to be added to
+// MonitoringFilterNamespaceLister.
+type MonitoringFilterNamespaceListerExpansion interface{}
+
 // MonitoringRuleListerExpansion allows custom methods to be added to
 // MonitoringRuleLister.
 type MonitoringRuleListerExpansion interface{}

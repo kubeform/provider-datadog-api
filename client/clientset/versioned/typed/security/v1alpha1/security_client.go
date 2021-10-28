@@ -28,6 +28,7 @@ import (
 type SecurityV1alpha1Interface interface {
 	RESTClient() rest.Interface
 	MonitoringDefaultRulesGetter
+	MonitoringFiltersGetter
 	MonitoringRulesGetter
 }
 
@@ -38,6 +39,10 @@ type SecurityV1alpha1Client struct {
 
 func (c *SecurityV1alpha1Client) MonitoringDefaultRules(namespace string) MonitoringDefaultRuleInterface {
 	return newMonitoringDefaultRules(c, namespace)
+}
+
+func (c *SecurityV1alpha1Client) MonitoringFilters(namespace string) MonitoringFilterInterface {
+	return newMonitoringFilters(c, namespace)
 }
 
 func (c *SecurityV1alpha1Client) MonitoringRules(namespace string) MonitoringRuleInterface {

@@ -20,6 +20,12 @@ package fake
 
 import (
 	clientset "kubeform.dev/provider-datadog-api/client/clientset/versioned"
+	apikeyv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/apikey/v1alpha1"
+	fakeapikeyv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/apikey/v1alpha1/fake"
+	applicationv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/application/v1alpha1"
+	fakeapplicationv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/application/v1alpha1/fake"
+	childv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/child/v1alpha1"
+	fakechildv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/child/v1alpha1/fake"
 	dashboardv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/dashboard/v1alpha1"
 	fakedashboardv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/dashboard/v1alpha1/fake"
 	downtimev1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/downtime/v1alpha1"
@@ -32,6 +38,8 @@ import (
 	fakemetricv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/metric/v1alpha1/fake"
 	monitorv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/monitor/v1alpha1"
 	fakemonitorv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/monitor/v1alpha1/fake"
+	organizationv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/organization/v1alpha1"
+	fakeorganizationv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/organization/v1alpha1/fake"
 	rolev1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/role/v1alpha1"
 	fakerolev1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/role/v1alpha1/fake"
 	securityv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/security/v1alpha1"
@@ -44,6 +52,8 @@ import (
 	fakesyntheticsv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/synthetics/v1alpha1/fake"
 	userv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/user/v1alpha1"
 	fakeuserv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/user/v1alpha1/fake"
+	webhookv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/webhook/v1alpha1"
+	fakewebhookv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/webhook/v1alpha1/fake"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
@@ -99,6 +109,21 @@ func (c *Clientset) Tracker() testing.ObjectTracker {
 
 var _ clientset.Interface = &Clientset{}
 
+// ApikeyV1alpha1 retrieves the ApikeyV1alpha1Client
+func (c *Clientset) ApikeyV1alpha1() apikeyv1alpha1.ApikeyV1alpha1Interface {
+	return &fakeapikeyv1alpha1.FakeApikeyV1alpha1{Fake: &c.Fake}
+}
+
+// ApplicationV1alpha1 retrieves the ApplicationV1alpha1Client
+func (c *Clientset) ApplicationV1alpha1() applicationv1alpha1.ApplicationV1alpha1Interface {
+	return &fakeapplicationv1alpha1.FakeApplicationV1alpha1{Fake: &c.Fake}
+}
+
+// ChildV1alpha1 retrieves the ChildV1alpha1Client
+func (c *Clientset) ChildV1alpha1() childv1alpha1.ChildV1alpha1Interface {
+	return &fakechildv1alpha1.FakeChildV1alpha1{Fake: &c.Fake}
+}
+
 // DashboardV1alpha1 retrieves the DashboardV1alpha1Client
 func (c *Clientset) DashboardV1alpha1() dashboardv1alpha1.DashboardV1alpha1Interface {
 	return &fakedashboardv1alpha1.FakeDashboardV1alpha1{Fake: &c.Fake}
@@ -129,6 +154,11 @@ func (c *Clientset) MonitorV1alpha1() monitorv1alpha1.MonitorV1alpha1Interface {
 	return &fakemonitorv1alpha1.FakeMonitorV1alpha1{Fake: &c.Fake}
 }
 
+// OrganizationV1alpha1 retrieves the OrganizationV1alpha1Client
+func (c *Clientset) OrganizationV1alpha1() organizationv1alpha1.OrganizationV1alpha1Interface {
+	return &fakeorganizationv1alpha1.FakeOrganizationV1alpha1{Fake: &c.Fake}
+}
+
 // RoleV1alpha1 retrieves the RoleV1alpha1Client
 func (c *Clientset) RoleV1alpha1() rolev1alpha1.RoleV1alpha1Interface {
 	return &fakerolev1alpha1.FakeRoleV1alpha1{Fake: &c.Fake}
@@ -157,4 +187,9 @@ func (c *Clientset) SyntheticsV1alpha1() syntheticsv1alpha1.SyntheticsV1alpha1In
 // UserV1alpha1 retrieves the UserV1alpha1Client
 func (c *Clientset) UserV1alpha1() userv1alpha1.UserV1alpha1Interface {
 	return &fakeuserv1alpha1.FakeUserV1alpha1{Fake: &c.Fake}
+}
+
+// WebhookV1alpha1 retrieves the WebhookV1alpha1Client
+func (c *Clientset) WebhookV1alpha1() webhookv1alpha1.WebhookV1alpha1Interface {
+	return &fakewebhookv1alpha1.FakeWebhookV1alpha1{Fake: &c.Fake}
 }

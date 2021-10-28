@@ -98,16 +98,14 @@ spec:
                     type: array
                   filter:
                     description: Logs filter
-                    items:
-                      properties:
-                        query:
-                          description: Logs filter criteria. Only logs matching this
-                            filter criteria are considered for this index.
-                          type: string
-                      required:
-                      - query
-                      type: object
-                    type: array
+                    properties:
+                      query:
+                        description: Logs filter criteria. Only logs matching this
+                          filter criteria are considered for this index.
+                        type: string
+                    required:
+                    - query
+                    type: object
                   id:
                     type: string
                   name:
@@ -165,16 +163,14 @@ spec:
                     type: array
                   filter:
                     description: Logs filter
-                    items:
-                      properties:
-                        query:
-                          description: Logs filter criteria. Only logs matching this
-                            filter criteria are considered for this index.
-                          type: string
-                      required:
-                      - query
-                      type: object
-                    type: array
+                    properties:
+                      query:
+                        description: Logs filter criteria. Only logs matching this
+                          filter criteria are considered for this index.
+                        type: string
+                    required:
+                    - query
+                    type: object
                   id:
                     type: string
                   name:

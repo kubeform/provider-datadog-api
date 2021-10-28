@@ -84,7 +84,17 @@ type MonitoringRuleSpecOptions struct {
 	NewValueOptions *MonitoringRuleSpecOptionsNewValueOptions `json:"newValueOptions,omitempty" tf:"new_value_options"`
 }
 
+type MonitoringRuleSpecQueryAgentRule struct {
+	// The Agent rule ID. Must be unique within the rule.
+	AgentRuleID *string `json:"agentRuleID" tf:"agent_rule_id"`
+	// A Runtime Security expression determines what activity should be collected by the Datadog Agent. These logical expressions can use predefined operators and attributes. Tags cannot be used in Runtime Security expressions. Instead, allow or deny based on tags under the advanced option.
+	Expression *string `json:"expression" tf:"expression"`
+}
+
 type MonitoringRuleSpecQuery struct {
+	// The agent rule.
+	// +optional
+	AgentRule []MonitoringRuleSpecQueryAgentRule `json:"agentRule,omitempty" tf:"agent_rule"`
 	// The aggregation type.
 	// +optional
 	Aggregation *string `json:"aggregation,omitempty" tf:"aggregation"`
@@ -145,6 +155,9 @@ type MonitoringRuleSpecResource struct {
 	// Tags for generated signals.
 	// +optional
 	Tags []string `json:"tags,omitempty" tf:"tags"`
+	// The rule type.
+	// +optional
+	Type *string `json:"type,omitempty" tf:"type"`
 }
 
 type MonitoringRuleStatus struct {

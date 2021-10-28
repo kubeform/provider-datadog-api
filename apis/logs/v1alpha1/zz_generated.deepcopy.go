@@ -2404,10 +2404,8 @@ func (in *IndexSpecResource) DeepCopyInto(out *IndexSpecResource) {
 	}
 	if in.Filter != nil {
 		in, out := &in.Filter, &out.Filter
-		*out = make([]IndexSpecFilter, len(*in))
-		for i := range *in {
-			(*in)[i].DeepCopyInto(&(*out)[i])
-		}
+		*out = new(IndexSpecFilter)
+		(*in).DeepCopyInto(*out)
 	}
 	if in.Name != nil {
 		in, out := &in.Name, &out.Name

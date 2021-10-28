@@ -88,7 +88,10 @@ type GlobalVariableSpecResource struct {
 	// ID of the Synthetics test to use a source of the global variable value.
 	// +optional
 	ParseTestOptions *GlobalVariableSpecParseTestOptions `json:"parseTestOptions,omitempty" tf:"parse_test_options"`
-	// Sets the variable as secure. Defaults to `false`.
+	// A list of role identifiers to associate with the Synthetics global variable.
+	// +optional
+	RestrictedRoles []string `json:"restrictedRoles,omitempty" tf:"restricted_roles"`
+	// If set to true, the value of the global variable is hidden. Defaults to `false`.
 	// +optional
 	Secure *bool `json:"secure,omitempty" tf:"secure"`
 	// A list of tags to associate with your synthetics global variable.

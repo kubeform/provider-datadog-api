@@ -21,18 +21,23 @@ package versioned
 import (
 	"fmt"
 
+	apikeyv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/apikey/v1alpha1"
+	applicationv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/application/v1alpha1"
+	childv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/child/v1alpha1"
 	dashboardv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/dashboard/v1alpha1"
 	downtimev1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/downtime/v1alpha1"
 	integrationv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/integration/v1alpha1"
 	logsv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/logs/v1alpha1"
 	metricv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/metric/v1alpha1"
 	monitorv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/monitor/v1alpha1"
+	organizationv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/organization/v1alpha1"
 	rolev1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/role/v1alpha1"
 	securityv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/security/v1alpha1"
 	servicev1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/service/v1alpha1"
 	slov1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/slo/v1alpha1"
 	syntheticsv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/synthetics/v1alpha1"
 	userv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/user/v1alpha1"
+	webhookv1alpha1 "kubeform.dev/provider-datadog-api/client/clientset/versioned/typed/webhook/v1alpha1"
 
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
@@ -41,36 +46,61 @@ import (
 
 type Interface interface {
 	Discovery() discovery.DiscoveryInterface
+	ApikeyV1alpha1() apikeyv1alpha1.ApikeyV1alpha1Interface
+	ApplicationV1alpha1() applicationv1alpha1.ApplicationV1alpha1Interface
+	ChildV1alpha1() childv1alpha1.ChildV1alpha1Interface
 	DashboardV1alpha1() dashboardv1alpha1.DashboardV1alpha1Interface
 	DowntimeV1alpha1() downtimev1alpha1.DowntimeV1alpha1Interface
 	IntegrationV1alpha1() integrationv1alpha1.IntegrationV1alpha1Interface
 	LogsV1alpha1() logsv1alpha1.LogsV1alpha1Interface
 	MetricV1alpha1() metricv1alpha1.MetricV1alpha1Interface
 	MonitorV1alpha1() monitorv1alpha1.MonitorV1alpha1Interface
+	OrganizationV1alpha1() organizationv1alpha1.OrganizationV1alpha1Interface
 	RoleV1alpha1() rolev1alpha1.RoleV1alpha1Interface
 	SecurityV1alpha1() securityv1alpha1.SecurityV1alpha1Interface
 	ServiceV1alpha1() servicev1alpha1.ServiceV1alpha1Interface
 	SloV1alpha1() slov1alpha1.SloV1alpha1Interface
 	SyntheticsV1alpha1() syntheticsv1alpha1.SyntheticsV1alpha1Interface
 	UserV1alpha1() userv1alpha1.UserV1alpha1Interface
+	WebhookV1alpha1() webhookv1alpha1.WebhookV1alpha1Interface
 }
 
 // Clientset contains the clients for groups. Each group has exactly one
 // version included in a Clientset.
 type Clientset struct {
 	*discovery.DiscoveryClient
-	dashboardV1alpha1   *dashboardv1alpha1.DashboardV1alpha1Client
-	downtimeV1alpha1    *downtimev1alpha1.DowntimeV1alpha1Client
-	integrationV1alpha1 *integrationv1alpha1.IntegrationV1alpha1Client
-	logsV1alpha1        *logsv1alpha1.LogsV1alpha1Client
-	metricV1alpha1      *metricv1alpha1.MetricV1alpha1Client
-	monitorV1alpha1     *monitorv1alpha1.MonitorV1alpha1Client
-	roleV1alpha1        *rolev1alpha1.RoleV1alpha1Client
-	securityV1alpha1    *securityv1alpha1.SecurityV1alpha1Client
-	serviceV1alpha1     *servicev1alpha1.ServiceV1alpha1Client
-	sloV1alpha1         *slov1alpha1.SloV1alpha1Client
-	syntheticsV1alpha1  *syntheticsv1alpha1.SyntheticsV1alpha1Client
-	userV1alpha1        *userv1alpha1.UserV1alpha1Client
+	apikeyV1alpha1       *apikeyv1alpha1.ApikeyV1alpha1Client
+	applicationV1alpha1  *applicationv1alpha1.ApplicationV1alpha1Client
+	childV1alpha1        *childv1alpha1.ChildV1alpha1Client
+	dashboardV1alpha1    *dashboardv1alpha1.DashboardV1alpha1Client
+	downtimeV1alpha1     *downtimev1alpha1.DowntimeV1alpha1Client
+	integrationV1alpha1  *integrationv1alpha1.IntegrationV1alpha1Client
+	logsV1alpha1         *logsv1alpha1.LogsV1alpha1Client
+	metricV1alpha1       *metricv1alpha1.MetricV1alpha1Client
+	monitorV1alpha1      *monitorv1alpha1.MonitorV1alpha1Client
+	organizationV1alpha1 *organizationv1alpha1.OrganizationV1alpha1Client
+	roleV1alpha1         *rolev1alpha1.RoleV1alpha1Client
+	securityV1alpha1     *securityv1alpha1.SecurityV1alpha1Client
+	serviceV1alpha1      *servicev1alpha1.ServiceV1alpha1Client
+	sloV1alpha1          *slov1alpha1.SloV1alpha1Client
+	syntheticsV1alpha1   *syntheticsv1alpha1.SyntheticsV1alpha1Client
+	userV1alpha1         *userv1alpha1.UserV1alpha1Client
+	webhookV1alpha1      *webhookv1alpha1.WebhookV1alpha1Client
+}
+
+// ApikeyV1alpha1 retrieves the ApikeyV1alpha1Client
+func (c *Clientset) ApikeyV1alpha1() apikeyv1alpha1.ApikeyV1alpha1Interface {
+	return c.apikeyV1alpha1
+}
+
+// ApplicationV1alpha1 retrieves the ApplicationV1alpha1Client
+func (c *Clientset) ApplicationV1alpha1() applicationv1alpha1.ApplicationV1alpha1Interface {
+	return c.applicationV1alpha1
+}
+
+// ChildV1alpha1 retrieves the ChildV1alpha1Client
+func (c *Clientset) ChildV1alpha1() childv1alpha1.ChildV1alpha1Interface {
+	return c.childV1alpha1
 }
 
 // DashboardV1alpha1 retrieves the DashboardV1alpha1Client
@@ -103,6 +133,11 @@ func (c *Clientset) MonitorV1alpha1() monitorv1alpha1.MonitorV1alpha1Interface {
 	return c.monitorV1alpha1
 }
 
+// OrganizationV1alpha1 retrieves the OrganizationV1alpha1Client
+func (c *Clientset) OrganizationV1alpha1() organizationv1alpha1.OrganizationV1alpha1Interface {
+	return c.organizationV1alpha1
+}
+
 // RoleV1alpha1 retrieves the RoleV1alpha1Client
 func (c *Clientset) RoleV1alpha1() rolev1alpha1.RoleV1alpha1Interface {
 	return c.roleV1alpha1
@@ -133,6 +168,11 @@ func (c *Clientset) UserV1alpha1() userv1alpha1.UserV1alpha1Interface {
 	return c.userV1alpha1
 }
 
+// WebhookV1alpha1 retrieves the WebhookV1alpha1Client
+func (c *Clientset) WebhookV1alpha1() webhookv1alpha1.WebhookV1alpha1Interface {
+	return c.webhookV1alpha1
+}
+
 // Discovery retrieves the DiscoveryClient
 func (c *Clientset) Discovery() discovery.DiscoveryInterface {
 	if c == nil {
@@ -154,6 +194,18 @@ func NewForConfig(c *rest.Config) (*Clientset, error) {
 	}
 	var cs Clientset
 	var err error
+	cs.apikeyV1alpha1, err = apikeyv1alpha1.NewForConfig(&configShallowCopy)
+	if err != nil {
+		return nil, err
+	}
+	cs.applicationV1alpha1, err = applicationv1alpha1.NewForConfig(&configShallowCopy)
+	if err != nil {
+		return nil, err
+	}
+	cs.childV1alpha1, err = childv1alpha1.NewForConfig(&configShallowCopy)
+	if err != nil {
+		return nil, err
+	}
 	cs.dashboardV1alpha1, err = dashboardv1alpha1.NewForConfig(&configShallowCopy)
 	if err != nil {
 		return nil, err
@@ -175,6 +227,10 @@ func NewForConfig(c *rest.Config) (*Clientset, error) {
 		return nil, err
 	}
 	cs.monitorV1alpha1, err = monitorv1alpha1.NewForConfig(&configShallowCopy)
+	if err != nil {
+		return nil, err
+	}
+	cs.organizationV1alpha1, err = organizationv1alpha1.NewForConfig(&configShallowCopy)
 	if err != nil {
 		return nil, err
 	}
@@ -202,6 +258,10 @@ func NewForConfig(c *rest.Config) (*Clientset, error) {
 	if err != nil {
 		return nil, err
 	}
+	cs.webhookV1alpha1, err = webhookv1alpha1.NewForConfig(&configShallowCopy)
+	if err != nil {
+		return nil, err
+	}
 
 	cs.DiscoveryClient, err = discovery.NewDiscoveryClientForConfig(&configShallowCopy)
 	if err != nil {
@@ -214,18 +274,23 @@ func NewForConfig(c *rest.Config) (*Clientset, error) {
 // panics if there is an error in the config.
 func NewForConfigOrDie(c *rest.Config) *Clientset {
 	var cs Clientset
+	cs.apikeyV1alpha1 = apikeyv1alpha1.NewForConfigOrDie(c)
+	cs.applicationV1alpha1 = applicationv1alpha1.NewForConfigOrDie(c)
+	cs.childV1alpha1 = childv1alpha1.NewForConfigOrDie(c)
 	cs.dashboardV1alpha1 = dashboardv1alpha1.NewForConfigOrDie(c)
 	cs.downtimeV1alpha1 = downtimev1alpha1.NewForConfigOrDie(c)
 	cs.integrationV1alpha1 = integrationv1alpha1.NewForConfigOrDie(c)
 	cs.logsV1alpha1 = logsv1alpha1.NewForConfigOrDie(c)
 	cs.metricV1alpha1 = metricv1alpha1.NewForConfigOrDie(c)
 	cs.monitorV1alpha1 = monitorv1alpha1.NewForConfigOrDie(c)
+	cs.organizationV1alpha1 = organizationv1alpha1.NewForConfigOrDie(c)
 	cs.roleV1alpha1 = rolev1alpha1.NewForConfigOrDie(c)
 	cs.securityV1alpha1 = securityv1alpha1.NewForConfigOrDie(c)
 	cs.serviceV1alpha1 = servicev1alpha1.NewForConfigOrDie(c)
 	cs.sloV1alpha1 = slov1alpha1.NewForConfigOrDie(c)
 	cs.syntheticsV1alpha1 = syntheticsv1alpha1.NewForConfigOrDie(c)
 	cs.userV1alpha1 = userv1alpha1.NewForConfigOrDie(c)
+	cs.webhookV1alpha1 = webhookv1alpha1.NewForConfigOrDie(c)
 
 	cs.DiscoveryClient = discovery.NewDiscoveryClientForConfigOrDie(c)
 	return &cs
@@ -234,18 +299,23 @@ func NewForConfigOrDie(c *rest.Config) *Clientset {
 // New creates a new Clientset for the given RESTClient.
 func New(c rest.Interface) *Clientset {
 	var cs Clientset
+	cs.apikeyV1alpha1 = apikeyv1alpha1.New(c)
+	cs.applicationV1alpha1 = applicationv1alpha1.New(c)
+	cs.childV1alpha1 = childv1alpha1.New(c)
 	cs.dashboardV1alpha1 = dashboardv1alpha1.New(c)
 	cs.downtimeV1alpha1 = downtimev1alpha1.New(c)
 	cs.integrationV1alpha1 = integrationv1alpha1.New(c)
 	cs.logsV1alpha1 = logsv1alpha1.New(c)
 	cs.metricV1alpha1 = metricv1alpha1.New(c)
 	cs.monitorV1alpha1 = monitorv1alpha1.New(c)
+	cs.organizationV1alpha1 = organizationv1alpha1.New(c)
 	cs.roleV1alpha1 = rolev1alpha1.New(c)
 	cs.securityV1alpha1 = securityv1alpha1.New(c)
 	cs.serviceV1alpha1 = servicev1alpha1.New(c)
 	cs.sloV1alpha1 = slov1alpha1.New(c)
 	cs.syntheticsV1alpha1 = syntheticsv1alpha1.New(c)
 	cs.userV1alpha1 = userv1alpha1.New(c)
+	cs.webhookV1alpha1 = webhookv1alpha1.New(c)
 
 	cs.DiscoveryClient = discovery.NewDiscoveryClient(c)
 	return &cs

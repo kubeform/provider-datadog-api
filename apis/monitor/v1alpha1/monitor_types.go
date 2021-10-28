@@ -123,8 +123,16 @@ type MonitorSpecResource struct {
 	MonitorThresholds *MonitorSpecMonitorThresholds `json:"monitorThresholds,omitempty" tf:"monitor_thresholds"`
 	// Name of Datadog monitor.
 	Name *string `json:"name" tf:"name"`
-	// Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor results. Should be a non negative integer. Defaults to `300`.
+	// Time (in seconds) to skip evaluations for new groups.
+	//
+	// `new_group_delay` overrides `new_host_delay` if it is set to a nonzero value.
+	//
+	// To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
 	// +optional
+	NewGroupDelay *int64 `json:"newGroupDelay,omitempty" tf:"new_group_delay"`
+	// Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release and `new_host_delay` will be removed entirely in a subsequent major version release).
+	// +optional
+	// Deprecated
 	NewHostDelay *int64 `json:"newHostDelay,omitempty" tf:"new_host_delay"`
 	// The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
 	//
@@ -147,6 +155,12 @@ type MonitorSpecResource struct {
 	// The number of minutes after the last notification before a monitor will re-notify on the current status. It will only re-notify if it's not resolved.
 	// +optional
 	RenotifyInterval *int64 `json:"renotifyInterval,omitempty" tf:"renotify_interval"`
+	// The number of re-notification messages that should be sent on the current status.
+	// +optional
+	RenotifyOccurrences *int64 `json:"renotifyOccurrences,omitempty" tf:"renotify_occurrences"`
+	// The types of statuses for which re-notification messages should be sent.
+	// +optional
+	RenotifyStatuses []string `json:"renotifyStatuses,omitempty" tf:"renotify_statuses"`
 	// A boolean indicating whether this monitor needs a full window of data before it's evaluated.
 	//
 	// We highly recommend you set this to `false` for sparse metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all times` and `in total` aggregation. `false` otherwise.

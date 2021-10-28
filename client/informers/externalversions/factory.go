@@ -24,6 +24,9 @@ import (
 	time "time"
 
 	versioned "kubeform.dev/provider-datadog-api/client/clientset/versioned"
+	apikey "kubeform.dev/provider-datadog-api/client/informers/externalversions/apikey"
+	application "kubeform.dev/provider-datadog-api/client/informers/externalversions/application"
+	child "kubeform.dev/provider-datadog-api/client/informers/externalversions/child"
 	dashboard "kubeform.dev/provider-datadog-api/client/informers/externalversions/dashboard"
 	downtime "kubeform.dev/provider-datadog-api/client/informers/externalversions/downtime"
 	integration "kubeform.dev/provider-datadog-api/client/informers/externalversions/integration"
@@ -31,12 +34,14 @@ import (
 	logs "kubeform.dev/provider-datadog-api/client/informers/externalversions/logs"
 	metric "kubeform.dev/provider-datadog-api/client/informers/externalversions/metric"
 	monitor "kubeform.dev/provider-datadog-api/client/informers/externalversions/monitor"
+	organization "kubeform.dev/provider-datadog-api/client/informers/externalversions/organization"
 	role "kubeform.dev/provider-datadog-api/client/informers/externalversions/role"
 	security "kubeform.dev/provider-datadog-api/client/informers/externalversions/security"
 	service "kubeform.dev/provider-datadog-api/client/informers/externalversions/service"
 	slo "kubeform.dev/provider-datadog-api/client/informers/externalversions/slo"
 	synthetics "kubeform.dev/provider-datadog-api/client/informers/externalversions/synthetics"
 	user "kubeform.dev/provider-datadog-api/client/informers/externalversions/user"
+	webhook "kubeform.dev/provider-datadog-api/client/informers/externalversions/webhook"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
@@ -184,18 +189,35 @@ type SharedInformerFactory interface {
 	ForResource(resource schema.GroupVersionResource) (GenericInformer, error)
 	WaitForCacheSync(stopCh <-chan struct{}) map[reflect.Type]bool
 
+	Apikey() apikey.Interface
+	Application() application.Interface
+	Child() child.Interface
 	Dashboard() dashboard.Interface
 	Downtime() downtime.Interface
 	Integration() integration.Interface
 	Logs() logs.Interface
 	Metric() metric.Interface
 	Monitor() monitor.Interface
+	Organization() organization.Interface
 	Role() role.Interface
 	Security() security.Interface
 	Service() service.Interface
 	Slo() slo.Interface
 	Synthetics() synthetics.Interface
 	User() user.Interface
+	Webhook() webhook.Interface
+}
+
+func (f *sharedInformerFactory) Apikey() apikey.Interface {
+	return apikey.New(f, f.namespace, f.tweakListOptions)
+}
+
+func (f *sharedInformerFactory) Application() application.Interface {
+	return application.New(f, f.namespace, f.tweakListOptions)
+}
+
+func (f *sharedInformerFactory) Child() child.Interface {
+	return child.New(f, f.namespace, f.tweakListOptions)
 }
 
 func (f *sharedInformerFactory) Dashboard() dashboard.Interface {
@@ -222,6 +244,10 @@ func (f *sharedInformerFactory) Monitor() monitor.Interface {
 	return monitor.New(f, f.namespace, f.tweakListOptions)
 }
 
+func (f *sharedInformerFactory) Organization() organization.Interface {
+	return organization.New(f, f.namespace, f.tweakListOptions)
+}
+
 func (f *sharedInformerFactory) Role() role.Interface {
 	return role.New(f, f.namespace, f.tweakListOptions)
 }
@@ -244,4 +270,8 @@ func (f *sharedInformerFactory) Synthetics() synthetics.Interface {
 
 func (f *sharedInformerFactory) User() user.Interface {
 	return user.New(f, f.namespace, f.tweakListOptions)
+}
+
+func (f *sharedInformerFactory) Webhook() webhook.Interface {
+	return webhook.New(f, f.namespace, f.tweakListOptions)
 }

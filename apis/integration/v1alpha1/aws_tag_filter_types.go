@@ -58,7 +58,7 @@ type AwsTagFilterSpec struct {
 type AwsTagFilterSpecResource struct {
 	ID string `json:"id,omitempty" tf:"id,omitempty"`
 
-	// Your AWS Account ID without dashes.
+	// Your AWS Account ID without dashes. If your account is a GovCloud or China account, specify the `access_key_id` here.
 	AccountID *string `json:"accountID" tf:"account_id"`
 	// The namespace associated with the tag filter entry.
 	Namespace *string `json:"namespace" tf:"namespace"`
