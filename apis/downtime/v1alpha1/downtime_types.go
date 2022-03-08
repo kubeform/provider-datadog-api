@@ -99,7 +99,7 @@ type DowntimeSpecResource struct {
 	// When specified, this downtime will only apply to this monitor
 	// +optional
 	MonitorID *int64 `json:"monitorID,omitempty" tf:"monitor_id"`
-	// A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
+	// A list of monitor tags (up to 32) to base the scheduled downtime on. Only monitors that have all selected tags are silenced
 	// +optional
 	MonitorTags []string `json:"monitorTags,omitempty" tf:"monitor_tags"`
 	// Optional recurring schedule for this downtime

@@ -57,6 +57,9 @@ spec:
                 type: object
               resource:
                 properties:
+                  automute:
+                    description: Silence monitors for expected Azure VM shutdowns.
+                    type: boolean
                   clientID:
                     description: Your Azure web application ID.
                     type: string
@@ -87,6 +90,9 @@ spec:
                 type: object
               state:
                 properties:
+                  automute:
+                    description: Silence monitors for expected Azure VM shutdowns.
+                    type: boolean
                   clientID:
                     description: Your Azure web application ID.
                     type: string

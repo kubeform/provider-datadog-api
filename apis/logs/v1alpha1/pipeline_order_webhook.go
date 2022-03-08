@@ -86,7 +86,7 @@ func (r *PipelineOrder) ValidateUpdate(old runtime.Object) error {
 		return err
 	}
 
-	for key := range pipelineorderForceNewList {
+	for key, _ := range pipelineorderForceNewList {
 		keySplit := strings.Split(key, "/*")
 		length := len(keySplit)
 		checkIfAnyDif := false

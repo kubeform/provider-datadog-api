@@ -88,7 +88,7 @@ func (r *LevelObjective) ValidateUpdate(old runtime.Object) error {
 		return err
 	}
 
-	for key := range levelobjectiveForceNewList {
+	for key, _ := range levelobjectiveForceNewList {
 		keySplit := strings.Split(key, "/*")
 		length := len(keySplit)
 		checkIfAnyDif := false

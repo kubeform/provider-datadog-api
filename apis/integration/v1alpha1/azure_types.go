@@ -60,6 +60,9 @@ type AzureSpec struct {
 type AzureSpecResource struct {
 	ID string `json:"id,omitempty" tf:"id,omitempty"`
 
+	// Silence monitors for expected Azure VM shutdowns.
+	// +optional
+	Automute *bool `json:"automute,omitempty" tf:"automute"`
 	// Your Azure web application ID.
 	ClientID *string `json:"clientID" tf:"client_id"`
 	// (Required for Initial Creation) Your Azure web application secret key.

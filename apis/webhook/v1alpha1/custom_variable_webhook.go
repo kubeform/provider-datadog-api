@@ -86,7 +86,7 @@ func (r *CustomVariable) ValidateUpdate(old runtime.Object) error {
 		return err
 	}
 
-	for key := range customvariableForceNewList {
+	for key, _ := range customvariableForceNewList {
 		keySplit := strings.Split(key, "/*")
 		length := len(keySplit)
 		checkIfAnyDif := false

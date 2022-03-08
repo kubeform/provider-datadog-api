@@ -129,9 +129,19 @@ func (in *CorrectionSpecResource) DeepCopyInto(out *CorrectionSpecResource) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.Duration != nil {
+		in, out := &in.Duration, &out.Duration
+		*out = new(int64)
+		**out = **in
+	}
 	if in.End != nil {
 		in, out := &in.End, &out.End
 		*out = new(int64)
+		**out = **in
+	}
+	if in.Rrule != nil {
+		in, out := &in.Rrule, &out.Rrule
+		*out = new(string)
 		**out = **in
 	}
 	if in.SloID != nil {

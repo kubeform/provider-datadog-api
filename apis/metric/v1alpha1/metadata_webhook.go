@@ -86,7 +86,7 @@ func (r *Metadata) ValidateUpdate(old runtime.Object) error {
 		return err
 	}
 
-	for key := range metadataForceNewList {
+	for key, _ := range metadataForceNewList {
 		keySplit := strings.Split(key, "/*")
 		length := len(keySplit)
 		checkIfAnyDif := false

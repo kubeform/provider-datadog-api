@@ -85,15 +85,16 @@ type MonitoringRuleSpecOptions struct {
 }
 
 type MonitoringRuleSpecQueryAgentRule struct {
-	// The Agent rule ID. Must be unique within the rule.
+	// **Deprecated**. It won't be applied anymore.
 	AgentRuleID *string `json:"agentRuleID" tf:"agent_rule_id"`
-	// A Runtime Security expression determines what activity should be collected by the Datadog Agent. These logical expressions can use predefined operators and attributes. Tags cannot be used in Runtime Security expressions. Instead, allow or deny based on tags under the advanced option.
+	// **Deprecated**. It won't be applied anymore.
 	Expression *string `json:"expression" tf:"expression"`
 }
 
 type MonitoringRuleSpecQuery struct {
-	// The agent rule.
+	// **Deprecated**. It won't be applied anymore.
 	// +optional
+	// Deprecated
 	AgentRule []MonitoringRuleSpecQueryAgentRule `json:"agentRule,omitempty" tf:"agent_rule"`
 	// The aggregation type.
 	// +optional
@@ -132,7 +133,7 @@ type MonitoringRuleSpecResource struct {
 	ID string `json:"id,omitempty" tf:"id,omitempty"`
 
 	// Cases for generating signals.
-	// +kubebuilder:validation:MaxItems=5
+	// +kubebuilder:validation:MaxItems=10
 	Case []MonitoringRuleSpecCase `json:"case" tf:"case"`
 	// Whether the rule is enabled.
 	// +optional

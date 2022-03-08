@@ -191,6 +191,59 @@ type DashboardSpecWidgetChangeDefinitionRequestApmQuery struct {
 	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
 }
 
+type DashboardSpecWidgetChangeDefinitionRequestFormulaConditionalFormats struct {
+	// The comparator to use.
+	Comparator *string `json:"comparator" tf:"comparator"`
+	// The color palette to apply to the background, same values available as palette.
+	// +optional
+	CustomBgColor *string `json:"customBgColor,omitempty" tf:"custom_bg_color"`
+	// The color palette to apply to the foreground, same values available as palette.
+	// +optional
+	CustomFgColor *string `json:"customFgColor,omitempty" tf:"custom_fg_color"`
+	// Setting this to True hides values.
+	// +optional
+	HideValue *bool `json:"hideValue,omitempty" tf:"hide_value"`
+	// Displays an image as the background.
+	// +optional
+	ImageURL *string `json:"imageURL,omitempty" tf:"image_url"`
+	// The metric from the request to correlate with this conditional format.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// The color palette to apply.
+	Palette *string `json:"palette" tf:"palette"`
+	// Defines the displayed timeframe.
+	// +optional
+	Timeframe *string `json:"timeframe,omitempty" tf:"timeframe"`
+	// A value for the comparator.
+	Value *float64 `json:"value" tf:"value"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestFormulaLimit struct {
+	// The number of results to return
+	// +optional
+	Count *int64 `json:"count,omitempty" tf:"count"`
+	// The direction of the sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestFormula struct {
+	// An expression alias.
+	// +optional
+	Alias *string `json:"alias,omitempty" tf:"alias"`
+	// A list of display modes for each table cell.
+	// +optional
+	CellDisplayMode *string `json:"cellDisplayMode,omitempty" tf:"cell_display_mode"`
+	// Conditional formats allow you to set the color of your widget content or background depending on the rule applied to your data. Multiple `conditional_formats` blocks are allowed using the structure below.
+	// +optional
+	ConditionalFormats []DashboardSpecWidgetChangeDefinitionRequestFormulaConditionalFormats `json:"conditionalFormats,omitempty" tf:"conditional_formats"`
+	// A string expression built from queries, formulas, and functions.
+	FormulaExpression *string `json:"formulaExpression" tf:"formula_expression"`
+	// The options for limiting results returned.
+	// +optional
+	Limit *DashboardSpecWidgetChangeDefinitionRequestFormulaLimit `json:"limit,omitempty" tf:"limit"`
+}
+
 type DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQuery struct {
 	// The aggregation method.
 	Aggregation *string `json:"aggregation" tf:"aggregation"`
@@ -264,6 +317,174 @@ type DashboardSpecWidgetChangeDefinitionRequestProcessQuery struct {
 	// Your chosen search term.
 	// +optional
 	SearchBy *string `json:"searchBy,omitempty" tf:"search_by"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery struct {
+	// The data source for APM Dependency Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Determines whether stats for upstream or downstream dependencies should be queried.
+	// +optional
+	IsUpstream *bool `json:"isUpstream,omitempty" tf:"is_upstream"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	OperationName *string `json:"operationName" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	ResourceName *string `json:"resourceName" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery struct {
+	// The data source for APM Resource Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Array of fields to group results by.
+	// +optional
+	GroupBy []string `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	// +optional
+	OperationName *string `json:"operationName,omitempty" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	// +optional
+	ResourceName *string `json:"resourceName,omitempty" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryCompute struct {
+	// The aggregation methods for event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// A time interval in milliseconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+	// The measurable attribute to compute.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort struct {
+	// The aggregation methods for the event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The metric used for sorting group by results.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// Direction of sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBy struct {
+	// The event facet.
+	Facet *string `json:"facet" tf:"facet"`
+	// The number of groups to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The options for sorting group by results.
+	// +optional
+	Sort *DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort `json:"sort,omitempty" tf:"sort"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch struct {
+	// The events search string.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery struct {
+	// The compute options.
+	Compute []DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryCompute `json:"compute" tf:"compute"`
+	// The data source for event platform-based queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Group by options.
+	// +optional
+	GroupBy []DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// An array of index names to query in the stream.
+	// +optional
+	Indexes []string `json:"indexes,omitempty" tf:"indexes"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The search options.
+	// +optional
+	Search *DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch `json:"search,omitempty" tf:"search"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for metrics queries.
+	// +optional
+	DataSource *string `json:"dataSource,omitempty" tf:"data_source"`
+	// The name of the query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The metrics query definition.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for process queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Whether to normalize the CPU percentages.
+	// +optional
+	IsNormalizedCPU *bool `json:"isNormalizedCPU,omitempty" tf:"is_normalized_cpu"`
+	// The number of hits to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The process metric name.
+	Metric *string `json:"metric" tf:"metric"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The direction of the sort.
+	// +optional
+	Sort *string `json:"sort,omitempty" tf:"sort"`
+	// An array of tags to filter by.
+	// +optional
+	TagFilters []string `json:"tagFilters,omitempty" tf:"tag_filters"`
+	// The text to use as a filter.
+	// +optional
+	TextFilter *string `json:"textFilter,omitempty" tf:"text_filter"`
+}
+
+type DashboardSpecWidgetChangeDefinitionRequestQuery struct {
+	// The APM Dependency Stats query using formulas and functions.
+	// +optional
+	ApmDependencyStatsQuery *DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery `json:"apmDependencyStatsQuery,omitempty" tf:"apm_dependency_stats_query"`
+	// The APM Resource Stats query using formulas and functions.
+	// +optional
+	ApmResourceStatsQuery *DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery `json:"apmResourceStatsQuery,omitempty" tf:"apm_resource_stats_query"`
+	// A timeseries formula and functions events query.
+	// +optional
+	EventQuery *DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery `json:"eventQuery,omitempty" tf:"event_query"`
+	// A timeseries formula and functions metrics query.
+	// +optional
+	MetricQuery *DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery `json:"metricQuery,omitempty" tf:"metric_query"`
+	// The process query using formulas and functions.
+	// +optional
+	ProcessQuery *DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery `json:"processQuery,omitempty" tf:"process_query"`
 }
 
 type DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQuery struct {
@@ -398,6 +619,8 @@ type DashboardSpecWidgetChangeDefinitionRequest struct {
 	// Choose from when to compare current data to.
 	// +optional
 	CompareTo *string `json:"compareTo,omitempty" tf:"compare_to"`
+	// +optional
+	Formula []DashboardSpecWidgetChangeDefinitionRequestFormula `json:"formula,omitempty" tf:"formula"`
 	// A Boolean indicating whether an increase in the value is good (displayed in green) or not (displayed in red).
 	// +optional
 	IncreaseGood *bool `json:"increaseGood,omitempty" tf:"increase_good"`
@@ -416,6 +639,8 @@ type DashboardSpecWidgetChangeDefinitionRequest struct {
 	// The metric query to use for this widget.
 	// +optional
 	Q *string `json:"q,omitempty" tf:"q"`
+	// +optional
+	Query []DashboardSpecWidgetChangeDefinitionRequestQuery `json:"query,omitempty" tf:"query"`
 	// The query to use for this widget.
 	// +optional
 	RumQuery *DashboardSpecWidgetChangeDefinitionRequestRumQuery `json:"rumQuery,omitempty" tf:"rum_query"`
@@ -1375,6 +1600,59 @@ type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery str
 	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
 }
 
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaConditionalFormats struct {
+	// The comparator to use.
+	Comparator *string `json:"comparator" tf:"comparator"`
+	// The color palette to apply to the background, same values available as palette.
+	// +optional
+	CustomBgColor *string `json:"customBgColor,omitempty" tf:"custom_bg_color"`
+	// The color palette to apply to the foreground, same values available as palette.
+	// +optional
+	CustomFgColor *string `json:"customFgColor,omitempty" tf:"custom_fg_color"`
+	// Setting this to True hides values.
+	// +optional
+	HideValue *bool `json:"hideValue,omitempty" tf:"hide_value"`
+	// Displays an image as the background.
+	// +optional
+	ImageURL *string `json:"imageURL,omitempty" tf:"image_url"`
+	// The metric from the request to correlate with this conditional format.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// The color palette to apply.
+	Palette *string `json:"palette" tf:"palette"`
+	// Defines the displayed timeframe.
+	// +optional
+	Timeframe *string `json:"timeframe,omitempty" tf:"timeframe"`
+	// A value for the comparator.
+	Value *float64 `json:"value" tf:"value"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit struct {
+	// The number of results to return
+	// +optional
+	Count *int64 `json:"count,omitempty" tf:"count"`
+	// The direction of the sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormula struct {
+	// An expression alias.
+	// +optional
+	Alias *string `json:"alias,omitempty" tf:"alias"`
+	// A list of display modes for each table cell.
+	// +optional
+	CellDisplayMode *string `json:"cellDisplayMode,omitempty" tf:"cell_display_mode"`
+	// Conditional formats allow you to set the color of your widget content or background depending on the rule applied to your data. Multiple `conditional_formats` blocks are allowed using the structure below.
+	// +optional
+	ConditionalFormats []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaConditionalFormats `json:"conditionalFormats,omitempty" tf:"conditional_formats"`
+	// A string expression built from queries, formulas, and functions.
+	FormulaExpression *string `json:"formulaExpression" tf:"formula_expression"`
+	// The options for limiting results returned.
+	// +optional
+	Limit *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit `json:"limit,omitempty" tf:"limit"`
+}
+
 type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQuery struct {
 	// The aggregation method.
 	Aggregation *string `json:"aggregation" tf:"aggregation"`
@@ -1448,6 +1726,174 @@ type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery
 	// Your chosen search term.
 	// +optional
 	SearchBy *string `json:"searchBy,omitempty" tf:"search_by"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery struct {
+	// The data source for APM Dependency Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Determines whether stats for upstream or downstream dependencies should be queried.
+	// +optional
+	IsUpstream *bool `json:"isUpstream,omitempty" tf:"is_upstream"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	OperationName *string `json:"operationName" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	ResourceName *string `json:"resourceName" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery struct {
+	// The data source for APM Resource Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Array of fields to group results by.
+	// +optional
+	GroupBy []string `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	// +optional
+	OperationName *string `json:"operationName,omitempty" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	// +optional
+	ResourceName *string `json:"resourceName,omitempty" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryCompute struct {
+	// The aggregation methods for event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// A time interval in milliseconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+	// The measurable attribute to compute.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort struct {
+	// The aggregation methods for the event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The metric used for sorting group by results.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// Direction of sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBy struct {
+	// The event facet.
+	Facet *string `json:"facet" tf:"facet"`
+	// The number of groups to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The options for sorting group by results.
+	// +optional
+	Sort *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort `json:"sort,omitempty" tf:"sort"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch struct {
+	// The events search string.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery struct {
+	// The compute options.
+	Compute []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryCompute `json:"compute" tf:"compute"`
+	// The data source for event platform-based queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Group by options.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// An array of index names to query in the stream.
+	// +optional
+	Indexes []string `json:"indexes,omitempty" tf:"indexes"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The search options.
+	// +optional
+	Search *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch `json:"search,omitempty" tf:"search"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for metrics queries.
+	// +optional
+	DataSource *string `json:"dataSource,omitempty" tf:"data_source"`
+	// The name of the query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The metrics query definition.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for process queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Whether to normalize the CPU percentages.
+	// +optional
+	IsNormalizedCPU *bool `json:"isNormalizedCPU,omitempty" tf:"is_normalized_cpu"`
+	// The number of hits to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The process metric name.
+	Metric *string `json:"metric" tf:"metric"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The direction of the sort.
+	// +optional
+	Sort *string `json:"sort,omitempty" tf:"sort"`
+	// An array of tags to filter by.
+	// +optional
+	TagFilters []string `json:"tagFilters,omitempty" tf:"tag_filters"`
+	// The text to use as a filter.
+	// +optional
+	TextFilter *string `json:"textFilter,omitempty" tf:"text_filter"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQuery struct {
+	// The APM Dependency Stats query using formulas and functions.
+	// +optional
+	ApmDependencyStatsQuery *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery `json:"apmDependencyStatsQuery,omitempty" tf:"apm_dependency_stats_query"`
+	// The APM Resource Stats query using formulas and functions.
+	// +optional
+	ApmResourceStatsQuery *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery `json:"apmResourceStatsQuery,omitempty" tf:"apm_resource_stats_query"`
+	// A timeseries formula and functions events query.
+	// +optional
+	EventQuery *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery `json:"eventQuery,omitempty" tf:"event_query"`
+	// A timeseries formula and functions metrics query.
+	// +optional
+	MetricQuery *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery `json:"metricQuery,omitempty" tf:"metric_query"`
+	// The process query using formulas and functions.
+	// +optional
+	ProcessQuery *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery `json:"processQuery,omitempty" tf:"process_query"`
 }
 
 type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQuery struct {
@@ -1582,6 +2028,8 @@ type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequest struct {
 	// Choose from when to compare current data to.
 	// +optional
 	CompareTo *string `json:"compareTo,omitempty" tf:"compare_to"`
+	// +optional
+	Formula []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormula `json:"formula,omitempty" tf:"formula"`
 	// A Boolean indicating whether an increase in the value is good (displayed in green) or not (displayed in red).
 	// +optional
 	IncreaseGood *bool `json:"increaseGood,omitempty" tf:"increase_good"`
@@ -1600,6 +2048,8 @@ type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequest struct {
 	// The metric query to use for this widget.
 	// +optional
 	Q *string `json:"q,omitempty" tf:"q"`
+	// +optional
+	Query []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQuery `json:"query,omitempty" tf:"query"`
 	// The query to use for this widget.
 	// +optional
 	RumQuery *DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQuery `json:"rumQuery,omitempty" tf:"rum_query"`
@@ -4858,6 +5308,191 @@ type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionCustomLink str
 	OverrideLabel *string `json:"overrideLabel,omitempty" tf:"override_label"`
 }
 
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableFormula struct {
+	// An expression alias.
+	// +optional
+	Alias *string `json:"alias,omitempty" tf:"alias"`
+	// Dimension of the Scatterplot.
+	Dimension *string `json:"dimension" tf:"dimension"`
+	// A string expression built from queries, formulas, and functions.
+	FormulaExpression *string `json:"formulaExpression" tf:"formula_expression"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery struct {
+	// The data source for APM Dependency Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Determines whether stats for upstream or downstream dependencies should be queried.
+	// +optional
+	IsUpstream *bool `json:"isUpstream,omitempty" tf:"is_upstream"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	OperationName *string `json:"operationName" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	ResourceName *string `json:"resourceName" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery struct {
+	// The data source for APM Resource Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Array of fields to group results by.
+	// +optional
+	GroupBy []string `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	// +optional
+	OperationName *string `json:"operationName,omitempty" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	// +optional
+	ResourceName *string `json:"resourceName,omitempty" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCompute struct {
+	// The aggregation methods for event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// A time interval in milliseconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+	// The measurable attribute to compute.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort struct {
+	// The aggregation methods for the event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The metric used for sorting group by results.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// Direction of sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBy struct {
+	// The event facet.
+	Facet *string `json:"facet" tf:"facet"`
+	// The number of groups to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The options for sorting group by results.
+	// +optional
+	Sort *DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort `json:"sort,omitempty" tf:"sort"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch struct {
+	// The events search string.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery struct {
+	// The compute options.
+	Compute []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCompute `json:"compute" tf:"compute"`
+	// The data source for event platform-based queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Group by options.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// An array of index names to query in the stream.
+	// +optional
+	Indexes []string `json:"indexes,omitempty" tf:"indexes"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The search options.
+	// +optional
+	Search *DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch `json:"search,omitempty" tf:"search"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for metrics queries.
+	// +optional
+	DataSource *string `json:"dataSource,omitempty" tf:"data_source"`
+	// The name of the query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The metrics query definition.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for process queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Whether to normalize the CPU percentages.
+	// +optional
+	IsNormalizedCPU *bool `json:"isNormalizedCPU,omitempty" tf:"is_normalized_cpu"`
+	// The number of hits to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The process metric name.
+	Metric *string `json:"metric" tf:"metric"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The direction of the sort.
+	// +optional
+	Sort *string `json:"sort,omitempty" tf:"sort"`
+	// An array of tags to filter by.
+	// +optional
+	TagFilters []string `json:"tagFilters,omitempty" tf:"tag_filters"`
+	// The text to use as a filter.
+	// +optional
+	TextFilter *string `json:"textFilter,omitempty" tf:"text_filter"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQuery struct {
+	// The APM Dependency Stats query using formulas and functions.
+	// +optional
+	ApmDependencyStatsQuery *DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery `json:"apmDependencyStatsQuery,omitempty" tf:"apm_dependency_stats_query"`
+	// The APM Resource Stats query using formulas and functions.
+	// +optional
+	ApmResourceStatsQuery *DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery `json:"apmResourceStatsQuery,omitempty" tf:"apm_resource_stats_query"`
+	// A timeseries formula and functions events query.
+	// +optional
+	EventQuery *DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery `json:"eventQuery,omitempty" tf:"event_query"`
+	// A timeseries formula and functions metrics query.
+	// +optional
+	MetricQuery *DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery `json:"metricQuery,omitempty" tf:"metric_query"`
+	// The process query using formulas and functions.
+	// +optional
+	ProcessQuery *DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery `json:"processQuery,omitempty" tf:"process_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTable struct {
+	// +optional
+	Formula []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableFormula `json:"formula,omitempty" tf:"formula"`
+	// +optional
+	Query []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQuery `json:"query,omitempty" tf:"query"`
+}
+
 type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQuery struct {
 	// The aggregation method.
 	Aggregation *string `json:"aggregation" tf:"aggregation"`
@@ -5423,6 +6058,9 @@ type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY struc
 }
 
 type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequest struct {
+	// Scatterplot request containing formulas and functions.
+	// +optional
+	ScatterplotTable []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTable `json:"scatterplotTable,omitempty" tf:"scatterplot_table"`
 	// The query used for the X-Axis. Exactly one nested block is allowed using the structure below (exactly one of `q`, `apm_query`, `log_query`, `rum_query`, `security_query`, `apm_stats_query` or `process_query` is required within the block).
 	// +optional
 	X []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX `json:"x,omitempty" tf:"x"`
@@ -5553,6 +6191,699 @@ type DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinition struct {
 	// +optional
 	TitleAlign *string `json:"titleAlign,omitempty" tf:"title_align"`
 	// The size of the widget's title (defaults to 16).
+	// +optional
+	TitleSize *string `json:"titleSize,omitempty" tf:"title_size"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionCustomLink struct {
+	// The flag for toggling context menu link visibility.
+	// +optional
+	IsHidden *bool `json:"isHidden,omitempty" tf:"is_hidden"`
+	// The label for the custom link URL.
+	// +optional
+	Label *string `json:"label,omitempty" tf:"label"`
+	// The URL of the custom link.
+	// +optional
+	Link *string `json:"link,omitempty" tf:"link"`
+	// The label id that refers to a context menu link item. When override_label is provided, the client request omits the label field.
+	// +optional
+	OverrideLabel *string `json:"overrideLabel,omitempty" tf:"override_label"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline struct {
+	// Whether to hide the percentages of the groups.
+	// +optional
+	HidePercent *bool `json:"hidePercent,omitempty" tf:"hide_percent"`
+	// Whether to hide the values of the groups.
+	// +optional
+	HideValue *bool `json:"hideValue,omitempty" tf:"hide_value"`
+	// The type of legend (inline or automatic).
+	Type *string `json:"type" tf:"type"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable struct {
+	// The type of legend (table or none).
+	Type *string `json:"type" tf:"type"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaConditionalFormats struct {
+	// The comparator to use.
+	Comparator *string `json:"comparator" tf:"comparator"`
+	// The color palette to apply to the background, same values available as palette.
+	// +optional
+	CustomBgColor *string `json:"customBgColor,omitempty" tf:"custom_bg_color"`
+	// The color palette to apply to the foreground, same values available as palette.
+	// +optional
+	CustomFgColor *string `json:"customFgColor,omitempty" tf:"custom_fg_color"`
+	// Setting this to True hides values.
+	// +optional
+	HideValue *bool `json:"hideValue,omitempty" tf:"hide_value"`
+	// Displays an image as the background.
+	// +optional
+	ImageURL *string `json:"imageURL,omitempty" tf:"image_url"`
+	// The metric from the request to correlate with this conditional format.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// The color palette to apply.
+	Palette *string `json:"palette" tf:"palette"`
+	// Defines the displayed timeframe.
+	// +optional
+	Timeframe *string `json:"timeframe,omitempty" tf:"timeframe"`
+	// A value for the comparator.
+	Value *float64 `json:"value" tf:"value"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit struct {
+	// The number of results to return
+	// +optional
+	Count *int64 `json:"count,omitempty" tf:"count"`
+	// The direction of the sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormula struct {
+	// An expression alias.
+	// +optional
+	Alias *string `json:"alias,omitempty" tf:"alias"`
+	// A list of display modes for each table cell.
+	// +optional
+	CellDisplayMode *string `json:"cellDisplayMode,omitempty" tf:"cell_display_mode"`
+	// Conditional formats allow you to set the color of your widget content or background depending on the rule applied to your data. Multiple `conditional_formats` blocks are allowed using the structure below.
+	// +optional
+	ConditionalFormats []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaConditionalFormats `json:"conditionalFormats,omitempty" tf:"conditional_formats"`
+	// A string expression built from queries, formulas, and functions.
+	FormulaExpression *string `json:"formulaExpression" tf:"formula_expression"`
+	// The options for limiting results returned.
+	// +optional
+	Limit *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit `json:"limit,omitempty" tf:"limit"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery struct {
+	// A list of processes.
+	// +optional
+	FilterBy []string `json:"filterBy,omitempty" tf:"filter_by"`
+	// The max number of items in the filter list.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// Your chosen metric.
+	Metric *string `json:"metric" tf:"metric"`
+	// Your chosen search term.
+	// +optional
+	SearchBy *string `json:"searchBy,omitempty" tf:"search_by"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery struct {
+	// The data source for APM Dependency Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Determines whether stats for upstream or downstream dependencies should be queried.
+	// +optional
+	IsUpstream *bool `json:"isUpstream,omitempty" tf:"is_upstream"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	OperationName *string `json:"operationName" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	ResourceName *string `json:"resourceName" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery struct {
+	// The data source for APM Resource Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Array of fields to group results by.
+	// +optional
+	GroupBy []string `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	// +optional
+	OperationName *string `json:"operationName,omitempty" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	// +optional
+	ResourceName *string `json:"resourceName,omitempty" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryCompute struct {
+	// The aggregation methods for event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// A time interval in milliseconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+	// The measurable attribute to compute.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort struct {
+	// The aggregation methods for the event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The metric used for sorting group by results.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// Direction of sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBy struct {
+	// The event facet.
+	Facet *string `json:"facet" tf:"facet"`
+	// The number of groups to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The options for sorting group by results.
+	// +optional
+	Sort *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort `json:"sort,omitempty" tf:"sort"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch struct {
+	// The events search string.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery struct {
+	// The compute options.
+	Compute []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryCompute `json:"compute" tf:"compute"`
+	// The data source for event platform-based queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Group by options.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// An array of index names to query in the stream.
+	// +optional
+	Indexes []string `json:"indexes,omitempty" tf:"indexes"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The search options.
+	// +optional
+	Search *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch `json:"search,omitempty" tf:"search"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for metrics queries.
+	// +optional
+	DataSource *string `json:"dataSource,omitempty" tf:"data_source"`
+	// The name of the query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The metrics query definition.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for process queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Whether to normalize the CPU percentages.
+	// +optional
+	IsNormalizedCPU *bool `json:"isNormalizedCPU,omitempty" tf:"is_normalized_cpu"`
+	// The number of hits to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The process metric name.
+	Metric *string `json:"metric" tf:"metric"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The direction of the sort.
+	// +optional
+	Sort *string `json:"sort,omitempty" tf:"sort"`
+	// An array of tags to filter by.
+	// +optional
+	TagFilters []string `json:"tagFilters,omitempty" tf:"tag_filters"`
+	// The text to use as a filter.
+	// +optional
+	TextFilter *string `json:"textFilter,omitempty" tf:"text_filter"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQuery struct {
+	// The APM Dependency Stats query using formulas and functions.
+	// +optional
+	ApmDependencyStatsQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery `json:"apmDependencyStatsQuery,omitempty" tf:"apm_dependency_stats_query"`
+	// The APM Resource Stats query using formulas and functions.
+	// +optional
+	ApmResourceStatsQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery `json:"apmResourceStatsQuery,omitempty" tf:"apm_resource_stats_query"`
+	// A timeseries formula and functions events query.
+	// +optional
+	EventQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery `json:"eventQuery,omitempty" tf:"event_query"`
+	// A timeseries formula and functions metrics query.
+	// +optional
+	MetricQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery `json:"metricQuery,omitempty" tf:"metric_query"`
+	// The process query using formulas and functions.
+	// +optional
+	ProcessQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery `json:"processQuery,omitempty" tf:"process_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequest struct {
+	// The query to use for this widget.
+	// +optional
+	ApmQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery `json:"apmQuery,omitempty" tf:"apm_query"`
+	// The query to use for this widget.
+	// +optional
+	AuditQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery `json:"auditQuery,omitempty" tf:"audit_query"`
+	// +optional
+	Formula []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormula `json:"formula,omitempty" tf:"formula"`
+	// The query to use for this widget.
+	// +optional
+	LogQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery `json:"logQuery,omitempty" tf:"log_query"`
+	// The query to use for this widget.
+	// +optional
+	NetworkQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery `json:"networkQuery,omitempty" tf:"network_query"`
+	// The process query to use in the widget. The structure of this block is described below.
+	// +optional
+	ProcessQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery `json:"processQuery,omitempty" tf:"process_query"`
+	// The metric query to use for this widget.
+	// +optional
+	Q *string `json:"q,omitempty" tf:"q"`
+	// +optional
+	Query []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQuery `json:"query,omitempty" tf:"query"`
+	// The query to use for this widget.
+	// +optional
+	RumQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery `json:"rumQuery,omitempty" tf:"rum_query"`
+	// The query to use for this widget.
+	// +optional
+	SecurityQuery *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery `json:"securityQuery,omitempty" tf:"security_query"`
+}
+
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition struct {
+	// Nested block describing a custom link. Multiple `custom_link` blocks are allowed with the structure below.
+	// +optional
+	CustomLink []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionCustomLink `json:"customLink,omitempty" tf:"custom_link"`
+	// Whether or not to show the total value in the widget.
+	// +optional
+	HideTotal *bool `json:"hideTotal,omitempty" tf:"hide_total"`
+	// Used to configure the inline legend. Cannot be used in conjunction with legend_table.
+	// +optional
+	LegendInline *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline `json:"legendInline,omitempty" tf:"legend_inline"`
+	// Used to configure the table legend. Cannot be used in conjunction with legend_inline.
+	// +optional
+	LegendTable *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable `json:"legendTable,omitempty" tf:"legend_table"`
+	// The timeframe to use when displaying the widget.
+	// +optional
+	LiveSpan *string `json:"liveSpan,omitempty" tf:"live_span"`
+	// Nested block describing the request to use when displaying the widget. Multiple `request` blocks are allowed with the structure below (exactly one of `q`, `log_query` or `rum_query` is required within the `request` block).
+	// +optional
+	Request []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequest `json:"request,omitempty" tf:"request"`
+	// The title of the widget.
+	// +optional
+	Title *string `json:"title,omitempty" tf:"title"`
+	// The alignment of the widget's title. One of `left`, `center`, or `right`.
+	// +optional
+	TitleAlign *string `json:"titleAlign,omitempty" tf:"title_align"`
+	// The size of the widget's title. Default is 16.
 	// +optional
 	TitleSize *string `json:"titleSize,omitempty" tf:"title_size"`
 }
@@ -6331,7 +7662,7 @@ type DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinition struct {
 	// The size of the widget's title (defaults to 16).
 	// +optional
 	TitleSize *string `json:"titleSize,omitempty" tf:"title_size"`
-	// A nested block describing the Y-Axis Controls. The structure of this block is described below
+	// A nested block describing the Y-Axis Controls. The structure of this block is described below.
 	// +optional
 	Yaxis *DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis `json:"yaxis,omitempty" tf:"yaxis"`
 }
@@ -7105,6 +8436,9 @@ type DashboardSpecWidgetGroupDefinitionWidget struct {
 	// The definition for a Service Map widget.
 	// +optional
 	ServicemapDefinition *DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinition `json:"servicemapDefinition,omitempty" tf:"servicemap_definition"`
+	// The definition for a Sunburst widget.
+	// +optional
+	SunburstDefinition *DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition `json:"sunburstDefinition,omitempty" tf:"sunburst_definition"`
 	// The definition for a Timeseries widget.
 	// +optional
 	TimeseriesDefinition *DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinition `json:"timeseriesDefinition,omitempty" tf:"timeseries_definition"`
@@ -9555,6 +10889,191 @@ type DashboardSpecWidgetScatterplotDefinitionCustomLink struct {
 	OverrideLabel *string `json:"overrideLabel,omitempty" tf:"override_label"`
 }
 
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableFormula struct {
+	// An expression alias.
+	// +optional
+	Alias *string `json:"alias,omitempty" tf:"alias"`
+	// Dimension of the Scatterplot.
+	Dimension *string `json:"dimension" tf:"dimension"`
+	// A string expression built from queries, formulas, and functions.
+	FormulaExpression *string `json:"formulaExpression" tf:"formula_expression"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery struct {
+	// The data source for APM Dependency Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Determines whether stats for upstream or downstream dependencies should be queried.
+	// +optional
+	IsUpstream *bool `json:"isUpstream,omitempty" tf:"is_upstream"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	OperationName *string `json:"operationName" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	ResourceName *string `json:"resourceName" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery struct {
+	// The data source for APM Resource Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Array of fields to group results by.
+	// +optional
+	GroupBy []string `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	// +optional
+	OperationName *string `json:"operationName,omitempty" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	// +optional
+	ResourceName *string `json:"resourceName,omitempty" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCompute struct {
+	// The aggregation methods for event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// A time interval in milliseconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+	// The measurable attribute to compute.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort struct {
+	// The aggregation methods for the event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The metric used for sorting group by results.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// Direction of sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBy struct {
+	// The event facet.
+	Facet *string `json:"facet" tf:"facet"`
+	// The number of groups to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The options for sorting group by results.
+	// +optional
+	Sort *DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort `json:"sort,omitempty" tf:"sort"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch struct {
+	// The events search string.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery struct {
+	// The compute options.
+	Compute []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCompute `json:"compute" tf:"compute"`
+	// The data source for event platform-based queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Group by options.
+	// +optional
+	GroupBy []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// An array of index names to query in the stream.
+	// +optional
+	Indexes []string `json:"indexes,omitempty" tf:"indexes"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The search options.
+	// +optional
+	Search *DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch `json:"search,omitempty" tf:"search"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for metrics queries.
+	// +optional
+	DataSource *string `json:"dataSource,omitempty" tf:"data_source"`
+	// The name of the query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The metrics query definition.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for process queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Whether to normalize the CPU percentages.
+	// +optional
+	IsNormalizedCPU *bool `json:"isNormalizedCPU,omitempty" tf:"is_normalized_cpu"`
+	// The number of hits to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The process metric name.
+	Metric *string `json:"metric" tf:"metric"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The direction of the sort.
+	// +optional
+	Sort *string `json:"sort,omitempty" tf:"sort"`
+	// An array of tags to filter by.
+	// +optional
+	TagFilters []string `json:"tagFilters,omitempty" tf:"tag_filters"`
+	// The text to use as a filter.
+	// +optional
+	TextFilter *string `json:"textFilter,omitempty" tf:"text_filter"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQuery struct {
+	// The APM Dependency Stats query using formulas and functions.
+	// +optional
+	ApmDependencyStatsQuery *DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery `json:"apmDependencyStatsQuery,omitempty" tf:"apm_dependency_stats_query"`
+	// The APM Resource Stats query using formulas and functions.
+	// +optional
+	ApmResourceStatsQuery *DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery `json:"apmResourceStatsQuery,omitempty" tf:"apm_resource_stats_query"`
+	// A timeseries formula and functions events query.
+	// +optional
+	EventQuery *DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery `json:"eventQuery,omitempty" tf:"event_query"`
+	// A timeseries formula and functions metrics query.
+	// +optional
+	MetricQuery *DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery `json:"metricQuery,omitempty" tf:"metric_query"`
+	// The process query using formulas and functions.
+	// +optional
+	ProcessQuery *DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery `json:"processQuery,omitempty" tf:"process_query"`
+}
+
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTable struct {
+	// +optional
+	Formula []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableFormula `json:"formula,omitempty" tf:"formula"`
+	// +optional
+	Query []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQuery `json:"query,omitempty" tf:"query"`
+}
+
 type DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQuery struct {
 	// The aggregation method.
 	Aggregation *string `json:"aggregation" tf:"aggregation"`
@@ -10120,6 +11639,9 @@ type DashboardSpecWidgetScatterplotDefinitionRequestY struct {
 }
 
 type DashboardSpecWidgetScatterplotDefinitionRequest struct {
+	// Scatterplot request containing formulas and functions.
+	// +optional
+	ScatterplotTable []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTable `json:"scatterplotTable,omitempty" tf:"scatterplot_table"`
 	// The query used for the X-Axis. Exactly one nested block is allowed using the structure below (exactly one of `q`, `apm_query`, `log_query`, `rum_query`, `security_query`, `apm_stats_query` or `process_query` is required within the block).
 	// +optional
 	X []DashboardSpecWidgetScatterplotDefinitionRequestX `json:"x,omitempty" tf:"x"`
@@ -10250,6 +11772,699 @@ type DashboardSpecWidgetServicemapDefinition struct {
 	// +optional
 	TitleAlign *string `json:"titleAlign,omitempty" tf:"title_align"`
 	// The size of the widget's title (defaults to 16).
+	// +optional
+	TitleSize *string `json:"titleSize,omitempty" tf:"title_size"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionCustomLink struct {
+	// The flag for toggling context menu link visibility.
+	// +optional
+	IsHidden *bool `json:"isHidden,omitempty" tf:"is_hidden"`
+	// The label for the custom link URL.
+	// +optional
+	Label *string `json:"label,omitempty" tf:"label"`
+	// The URL of the custom link.
+	// +optional
+	Link *string `json:"link,omitempty" tf:"link"`
+	// The label id that refers to a context menu link item. When override_label is provided, the client request omits the label field.
+	// +optional
+	OverrideLabel *string `json:"overrideLabel,omitempty" tf:"override_label"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionLegendInline struct {
+	// Whether to hide the percentages of the groups.
+	// +optional
+	HidePercent *bool `json:"hidePercent,omitempty" tf:"hide_percent"`
+	// Whether to hide the values of the groups.
+	// +optional
+	HideValue *bool `json:"hideValue,omitempty" tf:"hide_value"`
+	// The type of legend (inline or automatic).
+	Type *string `json:"type" tf:"type"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionLegendTable struct {
+	// The type of legend (table or none).
+	Type *string `json:"type" tf:"type"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestApmQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestApmQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetSunburstDefinitionRequestApmQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestAuditQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestAuditQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetSunburstDefinitionRequestAuditQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestFormulaConditionalFormats struct {
+	// The comparator to use.
+	Comparator *string `json:"comparator" tf:"comparator"`
+	// The color palette to apply to the background, same values available as palette.
+	// +optional
+	CustomBgColor *string `json:"customBgColor,omitempty" tf:"custom_bg_color"`
+	// The color palette to apply to the foreground, same values available as palette.
+	// +optional
+	CustomFgColor *string `json:"customFgColor,omitempty" tf:"custom_fg_color"`
+	// Setting this to True hides values.
+	// +optional
+	HideValue *bool `json:"hideValue,omitempty" tf:"hide_value"`
+	// Displays an image as the background.
+	// +optional
+	ImageURL *string `json:"imageURL,omitempty" tf:"image_url"`
+	// The metric from the request to correlate with this conditional format.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// The color palette to apply.
+	Palette *string `json:"palette" tf:"palette"`
+	// Defines the displayed timeframe.
+	// +optional
+	Timeframe *string `json:"timeframe,omitempty" tf:"timeframe"`
+	// A value for the comparator.
+	Value *float64 `json:"value" tf:"value"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit struct {
+	// The number of results to return
+	// +optional
+	Count *int64 `json:"count,omitempty" tf:"count"`
+	// The direction of the sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestFormula struct {
+	// An expression alias.
+	// +optional
+	Alias *string `json:"alias,omitempty" tf:"alias"`
+	// A list of display modes for each table cell.
+	// +optional
+	CellDisplayMode *string `json:"cellDisplayMode,omitempty" tf:"cell_display_mode"`
+	// Conditional formats allow you to set the color of your widget content or background depending on the rule applied to your data. Multiple `conditional_formats` blocks are allowed using the structure below.
+	// +optional
+	ConditionalFormats []DashboardSpecWidgetSunburstDefinitionRequestFormulaConditionalFormats `json:"conditionalFormats,omitempty" tf:"conditional_formats"`
+	// A string expression built from queries, formulas, and functions.
+	FormulaExpression *string `json:"formulaExpression" tf:"formula_expression"`
+	// The options for limiting results returned.
+	// +optional
+	Limit *DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit `json:"limit,omitempty" tf:"limit"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestLogQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestLogQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetSunburstDefinitionRequestLogQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestProcessQuery struct {
+	// A list of processes.
+	// +optional
+	FilterBy []string `json:"filterBy,omitempty" tf:"filter_by"`
+	// The max number of items in the filter list.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// Your chosen metric.
+	Metric *string `json:"metric" tf:"metric"`
+	// Your chosen search term.
+	// +optional
+	SearchBy *string `json:"searchBy,omitempty" tf:"search_by"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery struct {
+	// The data source for APM Dependency Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Determines whether stats for upstream or downstream dependencies should be queried.
+	// +optional
+	IsUpstream *bool `json:"isUpstream,omitempty" tf:"is_upstream"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	OperationName *string `json:"operationName" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	ResourceName *string `json:"resourceName" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery struct {
+	// The data source for APM Resource Stats queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// APM Environment.
+	Env *string `json:"env" tf:"env"`
+	// Array of fields to group results by.
+	// +optional
+	GroupBy []string `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// Name of operation on service.
+	// +optional
+	OperationName *string `json:"operationName,omitempty" tf:"operation_name"`
+	// The name of the second primary tag used within APM; required when `primary_tag_value` is specified. See https://docs.datadoghq.com/tracing/guide/setting_primary_tags_to_scope/#add-a-second-primary-tag-in-datadog.
+	// +optional
+	PrimaryTagName *string `json:"primaryTagName,omitempty" tf:"primary_tag_name"`
+	// Filter APM data by the second primary tag. `primary_tag_name` must also be specified.
+	// +optional
+	PrimaryTagValue *string `json:"primaryTagValue,omitempty" tf:"primary_tag_value"`
+	// APM resource.
+	// +optional
+	ResourceName *string `json:"resourceName,omitempty" tf:"resource_name"`
+	// APM service.
+	Service *string `json:"service" tf:"service"`
+	// APM statistic.
+	Stat *string `json:"stat" tf:"stat"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryCompute struct {
+	// The aggregation methods for event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// A time interval in milliseconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+	// The measurable attribute to compute.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort struct {
+	// The aggregation methods for the event platform queries.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The metric used for sorting group by results.
+	// +optional
+	Metric *string `json:"metric,omitempty" tf:"metric"`
+	// Direction of sort.
+	// +optional
+	Order *string `json:"order,omitempty" tf:"order"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBy struct {
+	// The event facet.
+	Facet *string `json:"facet" tf:"facet"`
+	// The number of groups to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The options for sorting group by results.
+	// +optional
+	Sort *DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort `json:"sort,omitempty" tf:"sort"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch struct {
+	// The events search string.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery struct {
+	// The compute options.
+	Compute []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryCompute `json:"compute" tf:"compute"`
+	// The data source for event platform-based queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Group by options.
+	// +optional
+	GroupBy []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// An array of index names to query in the stream.
+	// +optional
+	Indexes []string `json:"indexes,omitempty" tf:"indexes"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The search options.
+	// +optional
+	Search *DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch `json:"search,omitempty" tf:"search"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for metrics queries.
+	// +optional
+	DataSource *string `json:"dataSource,omitempty" tf:"data_source"`
+	// The name of the query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The metrics query definition.
+	Query *string `json:"query" tf:"query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery struct {
+	// The aggregation methods available for metrics queries.
+	// +optional
+	Aggregator *string `json:"aggregator,omitempty" tf:"aggregator"`
+	// The data source for process queries.
+	DataSource *string `json:"dataSource" tf:"data_source"`
+	// Whether to normalize the CPU percentages.
+	// +optional
+	IsNormalizedCPU *bool `json:"isNormalizedCPU,omitempty" tf:"is_normalized_cpu"`
+	// The number of hits to return.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// The process metric name.
+	Metric *string `json:"metric" tf:"metric"`
+	// The name of query for use in formulas.
+	Name *string `json:"name" tf:"name"`
+	// The direction of the sort.
+	// +optional
+	Sort *string `json:"sort,omitempty" tf:"sort"`
+	// An array of tags to filter by.
+	// +optional
+	TagFilters []string `json:"tagFilters,omitempty" tf:"tag_filters"`
+	// The text to use as a filter.
+	// +optional
+	TextFilter *string `json:"textFilter,omitempty" tf:"text_filter"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestQuery struct {
+	// The APM Dependency Stats query using formulas and functions.
+	// +optional
+	ApmDependencyStatsQuery *DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery `json:"apmDependencyStatsQuery,omitempty" tf:"apm_dependency_stats_query"`
+	// The APM Resource Stats query using formulas and functions.
+	// +optional
+	ApmResourceStatsQuery *DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery `json:"apmResourceStatsQuery,omitempty" tf:"apm_resource_stats_query"`
+	// A timeseries formula and functions events query.
+	// +optional
+	EventQuery *DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery `json:"eventQuery,omitempty" tf:"event_query"`
+	// A timeseries formula and functions metrics query.
+	// +optional
+	MetricQuery *DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery `json:"metricQuery,omitempty" tf:"metric_query"`
+	// The process query using formulas and functions.
+	// +optional
+	ProcessQuery *DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery `json:"processQuery,omitempty" tf:"process_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestRumQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestRumQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetSunburstDefinitionRequestRumQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Widget sorting methods.
+	Order *string `json:"order" tf:"order"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBy struct {
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// The maximum number of items in the group.
+	// +optional
+	Limit *int64 `json:"limit,omitempty" tf:"limit"`
+	// A list of exactly one element describing the sort query to use.
+	// +optional
+	SortQuery *DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery `json:"sortQuery,omitempty" tf:"sort_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryMultiCompute struct {
+	// The aggregation method.
+	Aggregation *string `json:"aggregation" tf:"aggregation"`
+	// The facet name.
+	// +optional
+	Facet *string `json:"facet,omitempty" tf:"facet"`
+	// Define the time interval in seconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery struct {
+	// `compute_query` or `multi_compute` is required. The map keys are listed below.
+	// +optional
+	ComputeQuery *DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery `json:"computeQuery,omitempty" tf:"compute_query"`
+	// Multiple `group_by` blocks are allowed using the structure below.
+	// +optional
+	GroupBy []DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBy `json:"groupBy,omitempty" tf:"group_by"`
+	// The name of the index to query.
+	Index *string `json:"index" tf:"index"`
+	// `compute_query` or `multi_compute` is required. Multiple `multi_compute` blocks are allowed using the structure below.
+	// +optional
+	MultiCompute []DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryMultiCompute `json:"multiCompute,omitempty" tf:"multi_compute"`
+	// The search query to use.
+	// +optional
+	SearchQuery *string `json:"searchQuery,omitempty" tf:"search_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinitionRequest struct {
+	// The query to use for this widget.
+	// +optional
+	ApmQuery *DashboardSpecWidgetSunburstDefinitionRequestApmQuery `json:"apmQuery,omitempty" tf:"apm_query"`
+	// The query to use for this widget.
+	// +optional
+	AuditQuery *DashboardSpecWidgetSunburstDefinitionRequestAuditQuery `json:"auditQuery,omitempty" tf:"audit_query"`
+	// +optional
+	Formula []DashboardSpecWidgetSunburstDefinitionRequestFormula `json:"formula,omitempty" tf:"formula"`
+	// The query to use for this widget.
+	// +optional
+	LogQuery *DashboardSpecWidgetSunburstDefinitionRequestLogQuery `json:"logQuery,omitempty" tf:"log_query"`
+	// The query to use for this widget.
+	// +optional
+	NetworkQuery *DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery `json:"networkQuery,omitempty" tf:"network_query"`
+	// The process query to use in the widget. The structure of this block is described below.
+	// +optional
+	ProcessQuery *DashboardSpecWidgetSunburstDefinitionRequestProcessQuery `json:"processQuery,omitempty" tf:"process_query"`
+	// The metric query to use for this widget.
+	// +optional
+	Q *string `json:"q,omitempty" tf:"q"`
+	// +optional
+	Query []DashboardSpecWidgetSunburstDefinitionRequestQuery `json:"query,omitempty" tf:"query"`
+	// The query to use for this widget.
+	// +optional
+	RumQuery *DashboardSpecWidgetSunburstDefinitionRequestRumQuery `json:"rumQuery,omitempty" tf:"rum_query"`
+	// The query to use for this widget.
+	// +optional
+	SecurityQuery *DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery `json:"securityQuery,omitempty" tf:"security_query"`
+}
+
+type DashboardSpecWidgetSunburstDefinition struct {
+	// Nested block describing a custom link. Multiple `custom_link` blocks are allowed with the structure below.
+	// +optional
+	CustomLink []DashboardSpecWidgetSunburstDefinitionCustomLink `json:"customLink,omitempty" tf:"custom_link"`
+	// Whether or not to show the total value in the widget.
+	// +optional
+	HideTotal *bool `json:"hideTotal,omitempty" tf:"hide_total"`
+	// Used to configure the inline legend. Cannot be used in conjunction with legend_table.
+	// +optional
+	LegendInline *DashboardSpecWidgetSunburstDefinitionLegendInline `json:"legendInline,omitempty" tf:"legend_inline"`
+	// Used to configure the table legend. Cannot be used in conjunction with legend_inline.
+	// +optional
+	LegendTable *DashboardSpecWidgetSunburstDefinitionLegendTable `json:"legendTable,omitempty" tf:"legend_table"`
+	// The timeframe to use when displaying the widget.
+	// +optional
+	LiveSpan *string `json:"liveSpan,omitempty" tf:"live_span"`
+	// Nested block describing the request to use when displaying the widget. Multiple `request` blocks are allowed with the structure below (exactly one of `q`, `log_query` or `rum_query` is required within the `request` block).
+	// +optional
+	Request []DashboardSpecWidgetSunburstDefinitionRequest `json:"request,omitempty" tf:"request"`
+	// The title of the widget.
+	// +optional
+	Title *string `json:"title,omitempty" tf:"title"`
+	// The alignment of the widget's title. One of `left`, `center`, or `right`.
+	// +optional
+	TitleAlign *string `json:"titleAlign,omitempty" tf:"title_align"`
+	// The size of the widget's title. Default is 16.
 	// +optional
 	TitleSize *string `json:"titleSize,omitempty" tf:"title_size"`
 }
@@ -11028,7 +13243,7 @@ type DashboardSpecWidgetTimeseriesDefinition struct {
 	// The size of the widget's title (defaults to 16).
 	// +optional
 	TitleSize *string `json:"titleSize,omitempty" tf:"title_size"`
-	// A nested block describing the Y-Axis Controls. The structure of this block is described below
+	// A nested block describing the Y-Axis Controls. The structure of this block is described below.
 	// +optional
 	Yaxis *DashboardSpecWidgetTimeseriesDefinitionYaxis `json:"yaxis,omitempty" tf:"yaxis"`
 }
@@ -11805,6 +14020,9 @@ type DashboardSpecWidget struct {
 	// The definition for a Service Map widget.
 	// +optional
 	ServicemapDefinition *DashboardSpecWidgetServicemapDefinition `json:"servicemapDefinition,omitempty" tf:"servicemap_definition"`
+	// The definition for a Sunburst widget.
+	// +optional
+	SunburstDefinition *DashboardSpecWidgetSunburstDefinition `json:"sunburstDefinition,omitempty" tf:"sunburst_definition"`
 	// The definition for a Timeseries widget.
 	// +optional
 	TimeseriesDefinition *DashboardSpecWidgetTimeseriesDefinition `json:"timeseriesDefinition,omitempty" tf:"timeseries_definition"`
@@ -11847,6 +14065,7 @@ type DashboardSpecResource struct {
 	Description *string `json:"description,omitempty" tf:"description"`
 	// Whether this dashboard is read-only.
 	// +optional
+	// Deprecated
 	IsReadOnly *bool `json:"isReadOnly,omitempty" tf:"is_read_only"`
 	// The layout type of the dashboard.
 	LayoutType *string `json:"layoutType" tf:"layout_type"`
@@ -11856,7 +14075,7 @@ type DashboardSpecResource struct {
 	// The reflow type of a new dashboard layout. Set this only when layout type is `ordered`. If set to `fixed`, the dashboard expects all widgets to have a layout, and if it's set to `auto`, widgets should not have layouts.
 	// +optional
 	ReflowType *string `json:"reflowType,omitempty" tf:"reflow_type"`
-	// Role UUIDs corresponding to users authorized to edit the dashboard. **This feature is currently in beta.**
+	// UUIDs of roles whose associated users are authorized to edit the dashboard.
 	// +optional
 	RestrictedRoles []string `json:"restrictedRoles,omitempty" tf:"restricted_roles"`
 	// The list of template variables for this dashboard.

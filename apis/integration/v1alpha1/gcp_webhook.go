@@ -91,7 +91,7 @@ func (r *Gcp) ValidateUpdate(old runtime.Object) error {
 		return err
 	}
 
-	for key := range gcpForceNewList {
+	for key, _ := range gcpForceNewList {
 		keySplit := strings.Split(key, "/*")
 		length := len(keySplit)
 		checkIfAnyDif := false

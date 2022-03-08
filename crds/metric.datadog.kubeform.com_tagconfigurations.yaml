@@ -57,12 +57,32 @@ spec:
                 type: object
               resource:
                 properties:
+                  aggregations:
+                    description: 'A list of queryable aggregation combinations for
+                      a count, rate, or gauge metric. By default, count and rate metrics
+                      require the (time: sum, space: sum) aggregation and gauge metrics
+                      require the (time: avg, space: avg) aggregation. Can only be
+                      applied to metrics that have a `metric_type` of count, rate,
+                      or gauge.'
+                    items:
+                      properties:
+                        space:
+                          description: A space aggregation for use in query.
+                          type: string
+                        time:
+                          description: A time aggregation for use in query.
+                          type: string
+                      required:
+                      - space
+                      - time
+                      type: object
+                    type: array
                   id:
                     type: string
                   includePercentiles:
                     description: Toggle to include/exclude percentiles for a distribution
                       metric. Defaults to false. Can only be applied to metrics that
-                      have a metric_type of distribution.
+                      have a `metric_type` of distribution.
                     type: boolean
                   metricName:
                     description: The metric name for this resource.
@@ -84,12 +104,32 @@ spec:
                 type: object
               state:
                 properties:
+                  aggregations:
+                    description: 'A list of queryable aggregation combinations for
+                      a count, rate, or gauge metric. By default, count and rate metrics
+                      require the (time: sum, space: sum) aggregation and gauge metrics
+                      require the (time: avg, space: avg) aggregation. Can only be
+                      applied to metrics that have a `metric_type` of count, rate,
+                      or gauge.'
+                    items:
+                      properties:
+                        space:
+                          description: A space aggregation for use in query.
+                          type: string
+                        time:
+                          description: A time aggregation for use in query.
+                          type: string
+                      required:
+                      - space
+                      - time
+                      type: object
+                    type: array
                   id:
                     type: string
                   includePercentiles:
                     description: Toggle to include/exclude percentiles for a distribution
                       metric. Defaults to false. Can only be applied to metrics that
-                      have a metric_type of distribution.
+                      have a `metric_type` of distribution.
                     type: boolean
                   metricName:
                     description: The metric name for this resource.
