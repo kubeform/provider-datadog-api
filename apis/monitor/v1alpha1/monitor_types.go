@@ -108,7 +108,7 @@ type MonitorSpecResource struct {
 	// A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title. Defaults to `true`.
 	// +optional
 	IncludeTags *bool `json:"includeTags,omitempty" tf:"include_tags"`
-	// A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to `false`.
+	// A boolean indicating whether changes to this monitor should be restricted to the creator or admins. Defaults to `false`.
 	// +optional
 	Locked *bool `json:"locked,omitempty" tf:"locked"`
 	// A message to include with notifications for this monitor.
@@ -123,14 +123,12 @@ type MonitorSpecResource struct {
 	MonitorThresholds *MonitorSpecMonitorThresholds `json:"monitorThresholds,omitempty" tf:"monitor_thresholds"`
 	// Name of Datadog monitor.
 	Name *string `json:"name" tf:"name"`
-	// Time (in seconds) to skip evaluations for new groups.
+	// The time (in seconds) to skip evaluations for new groups.
 	//
 	// `new_group_delay` overrides `new_host_delay` if it is set to a nonzero value.
-	//
-	// To disable group delay for monitors grouped by host, `new_host_delay` must be set to zero due to the default value of `300` for that field (`new_group_delay` defaults to zero, so setting it to zero is not required).
 	// +optional
 	NewGroupDelay *int64 `json:"newGroupDelay,omitempty" tf:"new_group_delay"`
-	// Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor results. Should be a non-negative integer. Defaults to `300` (this default will be removed in a major version release and `new_host_delay` will be removed entirely in a subsequent major version release).
+	// **Deprecated**. See `new_group_delay`. Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor results. Should be a non-negative integer. This value is ignored for simple monitors and monitors not grouped by host. Defaults to `300`. The only case when this should be used is to override the default and set `new_host_delay` to zero for monitors grouped by host.
 	// +optional
 	// Deprecated
 	NewHostDelay *int64 `json:"newHostDelay,omitempty" tf:"new_host_delay"`

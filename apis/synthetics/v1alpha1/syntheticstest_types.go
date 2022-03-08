@@ -131,6 +131,9 @@ type SyntheticstestSpecApiStepRequestDefinition struct {
 	// Host name to perform the test with.
 	// +optional
 	Host *string `json:"host,omitempty" tf:"host"`
+	// For UDP and websocket tests, message to send with the request.
+	// +optional
+	Message *string `json:"message,omitempty" tf:"message"`
 	// The HTTP method.
 	// +optional
 	Method *string `json:"method,omitempty" tf:"method"`
@@ -155,6 +158,15 @@ type SyntheticstestSpecApiStepRequestDefinition struct {
 	// The URL to send the request to.
 	// +optional
 	Url *string `json:"url,omitempty" tf:"url"`
+}
+
+type SyntheticstestSpecApiStepRetry struct {
+	// Number of retries needed to consider a location as failed before sending a notification alert.
+	// +optional
+	Count *int64 `json:"count,omitempty" tf:"count"`
+	// Interval between a failed test and the next retry in milliseconds.
+	// +optional
+	Interval *int64 `json:"interval,omitempty" tf:"interval"`
 }
 
 type SyntheticstestSpecApiStep struct {
@@ -187,6 +199,8 @@ type SyntheticstestSpecApiStep struct {
 	// Query arguments name and value map.
 	// +optional
 	RequestQuery map[string]string `json:"requestQuery,omitempty" tf:"request_query"`
+	// +optional
+	Retry *SyntheticstestSpecApiStepRetry `json:"retry,omitempty" tf:"retry"`
 	// The subtype of the Synthetic multistep API test step.
 	// +optional
 	Subtype *string `json:"subtype,omitempty" tf:"subtype"`
@@ -421,6 +435,9 @@ type SyntheticstestSpecRequestDefinition struct {
 	// Host name to perform the test with.
 	// +optional
 	Host *string `json:"host,omitempty" tf:"host"`
+	// For UDP and websocket tests, message to send with the request.
+	// +optional
+	Message *string `json:"message,omitempty" tf:"message"`
 	// The HTTP method.
 	// +optional
 	Method *string `json:"method,omitempty" tf:"method"`

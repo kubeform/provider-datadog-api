@@ -27,981 +27,1161 @@ import (
 
 func GetEncoder() map[string]jsoniter.ValEncoder {
 	return map[string]jsoniter.ValEncoder{
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetAlertGraphDefinition{}).Type1()):                                                            DashboardSpecWidgetAlertGraphDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetAlertValueDefinition{}).Type1()):                                                            DashboardSpecWidgetAlertValueDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinition{}).Type1()):                                                                DashboardSpecWidgetChangeDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQuery{}).Type1()):                                                 DashboardSpecWidgetChangeDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetChangeDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQuery{}).Type1()):                                                 DashboardSpecWidgetChangeDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetChangeDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestProcessQuery{}).Type1()):                                             DashboardSpecWidgetChangeDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQuery{}).Type1()):                                                 DashboardSpecWidgetChangeDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetChangeDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQuery{}).Type1()):                                            DashboardSpecWidgetChangeDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetChangeDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetChangeDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetCheckStatusDefinition{}).Type1()):                                                           DashboardSpecWidgetCheckStatusDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinition{}).Type1()):                                                          DashboardSpecWidgetDistributionDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQuery{}).Type1()):                                           DashboardSpecWidgetDistributionDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetDistributionDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetDistributionDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQuery{}).Type1()):                                           DashboardSpecWidgetDistributionDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetDistributionDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetDistributionDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestProcessQuery{}).Type1()):                                       DashboardSpecWidgetDistributionDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQuery{}).Type1()):                                           DashboardSpecWidgetDistributionDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetDistributionDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetDistributionDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQuery{}).Type1()):                                      DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestStyle{}).Type1()):                                              DashboardSpecWidgetDistributionDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetEventStreamDefinition{}).Type1()):                                                           DashboardSpecWidgetEventStreamDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetEventTimelineDefinition{}).Type1()):                                                         DashboardSpecWidgetEventTimelineDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetFreeTextDefinition{}).Type1()):                                                              DashboardSpecWidgetFreeTextDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinition{}).Type1()):                                                                DashboardSpecWidgetGeomapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestFormulaLimit{}).Type1()):                                             DashboardSpecWidgetGeomapDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                                                 DashboardSpecWidgetGeomapDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                             DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                               DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                                          DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                               DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):                                    DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryMetricQuery{}).Type1()):                                         DashboardSpecWidgetGeomapDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryProcessQuery{}).Type1()):                                        DashboardSpecWidgetGeomapDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQuery{}).Type1()):                                                 DashboardSpecWidgetGeomapDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetGeomapDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetGeomapDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionStyle{}).Type1()):                                                           DashboardSpecWidgetGeomapDefinitionStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionView{}).Type1()):                                                            DashboardSpecWidgetGeomapDefinitionViewCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinition{}).Type1()):                                                                 DashboardSpecWidgetGroupDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetAlertGraphDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetAlertGraphDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetAlertValueDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetAlertValueDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinition{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetCheckStatusDefinition{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetCheckStatusDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinition{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryComputeQuery{}).Type1()):     DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()): DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetEventStreamDefinition{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetEventStreamDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetEventTimelineDefinition{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetEventTimelineDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetFreeTextDefinition{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetFreeTextDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinition{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestFormulaLimit{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryMetricQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryProcessQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionStyle{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionView{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionViewCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinition{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinition{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequest{}).Type1()):                                   DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryComputeQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQuery{}).Type1()):  DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQuery{}).Type1()):  DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionStyle{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetIframeDefinition{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetIframeDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetImageDefinition{}).Type1()):                                            DashboardSpecWidgetGroupDefinitionWidgetImageDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinition{}).Type1()):                                        DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionSort{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionSortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetManageStatusDefinition{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetManageStatusDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetNoteDefinition{}).Type1()):                                             DashboardSpecWidgetGroupDefinitionWidgetNoteDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryComputeQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryMetricQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryProcessQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryComputeQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinition{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequest{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryComputeQuery{}).Type1()):     DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQuery{}).Type1()): DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryComputeQuery{}).Type1()):     DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQuery{}).Type1()): DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionXaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinition{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryMetricQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryProcessQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryComputeQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRightYaxis{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRightYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinition{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):              DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryMetricQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryProcessQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTraceServiceDefinition{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetTraceServiceDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetWidgetLayout{}).Type1()):                                               DashboardSpecWidgetGroupDefinitionWidgetWidgetLayoutCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinition{}).Type1()):                                                               DashboardSpecWidgetHeatmapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQuery{}).Type1()):                                                DashboardSpecWidgetHeatmapDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetHeatmapDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetHeatmapDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQuery{}).Type1()):                                                DashboardSpecWidgetHeatmapDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetHeatmapDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetHeatmapDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestProcessQuery{}).Type1()):                                            DashboardSpecWidgetHeatmapDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQuery{}).Type1()):                                                DashboardSpecWidgetHeatmapDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetHeatmapDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetHeatmapDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQuery{}).Type1()):                                           DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestStyle{}).Type1()):                                                   DashboardSpecWidgetHeatmapDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionYaxis{}).Type1()):                                                          DashboardSpecWidgetHeatmapDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinition{}).Type1()):                                                               DashboardSpecWidgetHostmapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequest{}).Type1()):                                                        DashboardSpecWidgetHostmapDefinitionRequestCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillProcessQuery{}).Type1()):                                        DashboardSpecWidgetHostmapDefinitionRequestFillProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQuery{}).Type1()):                                       DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryComputeQuery{}).Type1()):                           DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQuery{}).Type1()):                       DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeProcessQuery{}).Type1()):                                        DashboardSpecWidgetHostmapDefinitionRequestSizeProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQuery{}).Type1()):                                       DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQuery{}).Type1()):                           DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQuery{}).Type1()):                       DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionStyle{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetIframeDefinition{}).Type1()):                                                                DashboardSpecWidgetIframeDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetImageDefinition{}).Type1()):                                                                 DashboardSpecWidgetImageDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetLogStreamDefinition{}).Type1()):                                                             DashboardSpecWidgetLogStreamDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetLogStreamDefinitionSort{}).Type1()):                                                         DashboardSpecWidgetLogStreamDefinitionSortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetManageStatusDefinition{}).Type1()):                                                          DashboardSpecWidgetManageStatusDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetNoteDefinition{}).Type1()):                                                                  DashboardSpecWidgetNoteDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinition{}).Type1()):                                                            DashboardSpecWidgetQueryTableDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                                        DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                                     DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):                                    DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQuery{}).Type1()):                                        DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinition{}).Type1()):                                                            DashboardSpecWidgetQueryValueDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryMetricQuery{}).Type1()):                                     DashboardSpecWidgetQueryValueDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryProcessQuery{}).Type1()):                                    DashboardSpecWidgetQueryValueDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQuery{}).Type1()):                                        DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinition{}).Type1()):                                                           DashboardSpecWidgetScatterplotDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequest{}).Type1()):                                                    DashboardSpecWidgetScatterplotDefinitionRequestCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXProcessQuery{}).Type1()):                                       DashboardSpecWidgetScatterplotDefinitionRequestXProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQuery{}).Type1()):                                      DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYProcessQuery{}).Type1()):                                       DashboardSpecWidgetScatterplotDefinitionRequestYProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQuery{}).Type1()):                                      DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionXaxis{}).Type1()):                                                      DashboardSpecWidgetScatterplotDefinitionXaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionYaxis{}).Type1()):                                                      DashboardSpecWidgetScatterplotDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetServiceLevelObjectiveDefinition{}).Type1()):                                                 DashboardSpecWidgetServiceLevelObjectiveDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetServicemapDefinition{}).Type1()):                                                            DashboardSpecWidgetServicemapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinition{}).Type1()):                                                            DashboardSpecWidgetTimeseriesDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryMetricQuery{}).Type1()):                                     DashboardSpecWidgetTimeseriesDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryProcessQuery{}).Type1()):                                    DashboardSpecWidgetTimeseriesDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQuery{}).Type1()):                                        DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestStyle{}).Type1()):                                                DashboardSpecWidgetTimeseriesDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRightYaxis{}).Type1()):                                                  DashboardSpecWidgetTimeseriesDefinitionRightYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionYaxis{}).Type1()):                                                       DashboardSpecWidgetTimeseriesDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinition{}).Type1()):                                                               DashboardSpecWidgetToplistDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                  DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                            DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                                         DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):                                   DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryMetricQuery{}).Type1()):                                        DashboardSpecWidgetToplistDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryProcessQuery{}).Type1()):                                       DashboardSpecWidgetToplistDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQuery{}).Type1()):                                           DashboardSpecWidgetToplistDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetToplistDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetToplistDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestStyle{}).Type1()):                                                   DashboardSpecWidgetToplistDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTraceServiceDefinition{}).Type1()):                                                          DashboardSpecWidgetTraceServiceDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetWidgetLayout{}).Type1()):                                                                    DashboardSpecWidgetWidgetLayoutCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetAlertGraphDefinition{}).Type1()):                                                                          DashboardSpecWidgetAlertGraphDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetAlertValueDefinition{}).Type1()):                                                                          DashboardSpecWidgetAlertValueDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinition{}).Type1()):                                                                              DashboardSpecWidgetChangeDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQuery{}).Type1()):                                                               DashboardSpecWidgetChangeDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetChangeDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}).Type1()):                                                           DashboardSpecWidgetChangeDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQuery{}).Type1()):                                                               DashboardSpecWidgetChangeDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetChangeDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestProcessQuery{}).Type1()):                                                           DashboardSpecWidgetChangeDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                           DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                             DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}).Type1()):                                                        DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                             DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1()):                                                  DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1()):                                                       DashboardSpecWidgetChangeDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1()):                                                      DashboardSpecWidgetChangeDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQuery{}).Type1()):                                                               DashboardSpecWidgetChangeDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetChangeDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQuery{}).Type1()):                                                          DashboardSpecWidgetChangeDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetChangeDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetChangeDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetCheckStatusDefinition{}).Type1()):                                                                         DashboardSpecWidgetCheckStatusDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinition{}).Type1()):                                                                        DashboardSpecWidgetDistributionDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQuery{}).Type1()):                                                         DashboardSpecWidgetDistributionDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetDistributionDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetDistributionDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQuery{}).Type1()):                                                         DashboardSpecWidgetDistributionDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetDistributionDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetDistributionDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestProcessQuery{}).Type1()):                                                     DashboardSpecWidgetDistributionDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQuery{}).Type1()):                                                         DashboardSpecWidgetDistributionDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetDistributionDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetDistributionDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQuery{}).Type1()):                                                    DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                        DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                    DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestStyle{}).Type1()):                                                            DashboardSpecWidgetDistributionDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetEventStreamDefinition{}).Type1()):                                                                         DashboardSpecWidgetEventStreamDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetEventTimelineDefinition{}).Type1()):                                                                       DashboardSpecWidgetEventTimelineDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetFreeTextDefinition{}).Type1()):                                                                            DashboardSpecWidgetFreeTextDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinition{}).Type1()):                                                                              DashboardSpecWidgetGeomapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestFormulaLimit{}).Type1()):                                                           DashboardSpecWidgetGeomapDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                                                               DashboardSpecWidgetGeomapDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                           DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                             DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                                                        DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                             DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):                                                  DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryMetricQuery{}).Type1()):                                                       DashboardSpecWidgetGeomapDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryProcessQuery{}).Type1()):                                                      DashboardSpecWidgetGeomapDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQuery{}).Type1()):                                                               DashboardSpecWidgetGeomapDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetGeomapDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetGeomapDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionStyle{}).Type1()):                                                                         DashboardSpecWidgetGeomapDefinitionStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionView{}).Type1()):                                                                          DashboardSpecWidgetGeomapDefinitionViewCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinition{}).Type1()):                                                                               DashboardSpecWidgetGroupDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetAlertGraphDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetAlertGraphDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetAlertValueDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetAlertValueDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinition{}).Type1()):                                                         DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}).Type1()):                                   DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetCheckStatusDefinition{}).Type1()):                                                    DashboardSpecWidgetGroupDefinitionWidgetCheckStatusDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinition{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetEventStreamDefinition{}).Type1()):                                                    DashboardSpecWidgetGroupDefinitionWidgetEventStreamDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetEventTimelineDefinition{}).Type1()):                                                  DashboardSpecWidgetGroupDefinitionWidgetEventTimelineDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetFreeTextDefinition{}).Type1()):                                                       DashboardSpecWidgetGroupDefinitionWidgetFreeTextDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinition{}).Type1()):                                                         DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestFormulaLimit{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                                   DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryMetricQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryProcessQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionStyle{}).Type1()):                                                    DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionView{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionViewCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinition{}).Type1()):                                                        DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle{}).Type1()):                                            DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinition{}).Type1()):                                                        DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequest{}).Type1()):                                                 DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryComputeQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionStyle{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetIframeDefinition{}).Type1()):                                                         DashboardSpecWidgetGroupDefinitionWidgetIframeDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetImageDefinition{}).Type1()):                                                          DashboardSpecWidgetGroupDefinitionWidgetImageDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinition{}).Type1()):                                                      DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionSort{}).Type1()):                                                  DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionSortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetManageStatusDefinition{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetManageStatusDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetNoteDefinition{}).Type1()):                                                           DashboardSpecWidgetGroupDefinitionWidgetNoteDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryMetricQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryProcessQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinition{}).Type1()):                                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequest{}).Type1()):                                             DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1()): DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1()):              DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1()):             DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryComputeQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryComputeQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis{}).Type1()):                                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionXaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis{}).Type1()):                                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinition{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}).Type1()):                                                       DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInlineCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}).Type1()):                                            DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTableCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}).Type1()):                                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}).Type1()):                                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}).Type1()):                                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}).Type1()):                                   DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryMetricQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryProcessQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRightYaxis{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRightYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis{}).Type1()):                                                DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinition{}).Type1()):                                                        DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryMetricQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryProcessQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle{}).Type1()):                                            DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTraceServiceDefinition{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetTraceServiceDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetWidgetLayout{}).Type1()):                                                             DashboardSpecWidgetGroupDefinitionWidgetWidgetLayoutCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinition{}).Type1()):                                                                             DashboardSpecWidgetHeatmapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQuery{}).Type1()):                                                              DashboardSpecWidgetHeatmapDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetHeatmapDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetHeatmapDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQuery{}).Type1()):                                                              DashboardSpecWidgetHeatmapDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetHeatmapDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetHeatmapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestProcessQuery{}).Type1()):                                                          DashboardSpecWidgetHeatmapDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQuery{}).Type1()):                                                              DashboardSpecWidgetHeatmapDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetHeatmapDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetHeatmapDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQuery{}).Type1()):                                                         DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestStyle{}).Type1()):                                                                 DashboardSpecWidgetHeatmapDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionYaxis{}).Type1()):                                                                        DashboardSpecWidgetHeatmapDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinition{}).Type1()):                                                                             DashboardSpecWidgetHostmapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequest{}).Type1()):                                                                      DashboardSpecWidgetHostmapDefinitionRequestCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillProcessQuery{}).Type1()):                                                      DashboardSpecWidgetHostmapDefinitionRequestFillProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQuery{}).Type1()):                                                     DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryComputeQuery{}).Type1()):                                         DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQuery{}).Type1()):                                     DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeProcessQuery{}).Type1()):                                                      DashboardSpecWidgetHostmapDefinitionRequestSizeProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQuery{}).Type1()):                                                     DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQuery{}).Type1()):                                         DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQuery{}).Type1()):                                     DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionStyle{}).Type1()):                                                                        DashboardSpecWidgetHostmapDefinitionStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetIframeDefinition{}).Type1()):                                                                              DashboardSpecWidgetIframeDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetImageDefinition{}).Type1()):                                                                               DashboardSpecWidgetImageDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetLogStreamDefinition{}).Type1()):                                                                           DashboardSpecWidgetLogStreamDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetLogStreamDefinitionSort{}).Type1()):                                                                       DashboardSpecWidgetLogStreamDefinitionSortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetManageStatusDefinition{}).Type1()):                                                                        DashboardSpecWidgetManageStatusDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetNoteDefinition{}).Type1()):                                                                                DashboardSpecWidgetNoteDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinition{}).Type1()):                                                                          DashboardSpecWidgetQueryTableDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQuery{}).Type1()):                                                           DashboardSpecWidgetQueryTableDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                                                      DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                                                       DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                                                           DashboardSpecWidgetQueryTableDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                                                       DashboardSpecWidgetQueryTableDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                       DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                                                    DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):                                              DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                                                   DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):                                                  DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                                                           DashboardSpecWidgetQueryTableDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQuery{}).Type1()):                                                      DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                          DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                      DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinition{}).Type1()):                                                                          DashboardSpecWidgetQueryValueDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                                                           DashboardSpecWidgetQueryValueDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                                                         DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                                                       DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                                                           DashboardSpecWidgetQueryValueDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                                                       DashboardSpecWidgetQueryValueDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                       DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                                                    DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):                                              DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryMetricQuery{}).Type1()):                                                   DashboardSpecWidgetQueryValueDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryProcessQuery{}).Type1()):                                                  DashboardSpecWidgetQueryValueDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQuery{}).Type1()):                                                           DashboardSpecWidgetQueryValueDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryValueDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQuery{}).Type1()):                                                      DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                          DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                      DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinition{}).Type1()):                                                                         DashboardSpecWidgetScatterplotDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequest{}).Type1()):                                                                  DashboardSpecWidgetScatterplotDefinitionRequestCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1()):                      DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1()):                        DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1()):                                   DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1()):                        DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1()):                             DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1()):                                  DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1()):                                 DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXProcessQuery{}).Type1()):                                                     DashboardSpecWidgetScatterplotDefinitionRequestXProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQuery{}).Type1()):                                                    DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryComputeQuery{}).Type1()):                                        DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQuery{}).Type1()):                                    DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYProcessQuery{}).Type1()):                                                     DashboardSpecWidgetScatterplotDefinitionRequestYProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQuery{}).Type1()):                                                    DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryComputeQuery{}).Type1()):                                        DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQuery{}).Type1()):                                    DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionXaxis{}).Type1()):                                                                    DashboardSpecWidgetScatterplotDefinitionXaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionYaxis{}).Type1()):                                                                    DashboardSpecWidgetScatterplotDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetServiceLevelObjectiveDefinition{}).Type1()):                                                               DashboardSpecWidgetServiceLevelObjectiveDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetServicemapDefinition{}).Type1()):                                                                          DashboardSpecWidgetServicemapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinition{}).Type1()):                                                                            DashboardSpecWidgetSunburstDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendInline{}).Type1()):                                                                DashboardSpecWidgetSunburstDefinitionLegendInlineCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendTable{}).Type1()):                                                                 DashboardSpecWidgetSunburstDefinitionLegendTableCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}).Type1()):                                                             DashboardSpecWidgetSunburstDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1()):                                                 DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                             DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}).Type1()):                                                           DashboardSpecWidgetSunburstDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}).Type1()):                                                         DashboardSpecWidgetSunburstDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}).Type1()):                                                             DashboardSpecWidgetSunburstDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                 DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                             DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}).Type1()):                                                         DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}).Type1()):                                                         DashboardSpecWidgetSunburstDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                         DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                           DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1()):                                                      DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                           DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1()):                                                DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1()):                                                     DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1()):                                                    DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}).Type1()):                                                             DashboardSpecWidgetSunburstDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                 DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                             DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}).Type1()):                                                        DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                            DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                        DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinition{}).Type1()):                                                                          DashboardSpecWidgetTimeseriesDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                                                           DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                                                         DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                                                       DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                                                           DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQuery{}).Type1()):                                                       DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                                       DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                                                       DashboardSpecWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                       DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                                                    DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):                                              DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryMetricQuery{}).Type1()):                                                   DashboardSpecWidgetTimeseriesDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryProcessQuery{}).Type1()):                                                  DashboardSpecWidgetTimeseriesDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQuery{}).Type1()):                                                           DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQuery{}).Type1()):                                                      DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                          DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                      DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestStyle{}).Type1()):                                                              DashboardSpecWidgetTimeseriesDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRightYaxis{}).Type1()):                                                                DashboardSpecWidgetTimeseriesDefinitionRightYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionYaxis{}).Type1()):                                                                     DashboardSpecWidgetTimeseriesDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinition{}).Type1()):                                                                             DashboardSpecWidgetToplistDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQuery{}).Type1()):                                                              DashboardSpecWidgetToplistDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                                                            DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                                                          DashboardSpecWidgetToplistDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQuery{}).Type1()):                                                              DashboardSpecWidgetToplistDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                                                          DashboardSpecWidgetToplistDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                          DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                                                       DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):                                                 DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryMetricQuery{}).Type1()):                                                      DashboardSpecWidgetToplistDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryProcessQuery{}).Type1()):                                                     DashboardSpecWidgetToplistDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQuery{}).Type1()):                                                              DashboardSpecWidgetToplistDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetToplistDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQuery{}).Type1()):                                                         DashboardSpecWidgetToplistDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetToplistDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetToplistDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestStyle{}).Type1()):                                                                 DashboardSpecWidgetToplistDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTraceServiceDefinition{}).Type1()):                                                                        DashboardSpecWidgetTraceServiceDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetWidgetLayout{}).Type1()):                                                                                  DashboardSpecWidgetWidgetLayoutCodec{},
 	}
 }
 
 func GetDecoder() map[string]jsoniter.ValDecoder {
 	return map[string]jsoniter.ValDecoder{
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetAlertGraphDefinition{}).Type1()):                                                            DashboardSpecWidgetAlertGraphDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetAlertValueDefinition{}).Type1()):                                                            DashboardSpecWidgetAlertValueDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinition{}).Type1()):                                                                DashboardSpecWidgetChangeDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQuery{}).Type1()):                                                 DashboardSpecWidgetChangeDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetChangeDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQuery{}).Type1()):                                                 DashboardSpecWidgetChangeDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetChangeDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestProcessQuery{}).Type1()):                                             DashboardSpecWidgetChangeDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQuery{}).Type1()):                                                 DashboardSpecWidgetChangeDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetChangeDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQuery{}).Type1()):                                            DashboardSpecWidgetChangeDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetChangeDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetChangeDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetCheckStatusDefinition{}).Type1()):                                                           DashboardSpecWidgetCheckStatusDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinition{}).Type1()):                                                          DashboardSpecWidgetDistributionDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQuery{}).Type1()):                                           DashboardSpecWidgetDistributionDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetDistributionDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetDistributionDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQuery{}).Type1()):                                           DashboardSpecWidgetDistributionDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetDistributionDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetDistributionDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestProcessQuery{}).Type1()):                                       DashboardSpecWidgetDistributionDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQuery{}).Type1()):                                           DashboardSpecWidgetDistributionDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetDistributionDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetDistributionDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQuery{}).Type1()):                                      DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestStyle{}).Type1()):                                              DashboardSpecWidgetDistributionDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetEventStreamDefinition{}).Type1()):                                                           DashboardSpecWidgetEventStreamDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetEventTimelineDefinition{}).Type1()):                                                         DashboardSpecWidgetEventTimelineDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetFreeTextDefinition{}).Type1()):                                                              DashboardSpecWidgetFreeTextDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinition{}).Type1()):                                                                DashboardSpecWidgetGeomapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestFormulaLimit{}).Type1()):                                             DashboardSpecWidgetGeomapDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                                                 DashboardSpecWidgetGeomapDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                             DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                               DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                                          DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                               DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):                                    DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryMetricQuery{}).Type1()):                                         DashboardSpecWidgetGeomapDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryProcessQuery{}).Type1()):                                        DashboardSpecWidgetGeomapDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQuery{}).Type1()):                                                 DashboardSpecWidgetGeomapDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQueryComputeQuery{}).Type1()):                                     DashboardSpecWidgetGeomapDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                 DashboardSpecWidgetGeomapDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionStyle{}).Type1()):                                                           DashboardSpecWidgetGeomapDefinitionStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionView{}).Type1()):                                                            DashboardSpecWidgetGeomapDefinitionViewCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinition{}).Type1()):                                                                 DashboardSpecWidgetGroupDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetAlertGraphDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetAlertGraphDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetAlertValueDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetAlertValueDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinition{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetCheckStatusDefinition{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetCheckStatusDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinition{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryComputeQuery{}).Type1()):     DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()): DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetEventStreamDefinition{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetEventStreamDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetEventTimelineDefinition{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetEventTimelineDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetFreeTextDefinition{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetFreeTextDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinition{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestFormulaLimit{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryMetricQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryProcessQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryComputeQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionStyle{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionView{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionViewCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinition{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinition{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequest{}).Type1()):                                   DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryComputeQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQuery{}).Type1()):  DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryComputeQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQuery{}).Type1()):  DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionStyle{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetIframeDefinition{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetIframeDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetImageDefinition{}).Type1()):                                            DashboardSpecWidgetGroupDefinitionWidgetImageDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinition{}).Type1()):                                        DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionSort{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionSortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetManageStatusDefinition{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetManageStatusDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetNoteDefinition{}).Type1()):                                             DashboardSpecWidgetGroupDefinitionWidgetNoteDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryComputeQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryMetricQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryProcessQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryComputeQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinition{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequest{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryComputeQuery{}).Type1()):     DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQuery{}).Type1()): DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryComputeQuery{}).Type1()):     DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQuery{}).Type1()): DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionXaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinition{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinition{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryMetricQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryProcessQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryComputeQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryComputeQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRightYaxis{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRightYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinition{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):              DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryMetricQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryProcessQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryComputeQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryComputeQuery{}).Type1()):          DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):      DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTraceServiceDefinition{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetTraceServiceDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetWidgetLayout{}).Type1()):                                               DashboardSpecWidgetGroupDefinitionWidgetWidgetLayoutCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinition{}).Type1()):                                                               DashboardSpecWidgetHeatmapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQuery{}).Type1()):                                                DashboardSpecWidgetHeatmapDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetHeatmapDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetHeatmapDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQuery{}).Type1()):                                                DashboardSpecWidgetHeatmapDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetHeatmapDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetHeatmapDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestProcessQuery{}).Type1()):                                            DashboardSpecWidgetHeatmapDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQuery{}).Type1()):                                                DashboardSpecWidgetHeatmapDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetHeatmapDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetHeatmapDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQuery{}).Type1()):                                           DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestStyle{}).Type1()):                                                   DashboardSpecWidgetHeatmapDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionYaxis{}).Type1()):                                                          DashboardSpecWidgetHeatmapDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinition{}).Type1()):                                                               DashboardSpecWidgetHostmapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequest{}).Type1()):                                                        DashboardSpecWidgetHostmapDefinitionRequestCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillProcessQuery{}).Type1()):                                        DashboardSpecWidgetHostmapDefinitionRequestFillProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQuery{}).Type1()):                                       DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryComputeQuery{}).Type1()):                           DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQuery{}).Type1()):                       DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeProcessQuery{}).Type1()):                                        DashboardSpecWidgetHostmapDefinitionRequestSizeProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQuery{}).Type1()):                                            DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryComputeQuery{}).Type1()):                                DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQuery{}).Type1()):                            DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQuery{}).Type1()):                                       DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQuery{}).Type1()):                           DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQuery{}).Type1()):                       DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionStyle{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetIframeDefinition{}).Type1()):                                                                DashboardSpecWidgetIframeDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetImageDefinition{}).Type1()):                                                                 DashboardSpecWidgetImageDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetLogStreamDefinition{}).Type1()):                                                             DashboardSpecWidgetLogStreamDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetLogStreamDefinitionSort{}).Type1()):                                                         DashboardSpecWidgetLogStreamDefinitionSortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetManageStatusDefinition{}).Type1()):                                                          DashboardSpecWidgetManageStatusDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetNoteDefinition{}).Type1()):                                                                  DashboardSpecWidgetNoteDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinition{}).Type1()):                                                            DashboardSpecWidgetQueryTableDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                                        DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                                     DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):                                    DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                                             DashboardSpecWidgetQueryTableDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQuery{}).Type1()):                                        DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinition{}).Type1()):                                                            DashboardSpecWidgetQueryValueDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryMetricQuery{}).Type1()):                                     DashboardSpecWidgetQueryValueDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryProcessQuery{}).Type1()):                                    DashboardSpecWidgetQueryValueDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetQueryValueDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetQueryValueDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQuery{}).Type1()):                                        DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinition{}).Type1()):                                                           DashboardSpecWidgetScatterplotDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequest{}).Type1()):                                                    DashboardSpecWidgetScatterplotDefinitionRequestCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXProcessQuery{}).Type1()):                                       DashboardSpecWidgetScatterplotDefinitionRequestXProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQuery{}).Type1()):                                      DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYProcessQuery{}).Type1()):                                       DashboardSpecWidgetScatterplotDefinitionRequestYProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQuery{}).Type1()):                                           DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQuery{}).Type1()):                                      DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionXaxis{}).Type1()):                                                      DashboardSpecWidgetScatterplotDefinitionXaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionYaxis{}).Type1()):                                                      DashboardSpecWidgetScatterplotDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetServiceLevelObjectiveDefinition{}).Type1()):                                                 DashboardSpecWidgetServiceLevelObjectiveDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetServicemapDefinition{}).Type1()):                                                            DashboardSpecWidgetServicemapDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinition{}).Type1()):                                                            DashboardSpecWidgetTimeseriesDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                         DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                                      DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                           DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):                                DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryMetricQuery{}).Type1()):                                     DashboardSpecWidgetTimeseriesDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryProcessQuery{}).Type1()):                                    DashboardSpecWidgetTimeseriesDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryComputeQuery{}).Type1()):                                 DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                             DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQuery{}).Type1()):                                        DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestStyle{}).Type1()):                                                DashboardSpecWidgetTimeseriesDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRightYaxis{}).Type1()):                                                  DashboardSpecWidgetTimeseriesDefinitionRightYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionYaxis{}).Type1()):                                                       DashboardSpecWidgetTimeseriesDefinitionYaxisCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinition{}).Type1()):                                                               DashboardSpecWidgetToplistDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestApmQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                  DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestFormulaLimitCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestLogQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                            DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                                         DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                              DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):                                   DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryMetricQuery{}).Type1()):                                        DashboardSpecWidgetToplistDefinitionRequestQueryMetricQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryProcessQuery{}).Type1()):                                       DashboardSpecWidgetToplistDefinitionRequestQueryProcessQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestRumQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQueryComputeQuery{}).Type1()):                                    DashboardSpecWidgetToplistDefinitionRequestRumQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                DashboardSpecWidgetToplistDefinitionRequestRumQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQuery{}).Type1()):                                           DashboardSpecWidgetToplistDefinitionRequestSecurityQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                               DashboardSpecWidgetToplistDefinitionRequestSecurityQueryComputeQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                           DashboardSpecWidgetToplistDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestStyle{}).Type1()):                                                   DashboardSpecWidgetToplistDefinitionRequestStyleCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTraceServiceDefinition{}).Type1()):                                                          DashboardSpecWidgetTraceServiceDefinitionCodec{},
-		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetWidgetLayout{}).Type1()):                                                                    DashboardSpecWidgetWidgetLayoutCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetAlertGraphDefinition{}).Type1()):                                                                          DashboardSpecWidgetAlertGraphDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetAlertValueDefinition{}).Type1()):                                                                          DashboardSpecWidgetAlertValueDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinition{}).Type1()):                                                                              DashboardSpecWidgetChangeDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQuery{}).Type1()):                                                               DashboardSpecWidgetChangeDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetChangeDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}).Type1()):                                                           DashboardSpecWidgetChangeDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQuery{}).Type1()):                                                               DashboardSpecWidgetChangeDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetChangeDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetChangeDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestProcessQuery{}).Type1()):                                                           DashboardSpecWidgetChangeDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                           DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                             DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}).Type1()):                                                        DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                             DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1()):                                                  DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1()):                                                       DashboardSpecWidgetChangeDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1()):                                                      DashboardSpecWidgetChangeDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQuery{}).Type1()):                                                               DashboardSpecWidgetChangeDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetChangeDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetChangeDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQuery{}).Type1()):                                                          DashboardSpecWidgetChangeDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetChangeDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetChangeDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetCheckStatusDefinition{}).Type1()):                                                                         DashboardSpecWidgetCheckStatusDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinition{}).Type1()):                                                                        DashboardSpecWidgetDistributionDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQuery{}).Type1()):                                                         DashboardSpecWidgetDistributionDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetDistributionDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetDistributionDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQuery{}).Type1()):                                                         DashboardSpecWidgetDistributionDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetDistributionDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetDistributionDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestProcessQuery{}).Type1()):                                                     DashboardSpecWidgetDistributionDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQuery{}).Type1()):                                                         DashboardSpecWidgetDistributionDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetDistributionDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetDistributionDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQuery{}).Type1()):                                                    DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                        DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                    DashboardSpecWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetDistributionDefinitionRequestStyle{}).Type1()):                                                            DashboardSpecWidgetDistributionDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetEventStreamDefinition{}).Type1()):                                                                         DashboardSpecWidgetEventStreamDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetEventTimelineDefinition{}).Type1()):                                                                       DashboardSpecWidgetEventTimelineDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetFreeTextDefinition{}).Type1()):                                                                            DashboardSpecWidgetFreeTextDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinition{}).Type1()):                                                                              DashboardSpecWidgetGeomapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestFormulaLimit{}).Type1()):                                                           DashboardSpecWidgetGeomapDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                                                               DashboardSpecWidgetGeomapDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                           DashboardSpecWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                             DashboardSpecWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                                                        DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                             DashboardSpecWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):                                                  DashboardSpecWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryMetricQuery{}).Type1()):                                                       DashboardSpecWidgetGeomapDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestQueryProcessQuery{}).Type1()):                                                      DashboardSpecWidgetGeomapDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQuery{}).Type1()):                                                               DashboardSpecWidgetGeomapDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                   DashboardSpecWidgetGeomapDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                               DashboardSpecWidgetGeomapDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionStyle{}).Type1()):                                                                         DashboardSpecWidgetGeomapDefinitionStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGeomapDefinitionView{}).Type1()):                                                                          DashboardSpecWidgetGeomapDefinitionViewCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinition{}).Type1()):                                                                               DashboardSpecWidgetGroupDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetAlertGraphDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetAlertGraphDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetAlertValueDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetAlertValueDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinition{}).Type1()):                                                         DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}).Type1()):                                   DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetCheckStatusDefinition{}).Type1()):                                                    DashboardSpecWidgetGroupDefinitionWidgetCheckStatusDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinition{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetEventStreamDefinition{}).Type1()):                                                    DashboardSpecWidgetGroupDefinitionWidgetEventStreamDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetEventTimelineDefinition{}).Type1()):                                                  DashboardSpecWidgetGroupDefinitionWidgetEventTimelineDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetFreeTextDefinition{}).Type1()):                                                       DashboardSpecWidgetGroupDefinitionWidgetFreeTextDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinition{}).Type1()):                                                         DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestFormulaLimit{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuery{}).Type1()):                                   DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearch{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryMetricQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryProcessQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQuery{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryComputeQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionStyle{}).Type1()):                                                    DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionView{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetGeomapDefinitionViewCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinition{}).Type1()):                                                        DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle{}).Type1()):                                            DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetHeatmapDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinition{}).Type1()):                                                        DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequest{}).Type1()):                                                 DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryComputeQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryComputeQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQuery{}).Type1()):                DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionStyle{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetHostmapDefinitionStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetIframeDefinition{}).Type1()):                                                         DashboardSpecWidgetGroupDefinitionWidgetIframeDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetImageDefinition{}).Type1()):                                                          DashboardSpecWidgetGroupDefinitionWidgetImageDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinition{}).Type1()):                                                      DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionSort{}).Type1()):                                                  DashboardSpecWidgetGroupDefinitionWidgetLogStreamDefinitionSortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetManageStatusDefinition{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetManageStatusDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetNoteDefinition{}).Type1()):                                                           DashboardSpecWidgetGroupDefinitionWidgetNoteDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryMetricQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryProcessQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinition{}).Type1()):                                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequest{}).Type1()):                                             DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1()): DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1()):              DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1()):   DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1()):        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1()):             DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1()):            DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryComputeQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryComputeQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQuery{}).Type1()):               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis{}).Type1()):                                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionXaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis{}).Type1()):                                               DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinition{}).Type1()):                                          DashboardSpecWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}).Type1()):                                                       DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInlineCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}).Type1()):                                            DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTableCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}).Type1()):                                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}).Type1()):                                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}).Type1()):                                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}).Type1()):                                   DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                   DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinition{}).Type1()):                                                     DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                  DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                               DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryMetricQuery{}).Type1()):                              DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryProcessQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQuery{}).Type1()):                                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryComputeQuery{}).Type1()):                          DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                      DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                 DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRightYaxis{}).Type1()):                                           DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionRightYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis{}).Type1()):                                                DashboardSpecWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinition{}).Type1()):                                                        DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):                           DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                                     DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                     DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                                  DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                       DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):                            DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryMetricQuery{}).Type1()):                                 DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryProcessQuery{}).Type1()):                                DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQuery{}).Type1()):                                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryComputeQuery{}).Type1()):                             DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                         DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQuery{}).Type1()):                                    DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                        DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                    DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle{}).Type1()):                                            DashboardSpecWidgetGroupDefinitionWidgetToplistDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetTraceServiceDefinition{}).Type1()):                                                   DashboardSpecWidgetGroupDefinitionWidgetTraceServiceDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetWidgetLayout{}).Type1()):                                                             DashboardSpecWidgetGroupDefinitionWidgetWidgetLayoutCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinition{}).Type1()):                                                                             DashboardSpecWidgetHeatmapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQuery{}).Type1()):                                                              DashboardSpecWidgetHeatmapDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetHeatmapDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetHeatmapDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQuery{}).Type1()):                                                              DashboardSpecWidgetHeatmapDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetHeatmapDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetHeatmapDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestProcessQuery{}).Type1()):                                                          DashboardSpecWidgetHeatmapDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQuery{}).Type1()):                                                              DashboardSpecWidgetHeatmapDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetHeatmapDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetHeatmapDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQuery{}).Type1()):                                                         DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetHeatmapDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionRequestStyle{}).Type1()):                                                                 DashboardSpecWidgetHeatmapDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHeatmapDefinitionYaxis{}).Type1()):                                                                        DashboardSpecWidgetHeatmapDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinition{}).Type1()):                                                                             DashboardSpecWidgetHostmapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequest{}).Type1()):                                                                      DashboardSpecWidgetHostmapDefinitionRequestCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestFillApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestFillLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillProcessQuery{}).Type1()):                                                      DashboardSpecWidgetHostmapDefinitionRequestFillProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestFillRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQuery{}).Type1()):                                                     DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryComputeQuery{}).Type1()):                                         DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQuery{}).Type1()):                                     DashboardSpecWidgetHostmapDefinitionRequestFillSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestSizeApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestSizeLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeProcessQuery{}).Type1()):                                                      DashboardSpecWidgetHostmapDefinitionRequestSizeProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQuery{}).Type1()):                                                          DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryComputeQuery{}).Type1()):                                              DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQuery{}).Type1()):                                          DashboardSpecWidgetHostmapDefinitionRequestSizeRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQuery{}).Type1()):                                                     DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQuery{}).Type1()):                                         DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQuery{}).Type1()):                                     DashboardSpecWidgetHostmapDefinitionRequestSizeSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetHostmapDefinitionStyle{}).Type1()):                                                                        DashboardSpecWidgetHostmapDefinitionStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetIframeDefinition{}).Type1()):                                                                              DashboardSpecWidgetIframeDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetImageDefinition{}).Type1()):                                                                               DashboardSpecWidgetImageDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetLogStreamDefinition{}).Type1()):                                                                           DashboardSpecWidgetLogStreamDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetLogStreamDefinitionSort{}).Type1()):                                                                       DashboardSpecWidgetLogStreamDefinitionSortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetManageStatusDefinition{}).Type1()):                                                                        DashboardSpecWidgetManageStatusDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetNoteDefinition{}).Type1()):                                                                                DashboardSpecWidgetNoteDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinition{}).Type1()):                                                                          DashboardSpecWidgetQueryTableDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQuery{}).Type1()):                                                           DashboardSpecWidgetQueryTableDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryTableDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryTableDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQuery{}).Type1()):                                                      DashboardSpecWidgetQueryTableDefinitionRequestApmStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimit{}).Type1()):                                                       DashboardSpecWidgetQueryTableDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQuery{}).Type1()):                                                           DashboardSpecWidgetQueryTableDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryTableDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryTableDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestProcessQuery{}).Type1()):                                                       DashboardSpecWidgetQueryTableDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                       DashboardSpecWidgetQueryTableDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuery{}).Type1()):                                                    DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                         DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearch{}).Type1()):                                              DashboardSpecWidgetQueryTableDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQuery{}).Type1()):                                                   DashboardSpecWidgetQueryTableDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQuery{}).Type1()):                                                  DashboardSpecWidgetQueryTableDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQuery{}).Type1()):                                                           DashboardSpecWidgetQueryTableDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryTableDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryTableDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQuery{}).Type1()):                                                      DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                          DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                      DashboardSpecWidgetQueryTableDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinition{}).Type1()):                                                                          DashboardSpecWidgetQueryValueDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQuery{}).Type1()):                                                           DashboardSpecWidgetQueryValueDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryValueDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQuery{}).Type1()):                                                         DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimit{}).Type1()):                                                       DashboardSpecWidgetQueryValueDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQuery{}).Type1()):                                                           DashboardSpecWidgetQueryValueDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryValueDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestProcessQuery{}).Type1()):                                                       DashboardSpecWidgetQueryValueDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                       DashboardSpecWidgetQueryValueDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuery{}).Type1()):                                                    DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                         DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearch{}).Type1()):                                              DashboardSpecWidgetQueryValueDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryMetricQuery{}).Type1()):                                                   DashboardSpecWidgetQueryValueDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestQueryProcessQuery{}).Type1()):                                                  DashboardSpecWidgetQueryValueDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQuery{}).Type1()):                                                           DashboardSpecWidgetQueryValueDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetQueryValueDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetQueryValueDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQuery{}).Type1()):                                                      DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                          DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                      DashboardSpecWidgetQueryValueDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinition{}).Type1()):                                                                         DashboardSpecWidgetScatterplotDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequest{}).Type1()):                                                                  DashboardSpecWidgetScatterplotDefinitionRequestCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1()):                      DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1()):                        DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1()):                                   DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1()):                        DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1()):                             DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1()):                                  DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1()):                                 DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestXLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXProcessQuery{}).Type1()):                                                     DashboardSpecWidgetScatterplotDefinitionRequestXProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestXRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQuery{}).Type1()):                                                    DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryComputeQuery{}).Type1()):                                        DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQuery{}).Type1()):                                    DashboardSpecWidgetScatterplotDefinitionRequestXSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestYApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestYLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYProcessQuery{}).Type1()):                                                     DashboardSpecWidgetScatterplotDefinitionRequestYProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQuery{}).Type1()):                                                         DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetScatterplotDefinitionRequestYRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQuery{}).Type1()):                                                    DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryComputeQuery{}).Type1()):                                        DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQuery{}).Type1()):                                    DashboardSpecWidgetScatterplotDefinitionRequestYSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionXaxis{}).Type1()):                                                                    DashboardSpecWidgetScatterplotDefinitionXaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionYaxis{}).Type1()):                                                                    DashboardSpecWidgetScatterplotDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetServiceLevelObjectiveDefinition{}).Type1()):                                                               DashboardSpecWidgetServiceLevelObjectiveDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetServicemapDefinition{}).Type1()):                                                                          DashboardSpecWidgetServicemapDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinition{}).Type1()):                                                                            DashboardSpecWidgetSunburstDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendInline{}).Type1()):                                                                DashboardSpecWidgetSunburstDefinitionLegendInlineCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendTable{}).Type1()):                                                                 DashboardSpecWidgetSunburstDefinitionLegendTableCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}).Type1()):                                                             DashboardSpecWidgetSunburstDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1()):                                                 DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                             DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}).Type1()):                                                           DashboardSpecWidgetSunburstDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}).Type1()):                                                         DashboardSpecWidgetSunburstDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}).Type1()):                                                             DashboardSpecWidgetSunburstDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                 DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                             DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}).Type1()):                                                         DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}).Type1()):                                                         DashboardSpecWidgetSunburstDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                         DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                           DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1()):                                                      DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                           DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1()):                                                DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1()):                                                     DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1()):                                                    DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}).Type1()):                                                             DashboardSpecWidgetSunburstDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                 DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                             DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}).Type1()):                                                        DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                            DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                        DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinition{}).Type1()):                                                                          DashboardSpecWidgetTimeseriesDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQuery{}).Type1()):                                                           DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQuery{}).Type1()):                                                         DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimit{}).Type1()):                                                       DashboardSpecWidgetTimeseriesDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQuery{}).Type1()):                                                           DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQuery{}).Type1()):                                                       DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1()):                                       DashboardSpecWidgetTimeseriesDefinitionRequestNetworkQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestProcessQuery{}).Type1()):                                                       DashboardSpecWidgetTimeseriesDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                       DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuery{}).Type1()):                                                    DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                         DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearch{}).Type1()):                                              DashboardSpecWidgetTimeseriesDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryMetricQuery{}).Type1()):                                                   DashboardSpecWidgetTimeseriesDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestQueryProcessQuery{}).Type1()):                                                  DashboardSpecWidgetTimeseriesDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQuery{}).Type1()):                                                           DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryComputeQuery{}).Type1()):                                               DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                           DashboardSpecWidgetTimeseriesDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQuery{}).Type1()):                                                      DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                          DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                      DashboardSpecWidgetTimeseriesDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRequestStyle{}).Type1()):                                                              DashboardSpecWidgetTimeseriesDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionRightYaxis{}).Type1()):                                                                DashboardSpecWidgetTimeseriesDefinitionRightYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTimeseriesDefinitionYaxis{}).Type1()):                                                                     DashboardSpecWidgetTimeseriesDefinitionYaxisCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinition{}).Type1()):                                                                             DashboardSpecWidgetToplistDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQuery{}).Type1()):                                                              DashboardSpecWidgetToplistDefinitionRequestApmQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetToplistDefinitionRequestApmQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestApmQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQuery{}).Type1()):                                                            DashboardSpecWidgetToplistDefinitionRequestAuditQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQuery{}).Type1()):                                                DashboardSpecWidgetToplistDefinitionRequestAuditQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQuery{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestAuditQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestFormulaLimit{}).Type1()):                                                          DashboardSpecWidgetToplistDefinitionRequestFormulaLimitCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQuery{}).Type1()):                                                              DashboardSpecWidgetToplistDefinitionRequestLogQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetToplistDefinitionRequestLogQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestLogQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestProcessQuery{}).Type1()):                                                          DashboardSpecWidgetToplistDefinitionRequestProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQuery{}).Type1()):                                          DashboardSpecWidgetToplistDefinitionRequestQueryApmDependencyStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQuery{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestQueryApmResourceStatsQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuery{}).Type1()):                                                       DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySort{}).Type1()):                                            DashboardSpecWidgetToplistDefinitionRequestQueryEventQueryGroupBySortCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearch{}).Type1()):                                                 DashboardSpecWidgetToplistDefinitionRequestQueryEventQuerySearchCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryMetricQuery{}).Type1()):                                                      DashboardSpecWidgetToplistDefinitionRequestQueryMetricQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestQueryProcessQuery{}).Type1()):                                                     DashboardSpecWidgetToplistDefinitionRequestQueryProcessQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQuery{}).Type1()):                                                              DashboardSpecWidgetToplistDefinitionRequestRumQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQueryComputeQuery{}).Type1()):                                                  DashboardSpecWidgetToplistDefinitionRequestRumQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestRumQueryGroupBySortQuery{}).Type1()):                                              DashboardSpecWidgetToplistDefinitionRequestRumQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQuery{}).Type1()):                                                         DashboardSpecWidgetToplistDefinitionRequestSecurityQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQueryComputeQuery{}).Type1()):                                             DashboardSpecWidgetToplistDefinitionRequestSecurityQueryComputeQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1()):                                         DashboardSpecWidgetToplistDefinitionRequestSecurityQueryGroupBySortQueryCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetToplistDefinitionRequestStyle{}).Type1()):                                                                 DashboardSpecWidgetToplistDefinitionRequestStyleCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetTraceServiceDefinition{}).Type1()):                                                                        DashboardSpecWidgetTraceServiceDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetWidgetLayout{}).Type1()):                                                                                  DashboardSpecWidgetWidgetLayoutCodec{},
 	}
 }
 
@@ -1492,6 +1672,85 @@ func (DashboardSpecWidgetChangeDefinitionRequestApmQueryGroupBySortQueryCodec) D
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetChangeDefinitionRequestFormulaLimitCodec struct {
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestFormulaLimitCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetChangeDefinitionRequestFormulaLimit)(ptr) == nil
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestFormulaLimitCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetChangeDefinitionRequestFormulaLimit)(ptr)
+	var objs []DashboardSpecWidgetChangeDefinitionRequestFormulaLimit
+	if obj != nil {
+		objs = []DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestFormulaLimitCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetChangeDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetChangeDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetChangeDefinitionRequestFormulaLimit)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetChangeDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}
+			}
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetChangeDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetChangeDefinitionRequestFormulaLimit)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetChangeDefinitionRequestFormulaLimit{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestFormulaLimit", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetChangeDefinitionRequestLogQueryCodec struct {
 }
 
@@ -1804,6 +2063,559 @@ func (DashboardSpecWidgetChangeDefinitionRequestProcessQueryCodec) Decode(ptr un
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryCodec struct {
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery)(ptr)
+	var objs []DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestQueryEventQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec struct {
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) == nil
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr)
+	var objs []DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort
+	if obj != nil {
+		objs = []DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}
+			}
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestQueryEventQueryGroupBySort", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearchCodec struct {
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearchCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) == nil
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearchCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr)
+	var objs []DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch
+	if obj != nil {
+		objs = []DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearchCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}
+			}
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestQueryEventQuerySearch", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetChangeDefinitionRequestQueryMetricQueryCodec struct {
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryMetricQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryMetricQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery)(ptr)
+	var objs []DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryMetricQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestQueryMetricQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetChangeDefinitionRequestQueryProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetChangeDefinitionRequestQueryProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetChangeDefinitionRequestQueryProcessQuery", "unexpected JSON type")
 	}
 }
 
@@ -5679,6 +6491,85 @@ func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGro
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimitCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimitCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimitCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimitCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestFormulaLimit", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCodec struct {
 }
 
@@ -5991,6 +6882,559 @@ func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuer
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySortCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQueryGroupBySort", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearchCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearchCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearchCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearchCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryEventQuerySearch", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryMetricQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetChangeDefinitionRequestQueryProcessQuery", "unexpected JSON type")
 	}
 }
 
@@ -17292,6 +18736,559 @@ func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestCodec)
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCodec struct {
 }
 
@@ -19658,6 +21655,2376 @@ func (DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinitionCodec) Decode(
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetServicemapDefinition", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinition", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInlineCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInlineCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInlineCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInlineCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendInline", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTableCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTableCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTableCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTableCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionLegendTable", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimitCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimitCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimitCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimitCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestFormulaLimit", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryEventQuerySearch", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryMetricQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestQueryProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetGroupDefinitionWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery", "unexpected JSON type")
 	}
 }
 
@@ -32302,6 +36669,559 @@ func (DashboardSpecWidgetScatterplotDefinitionRequestCodec) Decode(ptr unsafe.Po
 }
 
 // +k8s:deepcopy-gen=false
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryApmResourceStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec struct {
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr)
+	var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec struct {
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) == nil
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr)
+	var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort
+	if obj != nil {
+		objs = []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySortCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}
+			}
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQueryGroupBySort", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec struct {
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) == nil
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr)
+	var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch
+	if obj != nil {
+		objs = []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearchCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}
+			}
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryEventQuerySearch", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec struct {
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr)
+	var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryMetricQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery)(ptr) = DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetScatterplotDefinitionRequestScatterplotTableQueryProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
 type DashboardSpecWidgetScatterplotDefinitionRequestXApmQueryCodec struct {
 }
 
@@ -34668,6 +39588,2376 @@ func (DashboardSpecWidgetServicemapDefinitionCodec) Decode(ptr unsafe.Pointer, i
 		}
 	default:
 		iter.ReportError("decode DashboardSpecWidgetServicemapDefinition", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinition)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinition)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinition
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinition{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinition{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinition)(ptr) = DashboardSpecWidgetSunburstDefinition{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinition
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinition{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinition)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinition)(ptr) = DashboardSpecWidgetSunburstDefinition{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinition)(ptr) = DashboardSpecWidgetSunburstDefinition{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinition
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinition{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinition)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinition)(ptr) = DashboardSpecWidgetSunburstDefinition{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinition", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionLegendInlineCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionLegendInlineCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionLegendInline)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionLegendInlineCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionLegendInline)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionLegendInline
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionLegendInline{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendInline{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionLegendInlineCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionLegendInline)(ptr) = DashboardSpecWidgetSunburstDefinitionLegendInline{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionLegendInline
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendInline{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionLegendInline)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionLegendInline)(ptr) = DashboardSpecWidgetSunburstDefinitionLegendInline{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionLegendInline)(ptr) = DashboardSpecWidgetSunburstDefinitionLegendInline{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionLegendInline
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendInline{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionLegendInline)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionLegendInline)(ptr) = DashboardSpecWidgetSunburstDefinitionLegendInline{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionLegendInline", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionLegendTableCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionLegendTableCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionLegendTable)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionLegendTableCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionLegendTable)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionLegendTable
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionLegendTable{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendTable{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionLegendTableCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionLegendTable)(ptr) = DashboardSpecWidgetSunburstDefinitionLegendTable{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionLegendTable
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendTable{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionLegendTable)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionLegendTable)(ptr) = DashboardSpecWidgetSunburstDefinitionLegendTable{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionLegendTable)(ptr) = DashboardSpecWidgetSunburstDefinitionLegendTable{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionLegendTable
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionLegendTable{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionLegendTable)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionLegendTable)(ptr) = DashboardSpecWidgetSunburstDefinitionLegendTable{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionLegendTable", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestApmQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestApmQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestApmQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestApmQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestApmQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestApmQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestApmQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestApmQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestApmQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestApmQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestApmQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestApmQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestApmQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestAuditQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestAuditQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestAuditQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestAuditQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestAuditQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestAuditQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestAuditQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestAuditQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestFormulaLimitCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestFormulaLimitCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestFormulaLimitCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestFormulaLimitCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestFormulaLimit", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestLogQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestLogQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestLogQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestLogQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestLogQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestLogQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestLogQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestLogQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestLogQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestLogQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestLogQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestLogQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestLogQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestNetworkQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestNetworkQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestProcessQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestProcessQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestProcessQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestProcessQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestQueryApmDependencyStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestQueryApmResourceStatsQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySortCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestQueryEventQueryGroupBySort", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearchCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestQueryEventQuerySearch", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestQueryMetricQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestQueryProcessQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestRumQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestRumQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestRumQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestRumQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestRumQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestRumQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestRumQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestRumQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestRumQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestRumQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestRumQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestRumQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestRumQueryGroupBySortQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestSecurityQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryComputeQuery", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec struct {
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) == nil
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr)
+	var objs []DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery
+	if obj != nil {
+		objs = []DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQueryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = objs[0]
+			} else {
+				*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}
+			}
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = obj
+		} else {
+			*(*DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery)(ptr) = DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery{}
+		}
+	default:
+		iter.ReportError("decode DashboardSpecWidgetSunburstDefinitionRequestSecurityQueryGroupBySortQuery", "unexpected JSON type")
 	}
 }
 

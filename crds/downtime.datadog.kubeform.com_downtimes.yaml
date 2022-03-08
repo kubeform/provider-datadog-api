@@ -91,8 +91,8 @@ spec:
                     format: int64
                     type: integer
                   monitorTags:
-                    description: A list of monitor tags (up to 25), i.e. tags that
-                      are applied directly to monitors to which the downtime applies
+                    description: A list of monitor tags (up to 32) to base the scheduled
+                      downtime on. Only monitors that have all selected tags are silenced
                     items:
                       type: string
                     type: array
@@ -194,8 +194,8 @@ spec:
                     format: int64
                     type: integer
                   monitorTags:
-                    description: A list of monitor tags (up to 25), i.e. tags that
-                      are applied directly to monitors to which the downtime applies
+                    description: A list of monitor tags (up to 32) to base the scheduled
+                      downtime on. Only monitors that have all selected tags are silenced
                     items:
                       type: string
                     type: array

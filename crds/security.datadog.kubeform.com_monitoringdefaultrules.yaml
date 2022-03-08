@@ -73,7 +73,7 @@ spec:
                       - notifications
                       - status
                       type: object
-                    maxItems: 5
+                    maxItems: 10
                     type: array
                   enabled:
                     description: Enable the rule.
@@ -117,7 +117,7 @@ spec:
                       - notifications
                       - status
                       type: object
-                    maxItems: 5
+                    maxItems: 10
                     type: array
                   enabled:
                     description: Enable the rule.

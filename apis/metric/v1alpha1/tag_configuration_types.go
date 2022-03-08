@@ -41,6 +41,13 @@ type TagConfiguration struct {
 	Status            TagConfigurationStatus `json:"status,omitempty"`
 }
 
+type TagConfigurationSpecAggregations struct {
+	// A space aggregation for use in query.
+	Space *string `json:"space" tf:"space"`
+	// A time aggregation for use in query.
+	Time *string `json:"time" tf:"time"`
+}
+
 type TagConfigurationSpec struct {
 	State *TagConfigurationSpecResource `json:"state,omitempty" tf:"-"`
 
@@ -58,7 +65,10 @@ type TagConfigurationSpec struct {
 type TagConfigurationSpecResource struct {
 	ID string `json:"id,omitempty" tf:"id,omitempty"`
 
-	// Toggle to include/exclude percentiles for a distribution metric. Defaults to false. Can only be applied to metrics that have a metric_type of distribution.
+	// A list of queryable aggregation combinations for a count, rate, or gauge metric. By default, count and rate metrics require the (time: sum, space: sum) aggregation and gauge metrics require the (time: avg, space: avg) aggregation. Can only be applied to metrics that have a `metric_type` of count, rate, or gauge.
+	// +optional
+	Aggregations []TagConfigurationSpecAggregations `json:"aggregations,omitempty" tf:"aggregations"`
+	// Toggle to include/exclude percentiles for a distribution metric. Defaults to false. Can only be applied to metrics that have a `metric_type` of distribution.
 	// +optional
 	IncludePercentiles *bool `json:"includePercentiles,omitempty" tf:"include_percentiles"`
 	// The metric name for this resource.

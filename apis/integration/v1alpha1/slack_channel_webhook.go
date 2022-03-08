@@ -88,7 +88,7 @@ func (r *SlackChannel) ValidateUpdate(old runtime.Object) error {
 		return err
 	}
 
-	for key := range slackchannelForceNewList {
+	for key, _ := range slackchannelForceNewList {
 		keySplit := strings.Split(key, "/*")
 		length := len(keySplit)
 		checkIfAnyDif := false

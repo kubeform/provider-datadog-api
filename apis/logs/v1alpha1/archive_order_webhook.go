@@ -86,7 +86,7 @@ func (r *ArchiveOrder) ValidateUpdate(old runtime.Object) error {
 		return err
 	}
 
-	for key := range archiveorderForceNewList {
+	for key, _ := range archiveorderForceNewList {
 		keySplit := strings.Split(key, "/*")
 		length := len(keySplit)
 		checkIfAnyDif := false

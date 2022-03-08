@@ -74,7 +74,7 @@ type MonitoringDefaultRuleSpecResource struct {
 
 	// Cases of the rule, this is used to update notifications.
 	// +optional
-	// +kubebuilder:validation:MaxItems=5
+	// +kubebuilder:validation:MaxItems=10
 	Case []MonitoringDefaultRuleSpecCase `json:"case,omitempty" tf:"case"`
 	// Enable the rule.
 	// +optional

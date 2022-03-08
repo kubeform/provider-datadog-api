@@ -63,8 +63,15 @@ type CorrectionSpecResource struct {
 	// Description of the correction being made.
 	// +optional
 	Description *string `json:"description,omitempty" tf:"description"`
-	// Ending time of the correction in epoch seconds.
-	End *int64 `json:"end" tf:"end"`
+	// Length of time in seconds for a specified `rrule` recurring SLO correction (required if specifying `rrule`)
+	// +optional
+	Duration *int64 `json:"duration,omitempty" tf:"duration"`
+	// Ending time of the correction in epoch seconds. Required for one time corrections, but optional if `rrule` is specified
+	// +optional
+	End *int64 `json:"end,omitempty" tf:"end"`
+	// Recurrence rules as defined in the iCalendar RFC 5545. Supported rules for SLO corrections are `FREQ`, `INTERVAL`, `COUNT` and `UNTIL`.
+	// +optional
+	Rrule *string `json:"rrule,omitempty" tf:"rrule"`
 	// ID of the SLO that this correction will be applied to.
 	SloID *string `json:"sloID" tf:"slo_id"`
 	// Starting time of the correction in epoch seconds.

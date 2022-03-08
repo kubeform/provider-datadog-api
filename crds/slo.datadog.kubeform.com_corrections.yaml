@@ -63,11 +63,22 @@ spec:
                   description:
                     description: Description of the correction being made.
                     type: string
+                  duration:
+                    description: Length of time in seconds for a specified `rrule`
+                      recurring SLO correction (required if specifying `rrule`)
+                    format: int64
+                    type: integer
                   end:
-                    description: Ending time of the correction in epoch seconds.
+                    description: Ending time of the correction in epoch seconds. Required
+                      for one time corrections, but optional if `rrule` is specified
                     format: int64
                     type: integer
                   id:
+                    type: string
+                  rrule:
+                    description: Recurrence rules as defined in the iCalendar RFC
+                      5545. Supported rules for SLO corrections are `FREQ`, `INTERVAL`,
+                      `COUNT` and `UNTIL`.
                     type: string
                   sloID:
                     description: ID of the SLO that this correction will be applied
@@ -83,7 +94,6 @@ spec:
                     type: string
                 required:
                 - category
-                - end
                 - sloID
                 - start
                 type: object
@@ -95,11 +105,22 @@ spec:
                   description:
                     description: Description of the correction being made.
                     type: string
+                  duration:
+                    description: Length of time in seconds for a specified `rrule`
+                      recurring SLO correction (required if specifying `rrule`)
+                    format: int64
+                    type: integer
                   end:
-                    description: Ending time of the correction in epoch seconds.
+                    description: Ending time of the correction in epoch seconds. Required
+                      for one time corrections, but optional if `rrule` is specified
                     format: int64
                     type: integer
                   id:
+                    type: string
+                  rrule:
+                    description: Recurrence rules as defined in the iCalendar RFC
+                      5545. Supported rules for SLO corrections are `FREQ`, `INTERVAL`,
+                      `COUNT` and `UNTIL`.
                     type: string
                   sloID:
                     description: ID of the SLO that this correction will be applied
@@ -115,7 +136,6 @@ spec:
                     type: string
                 required:
                 - category
-                - end
                 - sloID
                 - start
                 type: object

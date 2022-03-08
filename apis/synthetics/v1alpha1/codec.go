@@ -36,6 +36,7 @@ func GetEncoder() map[string]jsoniter.ValEncoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRequestClientCertificateCert{}).Type1()): SyntheticstestSpecApiStepRequestClientCertificateCertCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRequestClientCertificateKey{}).Type1()):  SyntheticstestSpecApiStepRequestClientCertificateKeyCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRequestDefinition{}).Type1()):            SyntheticstestSpecApiStepRequestDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRetry{}).Type1()):                        SyntheticstestSpecApiStepRetryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecAssertionTargetjsonpath{}).Type1()):             SyntheticstestSpecAssertionTargetjsonpathCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecBrowserStepParams{}).Type1()):                   SyntheticstestSpecBrowserStepParamsCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecBrowserStepParamsVariable{}).Type1()):           SyntheticstestSpecBrowserStepParamsVariableCodec{},
@@ -61,6 +62,7 @@ func GetDecoder() map[string]jsoniter.ValDecoder {
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRequestClientCertificateCert{}).Type1()): SyntheticstestSpecApiStepRequestClientCertificateCertCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRequestClientCertificateKey{}).Type1()):  SyntheticstestSpecApiStepRequestClientCertificateKeyCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRequestDefinition{}).Type1()):            SyntheticstestSpecApiStepRequestDefinitionCodec{},
+		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRetry{}).Type1()):                        SyntheticstestSpecApiStepRetryCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecAssertionTargetjsonpath{}).Type1()):             SyntheticstestSpecAssertionTargetjsonpathCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecBrowserStepParams{}).Type1()):                   SyntheticstestSpecBrowserStepParamsCodec{},
 		jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecBrowserStepParamsVariable{}).Type1()):           SyntheticstestSpecBrowserStepParamsVariableCodec{},
@@ -795,6 +797,85 @@ func (SyntheticstestSpecApiStepRequestDefinitionCodec) Decode(ptr unsafe.Pointer
 		}
 	default:
 		iter.ReportError("decode SyntheticstestSpecApiStepRequestDefinition", "unexpected JSON type")
+	}
+}
+
+// +k8s:deepcopy-gen=false
+type SyntheticstestSpecApiStepRetryCodec struct {
+}
+
+func (SyntheticstestSpecApiStepRetryCodec) IsEmpty(ptr unsafe.Pointer) bool {
+	return (*SyntheticstestSpecApiStepRetry)(ptr) == nil
+}
+
+func (SyntheticstestSpecApiStepRetryCodec) Encode(ptr unsafe.Pointer, stream *jsoniter.Stream) {
+	obj := (*SyntheticstestSpecApiStepRetry)(ptr)
+	var objs []SyntheticstestSpecApiStepRetry
+	if obj != nil {
+		objs = []SyntheticstestSpecApiStepRetry{*obj}
+	}
+
+	jsonit := jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            true,
+		ValidateJsonRawMessage: true,
+		TagKey:                 "tf",
+		TypeEncoders:           getEncodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRetry{}).Type1())),
+	}.Froze()
+
+	byt, _ := jsonit.Marshal(objs)
+
+	stream.Write(byt)
+}
+
+func (SyntheticstestSpecApiStepRetryCodec) Decode(ptr unsafe.Pointer, iter *jsoniter.Iterator) {
+	switch iter.WhatIsNext() {
+	case jsoniter.NilValue:
+		iter.Skip()
+		*(*SyntheticstestSpecApiStepRetry)(ptr) = SyntheticstestSpecApiStepRetry{}
+		return
+	case jsoniter.ArrayValue:
+		objsByte := iter.SkipAndReturnBytes()
+		if len(objsByte) > 0 {
+			var objs []SyntheticstestSpecApiStepRetry
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRetry{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objsByte, &objs)
+
+			if len(objs) > 0 {
+				*(*SyntheticstestSpecApiStepRetry)(ptr) = objs[0]
+			} else {
+				*(*SyntheticstestSpecApiStepRetry)(ptr) = SyntheticstestSpecApiStepRetry{}
+			}
+		} else {
+			*(*SyntheticstestSpecApiStepRetry)(ptr) = SyntheticstestSpecApiStepRetry{}
+		}
+	case jsoniter.ObjectValue:
+		objByte := iter.SkipAndReturnBytes()
+		if len(objByte) > 0 {
+			var obj SyntheticstestSpecApiStepRetry
+
+			jsonit := jsoniter.Config{
+				EscapeHTML:             true,
+				SortMapKeys:            true,
+				ValidateJsonRawMessage: true,
+				TagKey:                 "tf",
+				TypeDecoders:           getDecodersWithout(jsoniter.MustGetKind(reflect2.TypeOf(SyntheticstestSpecApiStepRetry{}).Type1())),
+			}.Froze()
+			jsonit.Unmarshal(objByte, &obj)
+
+			*(*SyntheticstestSpecApiStepRetry)(ptr) = obj
+		} else {
+			*(*SyntheticstestSpecApiStepRetry)(ptr) = SyntheticstestSpecApiStepRetry{}
+		}
+	default:
+		iter.ReportError("decode SyntheticstestSpecApiStepRetry", "unexpected JSON type")
 	}
 }
 
